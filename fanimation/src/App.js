@@ -7,7 +7,6 @@ function App() {
   return (
     <div className="App">
       <header id="navbar">
-        <div>
           <nav>
             <ul className="nav">
               <li>
@@ -24,7 +23,6 @@ function App() {
               </li>
             </ul>
           </nav>
-        </div>
       </header>
 
       <Routes>
