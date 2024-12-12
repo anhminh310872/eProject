@@ -64,6 +64,7 @@ header {
   transition: position 0.3s ease, top 0.3s ease;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   padding: 10px 0;
+  
 }
 
 header .nav {
@@ -75,7 +76,7 @@ header .nav {
 }
 
 header .nav li {
-  padding: 10px 20px;
+  padding: 0px 20px;
 }
 
 header .nav a {
@@ -88,6 +89,7 @@ header .nav a {
 header .nav a.active, 
 header .nav a:hover {
   color: white;
+  background-color: #b17a7a;
 }
 
 section {
