@@ -3,33 +3,6 @@ import React from 'react';
 function AboutUs() {
   return (
     <>
-    <div>
-        <h2>Fanimation</h2>
-        <p>is a global manufacturer of standard and custom fans and fan accessories.</p>
-    </div>
-      <header id="navbar">
-        <div>
-          <nav>
-            <ul className="nav">
-              <li>
-                <a href="#">Home</a>
-              </li>
-              <li>
-                <a href="#">Products</a>
-              </li>
-              <li>
-                <a href="#" className="active">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="#">Contact Us</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </header>
-
       <section>
         <div className="hero">
           <h1>About Us</h1>
@@ -128,7 +101,7 @@ function AboutUs() {
         <a href="tel:+84123456789">0123 456 789</a>
       </p>
       <p>
-        <img src="./images/icon-email.png" alt="" />
+        <img src="./images/icon-email.png" alt="" />  
         <a href="mailto:example@gmail.com">example@gmail.com</a>
       </p>
     </div>
