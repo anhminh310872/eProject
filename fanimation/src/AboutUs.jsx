@@ -69,12 +69,6 @@ function AboutUs() {
     <div className="founders">
       <div className="founder">
         {" "}
-        <img src="./images/Avatar.png" alt="Phuc Nguyen" />
-        <h4>Phuc Nguyen</h4>
-        <p>Programmer</p>
-      </div>
-      <div className="founder">
-        {" "}
         <img src="./images/Avatar.png" alt="Anh Minh" />
         <h4>Anh Minh</h4>
         <p>Programmer</p>
