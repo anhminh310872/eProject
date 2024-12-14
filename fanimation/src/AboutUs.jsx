@@ -58,7 +58,7 @@ function AboutUs() {
           <li>Page Load</li> <br />
           <li>Big data analysis</li>
         </ul>
-        <button>About Us</button>
+        <button>Contact Us</button>
       </div>
     </div>
   </section>
@@ -67,12 +67,6 @@ function AboutUs() {
     <h2>Our Founders</h2>
     <button>View All</button>
     <div className="founders">
-      <div className="founder">
-        {" "}
-        <img src="./images/Avatar.png" alt="Phuc Nguyen" />
-        <h4>Phuc Nguyen</h4>
-        <p>Programmer</p>
-      </div>
       <div className="founder">
         {" "}
         <img src="./images/Avatar.png" alt="Anh Minh" />
@@ -93,32 +87,91 @@ function AboutUs() {
       </div>
     </div>
   </section>
-  <footer>
-    <div className="contact-info">
-      <h2>Fanimation</h2>
-      <p>
-        <img src="./images/icon-phone.png" alt="" />
-        <a href="tel:+84123456789">0123 456 789</a>
-      </p>
-      <p>
-        <img src="./images/icon-email.png" alt="" />  
-        <a href="mailto:example@gmail.com">example@gmail.com</a>
-      </p>
-    </div>
-    <div className="contact-us">
-      <h2>Contact Us</h2>
-      <form>
-        <label htmlFor="name">Name:</label>
-        <input type="text" id="name" name="name" required="" />
-        <label htmlFor="phone">Phone:</label>
-        <input type="tel" id="phone" name="phone" required="" />
-        <label htmlFor="email">Email:</label>
-        <input type="email" id="email" name="email" required="" />
-        <button type="submit">Submit</button>
-      </form>
-    </div>
-  </footer>
-  </>
+
+      <footer>
+        <div className="footer-top">
+          <div className="footer-column">
+            <img
+              src="./images/logo.png"
+              alt="Fanimation Logo"
+              className="footer-logo"
+            />
+            <p>
+              590 CMT8 Quan 3<br />
+              Ho Chi Minh City
+              <br />
+              Phone: 012.345.6789
+              <br />
+              Email: fanimation@gmail.com
+            </p>
+          </div>
+          <div className="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+              <li>
+                <a href="#">Home</a>
+              </li>
+              <li>
+                <a href="#">Products</a>
+              </li>
+              <li>
+                <a href="#">About Us</a>
+              </li>
+              <li>
+                <a href="#">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+          <div className="footer-column">
+            <h3>Categories</h3>
+            <ul>
+              <li>
+                <a href="#">All Product</a>
+              </li>
+              <li>
+                <a href="#">Ceiling</a>
+              </li>
+              <li>
+                <a href="#">Pedestal</a>
+              </li>
+              <li>
+                <a href="#">Wall</a>
+              </li>
+              <li>
+                <a href="#">Accessories</a>
+              </li>
+            </ul>
+          </div>
+          <div className="footer-column">
+            <h3>Subscribe</h3>
+            <p>Enter your email address to receive updates and promotions.</p>
+            <input
+              type="email"
+              placeholder="Email address"
+              className="footer-input"
+            />
+            <button className="footer-button">Subscribe</button>
+          </div>
+        </div>
+        <div className="footer-bottom">
+          <p>© 2025 Fanimation. All rights reserved.</p>
+          <div className="footer-icons">
+            <a href="#">
+              <img src="./images/icon-facebook.png" alt="Facebook" />
+            </a>
+            <a href="#">
+              <img src="./images/icon-tiktok.png" alt="Tiktok" />
+            </a>
+            <a href="#">
+              <img src="./images/icon-instagram.png" alt="Instagram" />
+            </a>
+            <a href="#">
+              <img src="./images/icon-youtube.png" alt="YouTube" />
+            </a>
+          </div>
+        </div>
+      </footer>
+    </>
   );
 }
 
