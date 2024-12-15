@@ -428,6 +428,9 @@ button {
 .home-space {
   margin-top: 100px;
 }
+.home-space-small {
+  margin-top: 20px;
+}
 
 .home-title {
   font-family: serif;
@@ -529,8 +532,8 @@ button {
   }
 
   .home-intro-grid-column-2 {
-    flex: 67%;
-    max-width: 70%;
+    flex: 82%;
+    max-width: 85%;
     margin: auto;
 
   }
@@ -645,7 +648,7 @@ button {
   font-size: calc(28px + 1vw);
   margin: auto;
   transition: 0.3s;
-  padding:10px;
+  padding:8px;
 }
 
 .latest-product-gallery-btn:hover {

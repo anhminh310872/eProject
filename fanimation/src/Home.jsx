@@ -14,7 +14,7 @@ function Home() {
                 </div> <br />
                 <button className="shop-now-btn" onClick={() => nav('/products')}>SHOP NOW</button>
             </section>
-            
+
             <section className="home-intro home-space">
                 <div className="home-title">Established in 1994</div>
                 <div className="home-intro-grid-row">
@@ -100,9 +100,9 @@ function Home() {
                             </Carousel.Caption>
                         </Carousel.Item>
                     </Carousel>
-                    <div className="latest-product-gallery-btn">
+                    <button className="latest-product-gallery-btn" onClick={() => nav('/products')}>
                         Learn More
-                    </div>
+                    </button>
                 </div>
             </section>
 
