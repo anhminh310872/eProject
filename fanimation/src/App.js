@@ -6,23 +6,32 @@ import AboutUs from './AboutUs';
 function App() {
   return (
     <div className="App">
-      <header id="navbar">
-          <nav>
-            <ul className="nav">
+      <header>
+        <nav className="navbar">
+          <div className="left-section">
+            <div className="logo">
+              <img src="logo.png" alt="Fanimation Logo" />
+            </div>
+            <ul className="nav-links">
               <li>
-                <Link to="/home">Home</Link>
+                <a href="#">Home</a>
               </li>
               <li>
-                <Link to="/products">Products</Link>
+                <a href="#">Products</a>
               </li>
               <li>
-                <Link to="/about-us">About Us</Link>
+                <a href="#">About Us</a>
               </li>
               <li>
-                <Link to="/contact-us">Contact Us</Link>
+                <a href="#">Contact Us</a>
               </li>
             </ul>
-          </nav>
+          </div>
+          <div className="right-section">
+            <input type="text" placeholder="Search..." className="search-box" />
+            <button className="search-button">Search</button>
+          </div>
+        </nav>
       </header>
 
       <Routes>
