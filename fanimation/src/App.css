@@ -65,7 +65,7 @@ header {
   top: 0;
   z-index: 1000;
   background-color: #C0A9A5;
-  transition: position 0.3s ease, top 0.3s ease;
+  transition: position 0.5s ease, top 0.5s ease;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   padding: 10px 0;
   height: 50px;
@@ -389,9 +389,9 @@ footer {
 .collections2024 {
   font-family: serif;
   font-size: calc(40px + 6vw);
-  color: white;
-  text-shadow: #51424A 0px 3px 4px, #51424A 0px 6px 4px;
-  transition: 0.3s;
+  color: #efeae7;
+  text-shadow: #51424A50 0px 3px 4px, #51424A50 0px 6px 4px;
+  transition: 0.5s;
 }
 
 .shop-now-btn {
@@ -406,7 +406,7 @@ footer {
   text-align: center;
   font-family: serif;
   font-size: calc(20px + 1.5vw);
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
 .shop-now-btn:hover {
@@ -418,7 +418,7 @@ footer {
   background-image: url('../public/images/home-banner-1.png');
   background-size: cover;
   padding: 90px 0px;
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
 button {
@@ -461,7 +461,7 @@ button {
   font-family: serif;
   font-size: calc(10px + 2vw);
   margin: 25px;
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
 .home-intro-btn:hover {
@@ -473,12 +473,10 @@ button {
   display: flex;
   flex-wrap: wrap;
   padding: 0 4px;
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
 .home-intro-grid-column {
-  flex: 30%;
-  max-width: 33%;
   padding: 0 4px;
 }
 
@@ -493,29 +491,36 @@ button {
   font-size: calc(5px + 1vw);
 }
 
+.home-intro-grid-column-1 {
+  flex: 25%;
+    max-width: 25%;
+}
+
 .home-intro-grid-column-2 {
-  margin-top: 25px;
+  flex: 50%;
+    max-width: 50%;
 }
 
 .home-intro-grid-column-3 {
-  margin-top: 50px;
+  flex: 25%;
+    max-width: 25%;
 }
 
 
 @media screen and (max-width: 1150px) {
   .home-intro-grid-column-1 {
-    flex: 27%;
-    max-width: 30%;
+    flex:15%;
+    max-width: 15%;
+  }
+
+  .home-intro-grid-column-2 {
+    flex: 70%;
+    max-width: 70%;
   }
 
   .home-intro-grid-column-3 {
     flex: 27%;
-    max-width: 30%;
-  }
-
-  .home-intro-grid-column-2 {
-    flex: 37%;
-    max-width: 40%;
+    max-width: 15%;
   }
 }
 
@@ -567,7 +572,7 @@ button {
   width: 300px;
   height: 530px;
   border-radius: 5px;
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
 .home-product-list-item:hover {
@@ -669,7 +674,7 @@ button {
   font-family: serif;
   font-size: calc(28px + 1vw);
   margin: auto;
-  transition: 0.3s;
+  transition: 0.5s;
   padding:8px;
 }
 
