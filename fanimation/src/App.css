@@ -394,11 +394,10 @@ footer {
   padding: 0;
 }
 
-/* Updated Links with Hover Effect */
 .footer-column ul li a {
   color: #ddd;
   text-decoration: none;
-  position: relative; /* Required for the ::after pseudo-element */
+  position: relative; 
   transition: color 0.3s;
 }
 
@@ -406,19 +405,19 @@ footer {
   content: '';
   position: absolute;
   left: 0;
-  bottom: -2px; /* Slightly below the text */
+  bottom: -2px; 
   width: 0;
-  height: 2px; /* Thickness of the underline */
-  background-color: #fff; /* White underline */
+  height: 2px; 
+  background-color: #fff; 
   transition: width 0.3s ease;
 }
 
 .footer-column ul li a:hover {
-  color: #fff; /* Highlight the text color */
+  color: #fff; 
 }
 
 .footer-column ul li a:hover::after {
-  width: 100%; /* Extend the underline to full width */
+  width: 100%; 
 }
 
 .footer-input {
