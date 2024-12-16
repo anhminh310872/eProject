@@ -41,7 +41,7 @@ function Home() {
             <section className="latest-product-gallery">
                 {/* update link to each individual category of item later */}
                 <div className="latest-product-gallery-carousel">
-                    <Carousel interval={8000} pause={'hover'} variant={'dark'}>
+                    <Carousel interval={5000} pause={'hover'} variant={'dark'}>
                         <Carousel.Item>
                             <img
                                 className="d-block w-100"
