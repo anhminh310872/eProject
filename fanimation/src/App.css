@@ -437,6 +437,7 @@ footer {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+
   font-weight: bold;
   transition: background-color 0.3s;
 }
@@ -470,4 +471,3 @@ footer {
   width: 120px;
   margin-bottom: 15px;
 }
-
