@@ -62,16 +62,16 @@ function App() {
             <h3>Quick Links</h3>
             <ul>
               <li>
-                <a href="#">Home</a>
+                <Link to="/">Home</Link>
               </li>
               <li>
-                <a href="#">Products</a>
+                <Link to="/products">Products</Link>
               </li>
               <li>
-                <a href="#">About Us</a>
+                <Link to="/about-us">About Us</Link>
               </li>
               <li>
-                <a href="#">Contact Us</a>
+                <Link to="/contact-us">Contact Us</Link>
               </li>
             </ul>
           </div>
@@ -79,19 +79,19 @@ function App() {
             <h3>Categories</h3>
             <ul>
               <li>
-                <a href="#">All Product</a>
+              <Link to="/allproducts">All Products</Link>
               </li>
               <li>
-                <a href="#">Ceiling</a>
+              <Link to="/ceiling">Ceiling</Link>
               </li>
               <li>
-                <a href="#">Pedestal</a>
+              <Link to="/Pedestal">Pedestal</Link>
               </li>
               <li>
-                <a href="#">Wall</a>
+              <Link to="/wall">Wall</Link>
               </li>
               <li>
-                <a href="#">Accessories</a>
+              <Link to="/accessories">Accessories</Link>
               </li>
             </ul>
           </div>
