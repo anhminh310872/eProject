@@ -58,7 +58,7 @@ function AboutUs() {
           <li>Page Load</li> <br />
           <li>Big data analysis</li>
         </ul>
-        <button>About Us</button>
+        <button>Contact Us</button>
       </div>
     </div>
   </section>
@@ -67,12 +67,6 @@ function AboutUs() {
     <h2>Our Founders</h2>
     <button>View All</button>
     <div className="founders">
-      <div className="founder">
-        {" "}
-        <img src="./images/Avatar.png" alt="Phuc Nguyen" />
-        <h4>Phuc Nguyen</h4>
-        <p>Programmer</p>
-      </div>
       <div className="founder">
         {" "}
         <img src="./images/Avatar.png" alt="Anh Minh" />
@@ -93,31 +87,6 @@ function AboutUs() {
       </div>
     </div>
   </section>
-  <footer>
-    <div className="contact-info">
-      <h2>Fanimation</h2>
-      <p>
-        <img src="./images/icon-phone.png" alt="" />
-        <a href="tel:+84123456789">0123 456 789</a>
-      </p>
-      <p>
-        <img src="./images/icon-email.png" alt="" />  
-        <a href="mailto:example@gmail.com">example@gmail.com</a>
-      </p>
-    </div>
-    <div className="contact-us">
-      <h2>Contact Us</h2>
-      <form>
-        <label htmlFor="name">Name:</label>
-        <input type="text" id="name" name="name" required="" />
-        <label htmlFor="phone">Phone:</label>
-        <input type="tel" id="phone" name="phone" required="" />
-        <label htmlFor="email">Email:</label>
-        <input type="email" id="email" name="email" required="" />
-        <button type="submit">Submit</button>
-      </form>
-    </div>
-  </footer>
   </>
   );
 }
