@@ -2,7 +2,8 @@ import './App.css';
 import { Link, Route, Routes, useNavigate } from 'react-router-dom';
 import Home from './Home';
 import AboutUs from './AboutUs';
-import Products from './allproduct'
+import Products from './allproduct';
+import ContactUs from './ContactUs';
 
 function App() {
   const nav = useNavigate();
@@ -35,7 +36,7 @@ function App() {
       </header>
 
       <Routes>
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/contact-us" element={<ContactUs />}/>
