@@ -781,3 +781,56 @@ button {
 .latest-product-gallery-btn:hover {
   background-color: #b17a7a;
 }
+
+body {
+  background-color: #fdf7f4; /* Màu nền trang web */
+  font-family: Arial, sans-serif; /* Font chữ cho toàn bộ trang */
+}
+.card{
+  display: block;
+  background-color: #dfb6b2;
+  position: absolute;
+  left: 0; /* Đặt box sát bên trái trang */
+  top: 50%; /* Đặt box giữa trang theo chiều dọc */
+  transform: translateY(-40%); /* Điều chỉnh để căn giữa chính xác */ 
+  width: 350px; /* Tăng chiều rộng */
+  height: 350px; /* Tăng chiều cao nếu cần */
+  border-radius: 5px;
+  /*border: 3px solid #0f0f0f; /* Viền màu cam với độ dày 3px */
+  left: 5%;
+}
+.card h3{
+  margin-top: 3px;
+}
+
+.contact-us button:hover {
+  background-color: #000;
+}
+
+.hinhsp {
+  width: 230px;
+  height: 230px;
+  object-fit: contain;
+  background-color: #fff;
+  border-radius: 10px; /* Bo góc hình ảnh */
+  margin-top: 5%;
+  
+}
+
+.buynow {
+  display: inline-block; /* Cho phép box bao toàn bộ nội dung */
+  padding: 10px 10px;
+  background-color: #75616A;
+  color: #fff;
+  text-decoration: none;
+  margin-top: -40px;
+  border-radius: 8px;
+  box-shadow: 0 10px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease;
+  
+}
+
+.buynow:hover {
+  background-color: #252034;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
