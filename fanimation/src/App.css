@@ -628,9 +628,31 @@ button {
   text-shadow: #fff 2px 2px 0, #fff 2px -2px 0, #fff -2px 2px 0, #fff -2px -2px 0, #fff 2px 0 0, #fff -2px 0 0, #fff 0 2px 0, #fff 0 -2px 0;
 }
 
+.latest-product-gallery-caption-small {
+  text-shadow: #fff 2px 2px 0, #fff 2px -2px 0, #fff -2px 2px 0, #fff -2px -2px 0, #fff 2px 0 0, #fff -2px 0 0, #fff 0 2px 0, #fff 0 -2px 0;
+  display: none;
+  visibility: hidden;
+}
+
 @media screen and (max-width: 1050px){
   .latest-product-gallery-carousel {
     width: 80%;
+    padding: 30px;
+  }
+}
+
+@media screen and (max-width: 800px){
+  .latest-product-gallery-caption {
+    display: none;
+  visibility: hidden;
+  }
+  .latest-product-gallery-caption-small {
+    display:contents;
+    visibility: visible;
+  }
+  .latest-product-gallery-carousel {
+    width: 93%;
+    padding: 15px;
   }
 }
 

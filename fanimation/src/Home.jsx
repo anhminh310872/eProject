@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.css';
 import Carousel from 'react-bootstrap/Carousel';
-import CarouselCaption from 'react-bootstrap/CarouselCaption'
 
 function Home() {
     const nav = useNavigate();
@@ -55,6 +54,10 @@ function Home() {
                                     <h4>KDK W56WV Ceiling Fan</h4>
                                     <p>5.690.000 đ</p>
                                 </div>
+                                <div className="latest-product-gallery-caption-small">
+                                    <h6>KDK W56WV Ceiling Fan</h6>
+                                    <p>5.690.000 đ</p>
+                                </div>
                             </Carousel.Caption>
                         </Carousel.Item>
                         <Carousel.Item>
@@ -67,6 +70,10 @@ function Home() {
                             <Carousel.Caption>
                                 <div className="latest-product-gallery-caption">
                                     <h4>KDK M56XR Ceiling Fan</h4>
+                                    <p>3.390.000 đ</p>
+                                </div>
+                                <div className="latest-product-gallery-caption-small">
+                                    <h6>KDK M56XR Ceiling Fan</h6>
                                     <p>3.390.000 đ</p>
                                 </div>
                             </Carousel.Caption>
@@ -83,6 +90,10 @@ function Home() {
                                     <h4>Kangaroo KGSF056051 Ceiling Fan</h4>
                                     <p>2.290.000 đ</p>
                                 </div>
+                                <div className="latest-product-gallery-caption-small">
+                                    <h6>Kangaroo KGSF056051 Ceiling Fan</h6>
+                                    <p>2.290.000 đ</p>
+                                </div>
                             </Carousel.Caption>
                         </Carousel.Item>
                         <Carousel.Item>
@@ -95,6 +106,10 @@ function Home() {
                             <Carousel.Caption>
                                 <div className="latest-product-gallery-caption">
                                     <h4>Mitsubishi C56-RA5 CY-GY</h4>
+                                    <p>5.490.000 đ</p>
+                                </div>
+                                <div className="latest-product-gallery-caption-small">
+                                    <h6>Mitsubishi C56-RA5 CY-GY</h6>
                                     <p>5.490.000 đ</p>
                                 </div>
                             </Carousel.Caption>
