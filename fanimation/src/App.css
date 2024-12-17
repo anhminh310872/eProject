@@ -71,6 +71,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
+  height:80px;
 }
 
 
@@ -90,6 +91,7 @@ body {
   list-style: none;
   display: flex;
   gap: 25px;
+  margin-bottom:0px;
 }
 
 .nav-links li a {
@@ -111,6 +113,7 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
+  margin-right:20px;
 }
 
 .search-box {
@@ -547,7 +550,6 @@ button {
   width: calc(40vw + 300px);
   margin: auto;
   padding-bottom: 16px;
-  border-radius: 16px;
 }
 
 .home-intro {

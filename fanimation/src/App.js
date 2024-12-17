@@ -1,23 +1,22 @@
 import './App.css';
-import { Link, Route, Routes } from 'react-router-dom';
+import { Link, Route, Routes, useNavigate } from 'react-router-dom';
 import Home from './Home';
 import AboutUs from './AboutUs';
 import Products from './allproduct';
 import Contactus from './Contactus';
 
 function App() {
+  const nav = useNavigate();
+
   return (
     <div className="App">
       <header>
         <nav className="navbar">
           <div className="left-section">
             <div className="logo">
-              <img src="./images/logo.png" alt="Fanimation Logo" />
+              <img src="./images/logo.png" alt="Fanimation Logo" onClick={() => nav('/')}/>
             </div>
             <ul className="nav-links">
-              <li>
-                <Link to="/">Home</Link>
-              </li>
               <li>
                 <Link to="/products">Products</Link>
               </li>
@@ -37,7 +36,7 @@ function App() {
       </header>
 
       <Routes>
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/Contactus" element={<Contactus />} />
