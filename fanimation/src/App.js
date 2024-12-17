@@ -3,7 +3,7 @@ import { Link, Route, Routes, useNavigate } from 'react-router-dom';
 import Home from './Home';
 import AboutUs from './AboutUs';
 import Products from './allproduct';
-import Contactus from './Contactus';
+import ContactUs from './ContactUs';
 
 function App() {
   const nav = useNavigate();
@@ -24,7 +24,7 @@ function App() {
                 <Link to="/about-us">About Us</Link>
               </li>
               <li>
-                <Link to="/Contactus">Contact Us</Link>
+                <Link to="/Contact-us">Contact Us</Link>
               </li>
             </ul>
           </div>
@@ -39,7 +39,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products />} />
         <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/Contactus" element={<Contactus />} />
+        <Route path="/Contact-us" element={<ContactUs />} />
       </Routes>
 
       <footer>
@@ -72,7 +72,7 @@ function App() {
                 <Link to="/about-us">About Us</Link>
               </li>
               <li>
-                <Link to="/Contactus">Contact Us</Link>
+                <Link to="/Contact-us">Contact Us</Link>
               </li>
             </ul>
           </div>
