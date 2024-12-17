@@ -2,7 +2,8 @@ import './App.css';
 import { Link, Route, Routes } from 'react-router-dom';
 import Home from './Home';
 import AboutUs from './AboutUs';
-import Products from './allproduct'
+import Products from './allproduct';
+import Contactus from './Contactus';
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
                 <Link to="/about-us">About Us</Link>
               </li>
               <li>
-                <Link to="/contact-us">Contact Us</Link>
+                <Link to="/Contactus">Contact Us</Link>
               </li>
             </ul>
           </div>
@@ -39,7 +40,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/products" element={<Products />} />
         <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/contact-us" />
+        <Route path="/Contactus" element={<Contactus />} />
       </Routes>
 
       <footer>
@@ -72,7 +73,7 @@ function App() {
                 <Link to="/about-us">About Us</Link>
               </li>
               <li>
-                <Link to="/contact-us">Contact Us</Link>
+                <Link to="/Contactus">Contact Us</Link>
               </li>
             </ul>
           </div>
