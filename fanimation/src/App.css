@@ -366,7 +366,13 @@ section {
 .team-section button:hover {
   background-color: #333;
 }
+.logo {
+  filter: invert(100%);
+}
 
+.footer-logo{
+  filter: invert(100%);
+}
 .App footer {
   text-align: left;
 }

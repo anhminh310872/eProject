@@ -12,7 +12,7 @@ function App() {
         <nav className="navbar">
           <div className="left-section">
             <div className="logo">
-              <img src="logo.png" alt="Fanimation Logo" />
+              <img src="./images/logo.png" alt="Fanimation Logo" />
             </div>
             <ul className="nav-links">
               <li>
