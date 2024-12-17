@@ -1,21 +1,22 @@
+import React, { useState } from 'react';
 import './App.css';
-import { Link, Route, Routes } from 'react-router-dom';
+import { Link, Route, Routes, useNavigate } from 'react-router-dom';
 import Home from './Home';
 import AboutUs from './AboutUs';
+import Products from './allproduct';
+import ContactUs from './Contactus';
 
 function App() {
+  const navigate = useNavigate();
   return (
     <div className="App">
       <header>
         <nav className="navbar">
           <div className="left-section">
-            <div className="logo">
-              <img src="logo.png" alt="Fanimation Logo" />
+            <div className="logo" onClick={() => navigate('/')}>
+              <img src="./images/logo.png" alt="Fanimation Logo" />
             </div>
             <ul className="nav-links">
-              <li>
-                <Link to="/">Home</Link>
-              </li>
               <li>
                 <Link to="/products">Products</Link>
               </li>
@@ -34,11 +35,12 @@ function App() {
         </nav>
       </header>
 
+
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/products" />
+        <Route path="/products" element={<Products />} />
         <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/contact-us" />
+        <Route path="/contact-us" element={<ContactUs />} />
       </Routes>
 
       <footer>
@@ -71,7 +73,7 @@ function App() {
                 <Link to="/about-us">About Us</Link>
               </li>
               <li>
-                <Link to="/contact-us">Contact Us</Link>
+                <Link to="/Contact-us">Contact Us</Link>
               </li>
             </ul>
           </div>
@@ -79,19 +81,19 @@ function App() {
             <h3>Categories</h3>
             <ul>
               <li>
-              <Link to="/allproducts">All Products</Link>
+                <Link to="/allproducts">All Products</Link>
               </li>
               <li>
-              <Link to="/ceiling">Ceiling</Link>
+                <Link to="/ceiling">Ceiling</Link>
               </li>
               <li>
-              <Link to="/Pedestal">Pedestal</Link>
+                <Link to="/Pedestal">Pedestal</Link>
               </li>
               <li>
-              <Link to="/wall">Wall</Link>
+                <Link to="/wall">Wall</Link>
               </li>
               <li>
-              <Link to="/accessories">Accessories</Link>
+                <Link to="/accessories">Accessories</Link>
               </li>
             </ul>
           </div>
