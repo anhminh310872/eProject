@@ -1,24 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-function Products() {
-    return (
-        <>
+
+function Products({ data }) {
+  const [dt] = useState(data);
+  
+  return (
+    <>
       <div>
-          <h1>cai nay lam filter</h1>
+        <h1>cai nay lam filter</h1>
       </div>
-      <div className="card" style={{ width: "18rem" }}  >
-       <img src="/images/3bladepana.png" alt="Example Image" className='hinhsp' />
-
-        <h3>Panasonic FDL</h3>
-
-    
-        <a href="#" className="buynow">
-          Buy Now
-        </a>
-    
+      <div className="product-list">
+      {dt.map((f, index) =>          
+        <div className="product-card" key={index}>
+          <div className="product-card-img-container">
+          <img src={`./images/products/${f.Images}`} className="product-card-img" alt="" />
+          </div>
+          <div className="product-card-name">
+          {f.Brand} - {f.Name}
+          </div>
+          <div className="product-card-btn">
+            Buy now
+          </div>
+        </div>
+        )}
       </div>
-     
-  </>
+    </>
   );
 }
 

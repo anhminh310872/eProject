@@ -4,6 +4,7 @@ import Home from './Home';
 import AboutUs from './AboutUs';
 import Products from './allproduct';
 import ContactUs from './ContactUs';
+import product from './product.json';
 
 function App() {
   const nav = useNavigate();
@@ -37,7 +38,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/products" element={<Products />} />
+        <Route path="/products" element={<Products data={product}/>} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/contact-us" element={<ContactUs />}/>
       </Routes>
