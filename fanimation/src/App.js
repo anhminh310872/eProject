@@ -3,7 +3,7 @@ import { Link, Route, Routes, useNavigate } from 'react-router-dom';
 import Home from './Home';
 import AboutUs from './AboutUs';
 import Products from './allproduct';
-import ContactUs from './ContactUs';
+import Contactus from './Contactus';
 
 function App() {
   const nav = useNavigate();
@@ -14,7 +14,7 @@ function App() {
         <nav className="navbar">
           <div className="left-section">
             <div className="logo">
-              <img src="logo.png" alt="Fanimation Logo" onClick={() => nav('/')}/>
+              <img src="./images/logo.png" alt="Fanimation Logo" onClick={() => nav('/')}/>
             </div>
             <ul className="nav-links">
               <li>
@@ -24,7 +24,7 @@ function App() {
                 <Link to="/about-us">About Us</Link>
               </li>
               <li>
-                <Link to="/contact-us">Contact Us</Link>
+                <Link to="/Contactus">Contact Us</Link>
               </li>
             </ul>
           </div>
@@ -39,7 +39,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products />} />
         <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/contact-us" element={<ContactUs />}/>
+        <Route path="/Contactus" element={<Contactus />} />
       </Routes>
 
       <footer>
@@ -72,7 +72,7 @@ function App() {
                 <Link to="/about-us">About Us</Link>
               </li>
               <li>
-                <Link to="/contact-us">Contact Us</Link>
+                <Link to="/Contactus">Contact Us</Link>
               </li>
             </ul>
           </div>
