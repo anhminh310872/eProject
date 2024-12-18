@@ -13,9 +13,6 @@ function App() {
       <header>
         <nav className="navbar">
           <div className="left-section">
-            <div className="logo" onClick={() => navigate('/')}>
-              <img src="./images/logo.png" alt="Fanimation Logo" />
-            </div>
             <ul className="nav-links">
               <li>
                 <Link to="/products">Products</Link>
@@ -26,11 +23,23 @@ function App() {
               <li>
                 <Link to="/contact-us">Contact Us</Link>
               </li>
+              <li>
+              <input type="text" placeholder="Search..." className="search-box" />
+              </li>
+              <li>
+              <button className="search-button">Search</button>
+              </li>
             </ul>
           </div>
           <div className="right-section">
-            <input type="text" placeholder="Search..." className="search-box" />
-            <button className="search-button">Search</button>
+            <div className="logo" onClick={() => navigate('/')}>
+              <img src="./images/logo.png" alt="Fanimation Logo" />
+            </div>
+            <div className="auth-icons">
+              <Link to="/login" className="auth-icon">
+                <i className="fas fa-user"></i>
+              </Link>
+            </div>
           </div>
         </nav>
       </header>

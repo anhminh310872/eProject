@@ -147,8 +147,6 @@ function Products() {
                             name="price-from"
                             min={0}
                           />
-                        </label>
-                        <label>
                           <input
                             type="number"
                             placeholder="To..."
@@ -157,7 +155,7 @@ function Products() {
                           />
                         </label>
                         <br />
-                        <button className="apply-button">Apply</button>
+                        <button className="apply-button" id='button-price'>Apply</button>
                       </th>
                     </tr>
                   </tbody>
@@ -243,15 +241,11 @@ function Products() {
                       </td>
                     </tr>
                   </tbody>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <button className="clear-button">Clear</button>
-                        <button className="apply-button">Apply</button>
-                      </td>
-                    </tr>
-                  </tbody>
                 </table>
+              </div>
+              <div className="buttons-container">
+                <button className="clear-button">Clear</button>
+                <button className="apply-button">Apply</button>
               </div>
             </div>
           </div>
