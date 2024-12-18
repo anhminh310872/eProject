@@ -3,7 +3,7 @@ import { Link, Route, Routes, useNavigate } from 'react-router-dom';
 import Home from './Home';
 import AboutUs from './AboutUs';
 import Products from './allproduct';
-import ContactUs from './ContactUs';
+import ContactUs from './Contactus';
 
 function App() {
   const nav = useNavigate();
