@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -162,6 +164,19 @@ const BlurBackground = styled.div`
 `;
 
 function Login() {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault(); 
+
+    if (username === 'QuocBao' && password === '1234') {
+      navigate('/home');
+    } 
+  };
   return (
     <Container>
       <SlidingBackground />
@@ -170,14 +185,26 @@ function Login() {
         <div className="login-container">
           <div className="login-form">
             <h2><strong>Login</strong></h2>
-            <form action="#" method="post">
+            <form action="#" method="post" onSubmit={handleSubmit}>
               <div className="input-group">
                 <label htmlFor="username">User Name:</label>
-                <input type="text" id="username" name="username" required />
+                <input
+                  type="text"
+                  id="username"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)} 
+                  required
+                />
               </div>
               <div className="input-group">
                 <label htmlFor="password">Password:</label>
-                <input type="password" id="password" name="password" required />
+                <input
+                  type="password"
+                  id="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)} 
+                  required
+                />
               </div>
               <div className="options">
                 <div className="remember">
