@@ -1133,13 +1133,14 @@ body {
 }
 
 .product-card {
-  background-color: #dfb6bd;
+  background-color: #efeae7;
   border-radius: 10px;
   width: 300px;
   height: auto;
   padding: 30px;
   margin: 15px;
   box-shadow: #00000030 0 6px 6px;
+  transition: top ease 0.5s;
 }
 
 .product-card-img-container {
@@ -1156,6 +1157,7 @@ body {
   width: 240px;
   height: auto;
   margin: auto;
+  border-radius: 7px;
 }
 
 .product-card-name {
