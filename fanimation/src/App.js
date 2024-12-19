@@ -1,21 +1,21 @@
+import React, { useState } from 'react';
 import './App.css';
-import { Link, Route, Routes, useNavigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Home from './Home';
 import AboutUs from './AboutUs';
 import Products from './allproduct';
 import ContactUs from './Contactus';
+import Login from './Login';
+import SignUp from './SignUp';
 
 function App() {
-  const nav = useNavigate();
-
+  const navigate = useNavigate();
   return (
     <div className="App">
       <header>
         <nav className="navbar">
           <div className="left-section">
-            <div className="logo">
-              <img src="./images/logo.png" alt="Fanimation Logo" onClick={() => nav('/')}/>
-            </div>
             <ul className="nav-links">
               <li>
                 <Link to="/products">Products</Link>
@@ -26,20 +26,35 @@ function App() {
               <li>
                 <Link to="/Contact-us">Contact Us</Link>
               </li>
+              <li>
+              <input type="text" placeholder="Search..." className="search-box" />
+              </li>
+              <li>
+              <button className="search-button">Search</button>
+              </li>
             </ul>
           </div>
           <div className="right-section">
-            <input type="text" placeholder="Search..." className="search-box" />
-            <button className="search-button">Search</button>
+            <div className="logo" onClick={() => navigate('/')}>
+              <img src="./images/logo.png" alt="Fanimation Logo" />
+            </div>
+            <div className="auth-icons">
+              <Link to="/login" className="auth-icon">
+                <i className="fas fa-user"></i>
+              </Link>
+            </div>
           </div>
         </nav>
       </header>
 
+
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/products" element={<Products />} />
         <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/Contact-us" element={<ContactUs />} />
+        <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
       </Routes>
 
       <footer>
@@ -80,19 +95,19 @@ function App() {
             <h3>Categories</h3>
             <ul>
               <li>
-              <Link to="/allproducts">All Products</Link>
+                <Link to="/allproducts">All Products</Link>
               </li>
               <li>
-              <Link to="/ceiling">Ceiling</Link>
+                <Link to="/ceiling">Ceiling</Link>
               </li>
               <li>
-              <Link to="/Pedestal">Pedestal</Link>
+                <Link to="/Pedestal">Pedestal</Link>
               </li>
               <li>
-              <Link to="/wall">Wall</Link>
+                <Link to="/wall">Wall</Link>
               </li>
               <li>
-              <Link to="/accessories">Accessories</Link>
+                <Link to="/accessories">Accessories</Link>
               </li>
             </ul>
           </div>
