@@ -24,7 +24,7 @@ function App() {
                 <Link to="/about-us">About Us</Link>
               </li>
               <li>
-                <Link to="/contact-us">Contact Us</Link>
+                <Link to="/Contact-us">Contact Us</Link>
               </li>
               <li>
               <input type="text" placeholder="Search..." className="search-box" />
