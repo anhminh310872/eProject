@@ -6,6 +6,7 @@ import AboutUs from './AboutUs';
 import Products from './allproduct';
 import ContactUs from './Contactus';
 import Login from './Login';
+import SignUp from './SignUp';
 
 function App() {
   const navigate = useNavigate();
@@ -52,6 +53,7 @@ function App() {
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
       </Routes>
 
       <footer>

@@ -2,14 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
-  body {
+    body {
     margin: 0;
     overflow-x: hidden;
     height: 100vh;
   }
 
   .sliding-background {
-    background-image: url("/images/TriAire-Hero.png");
+    background-image: url("/images/mad8531-pd-hero.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
@@ -43,7 +43,7 @@ const Container = styled.div`
     height: 100vh;
   }
 
-  .login-container {
+  .signup-container {
     width: 50%;
     background-color: transparent;
     border: 4px solid rgba(255, 255, 255);
@@ -53,7 +53,7 @@ const Container = styled.div`
     z-index: 999;
   }
 
-  .login-form h2 {
+  .signup-form h2 {
     color: white;
     text-align: center;
     margin-bottom: 20px;
@@ -80,12 +80,6 @@ const Container = styled.div`
     outline: none;
   }
 
-  .login-form a {
-    color: white;
-    text-decoration: none;
-    font-style: italic;
-  }
-
   button {
     display: block;
     width: 50%;
@@ -98,31 +92,14 @@ const Container = styled.div`
     cursor: pointer;
   }
 
-  .options {
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 15px;
-    align-items: center;
-  }
-
-  .signupnow {
-    color: white;
-    text-decoration: none;
-    font-style: italic;
-    display: block;
-    margin: 10px auto;
-    width: fit-content;
-  }
-
-  .social-login {
+  .social-signup {
     display: flex;
     justify-content: center;
     margin-top: 20px;
     gap: 50px;
   }
 
-  .social-login img {
+  .social-signup img {
     width: 30px;
     height: 30px;
     margin: 0 5px;
@@ -133,13 +110,13 @@ const Container = styled.div`
     color: white;
   }
 
-  .social-login a img:hover {
+  .social-signup a img:hover {
     transform: scale(1.2);
   }
 `;
 
 const SlidingBackground = styled.div`
-  background-image: url("/images/TriAire-Hero.png");
+  background-image: url("/images/mad8531-pd-hero.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
@@ -161,49 +138,48 @@ const BlurBackground = styled.div`
   margin-bottom: 0;
 `;
 
-function Login() {
+function SignUp() {
   return (
     <Container>
       <SlidingBackground />
       <BlurBackground />
       <main>
-        <div className="login-container">
-          <div className="login-form">
-            <h2><strong>Login</strong></h2>
-            <form action="#" method="post">
-              <div className="input-group">
-                <label htmlFor="username">User Name:</label>
-                <input type="text" id="username" name="username" required />
+              <div className="signup-container">
+                  <div className="signup-form">
+                      <h2><strong>Sign Up</strong></h2>
+                      <form action="#" method="post">
+                          <div className="input-group">
+                              <label htmlFor="email">Email:</label>
+                              <input type="email" id="email" name="email" required />
+                          </div>
+                          <div className="input-group">
+                              <label htmlFor="username">User Name:</label>
+                              <input type="text" id="username" name="username" required />
+                          </div>
+                          <div className="input-group">
+                              <label htmlFor="password">Password:</label>
+                              <input type="password" id="password" name="password" required />
+                          </div>
+                          <div className="input-group">
+                              <label htmlFor="comfirm-password">Còmirm Password:</label>
+                              <input type="comfirm-password" id="comfirm-password" name="comfirm-password" required />
+                          </div>
+                          <button type="submit"><strong>SIGN UP NOW</strong></button>
+                          <div className="social-signup">
+                              <a href="#">
+                                  <img src="/images/icon-facebookblue.png" alt="Facebook" />
+                              </a>
+                              <a href="#">
+                                  <img src="/images/icon-google.png" alt="Google" />
+                              </a>
+                          </div>
+                      </form>
+                  </div>
               </div>
-              <div className="input-group">
-                <label htmlFor="password">Password:</label>
-                <input type="password" id="password" name="password" required />
-              </div>
-              <div className="options">
-                <div className="remember">
-                  <input type="checkbox" id="remember" name="remember" />
-                  <label htmlFor="remember">Remember me</label>
-                </div>
-                <a href="#">Forget Password?</a>
-              </div>
-              <button type="submit"><strong>LOGIN </strong></button>
-              <a className="signupnow" href="/signup">
-                Not a member? Sign Up Now
-              </a>
-              <div className="social-login">
-                <a href="#">
-                  <img src="/images/icon-facebookblue.png" alt="Facebook" />
-                </a>
-                <a href="#">
-                  <img src="/images/icon-google.png" alt="Google" />
-                </a>
-              </div>
-            </form>
-          </div>
-        </div>
       </main>
+
     </Container>
   );
 }
 
-export default Login;
+export default SignUp;
