@@ -8,6 +8,7 @@ import Products from './allproduct';
 import ContactUs from './Contactus';
 import Login from './Login';
 import SignUp from './SignUp';
+import product from './product.json';
 
 function App() {
   const navigate = useNavigate();
@@ -50,7 +51,7 @@ function App() {
 
       <Routes>
         <Route path="/home" element={<Home />} />
-        <Route path="/products" element={<Products />} />
+        <Route path="/products" element={<Products data={product} />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/login" element={<Login />} />

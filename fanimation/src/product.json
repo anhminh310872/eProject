@@ -1,0 +1,231 @@
+[
+    {
+      "Category": "Ceiling",
+      "Name": "F-60MZ2",
+      "Images": "10020147-quat-tran-panasonic-f-60mz2.jpg",
+      "Price": 54.72,
+      "Brand": "Panasonic",
+      "Blade": "3",
+      "Color": "white",
+      "ID": "1"
+    },
+    {
+      "Category": "Ceiling",
+      "Name": "N56YG",
+      "Images": "10010567-quat-tran-kdk-n56yg-mau-nau-dam.jpg",
+      "Price": 66.54,
+      "Brand": "KDK",
+      "Blade": 3,
+      "Color": [
+        "brown",
+        "black"
+      ],
+      "ID": "2"
+    },
+    {
+      "Category": "Ceiling",
+      "Name": "M56XR",
+      "Images": "10008672-quat-tran-kdk-m56xr-mau-vang-1.jpg",
+      "Price": 133.46,
+      "Brand": "KDK",
+      "Blade": 4,
+      "Color": "Yellow",
+      "ID": "3"
+    },
+    {
+      "Category": "Ceiling",
+      "Name": "F-56MPG-GO",
+      "Images": "10001771-quat-tran-panasonic-f-56mpg-go.jpg",
+      "Price": 117.72,
+      "Brand": "Panasonic",
+      "Blade": 4,
+      "Color": [
+        "yellow",
+        "grey"
+      ],
+      "ID": "4"
+    },
+    {
+      "Category": "Ceiling",
+      "Name": "T60DW",
+      "Images": "10023282-quat-tran-kdk-t60dw.jpg",
+      "Price": 285.43,
+      "Brand": "KDK",
+      "Blade": 5,
+      "Color": [
+        "white",
+        "grey"
+      ],
+      "ID": "5"
+    },
+    {
+      "Category": "Ceiling",
+      "Name": "W56WV",
+      "Images": "W56WVĐEN.jpg",
+      "Price": 285.43,
+      "Brand": "KDK",
+      "Blade": 4,
+      "Color": "black",
+      "ID": "6"
+    },
+    {
+      "Category": "Ceiling",
+      "Name": "C56-RA4 SF-GY",
+      "Images": "sfgy3-700x467.jpg",
+      "Price": 149.21,
+      "Brand": "Mitsubishi",
+      "Blade": 4,
+      "Color": [
+        "white",
+        "grey"
+      ],
+      "ID": "7"
+    },
+    {
+      "Category": "Ceiling",
+      "Name": "C56-RA5 CY-GY",
+      "Images": "ra5cygy2-700x467.jpg",
+      "Price": 216.14,
+      "Brand": "Mitsubishi",
+      "Blade": 5,
+      "Color": "black",
+      "ID": "8"
+    },
+    {
+      "Category": "Ceiling",
+      "Name": "KGSF056051",
+      "Images": "quattrankangarookgsf0560516-1-1-700x467.jpg",
+      "Price": 90.16,
+      "Brand": "Kangaroo",
+      "Blade": 5,
+      "Color": "white",
+      "ID": "9"
+    },
+    {
+      "Category": "Ceiling",
+      "Name": "F-56XPG-W",
+      "Images": "quat-tran-panasonic-f-56xpg-w-1-638610574169660682-700x467.jpg",
+      "Price": 137.4,
+      "Brand": "Panasonic",
+      "Blade": 4,
+      "Color": "white",
+      "ID": "10"
+    },
+    {
+      "Category": "pedestal",
+      "Name": "SHD7223",
+      "Images": "qua-t-sa-c-dien-sunhouse-shd7223-1-700x467.jpg",
+      "Price": 66.54,
+      "Brand": "Sunhouse",
+      "Blade": 5,
+      "Color": "white",
+      "ID": "11"
+    },
+    {
+      "Category": "pedestal",
+      "Name": "VY636790",
+      "Images": "10051530-quat-san-asiavina-vy636790-xam.jpg",
+      "Price": 27.17,
+      "Brand": "Asiavina",
+      "Blade": 6,
+      "Color": [
+        "white",
+        "grey"
+      ],
+      "ID": "12"
+    },
+    {
+      "Category": "pedestal",
+      "Name": "BD1012",
+      "Images": "10046884-quat-ban-senko-bd1012-kem-mon-1.jpg",
+      "Price": 12.6,
+      "Brand": "Senko",
+      "Blade": 3,
+      "Color": [
+        "grey",
+        "blue",
+        "purple"
+      ],
+      "ID": "13"
+    },
+    {
+      "Category": "pedestal",
+      "Name": "DTS1609",
+      "Images": "10057586-Quạt_đứng_Senko_DTS16091.jpg",
+      "Price": 15.75,
+      "Brand": "Senko",
+      "Blade": 3,
+      "Color": [
+        "black",
+        "orange"
+      ],
+      "ID": "14"
+    },
+    {
+      "Category": "pedestal",
+      "Name": "LV16-RB SF-GY",
+      "Images": "10057401-quat-dung-mitsibishi-lv16-rb-sf-gy-xam-nhat-1.jpg",
+    "Price": 94.09,
+    "Brand": "Mitsubishi",
+    "Blade": 3,
+    "Color": "grey",
+    "ID": "15"
+  },
+  {
+    "Category": "pedestal",
+    "Name": "F-LSA10(W)VN",
+    "Images": "quat-dung-toshiba-f-lsa10-w-vn-trang-1-2-700x467.jpg",
+    "Price": 45.28,
+    "Brand": "Toshiba",
+    "Blade": 5,
+    "Color": "white",
+    "ID": "16"
+  },
+  {
+    "Category": "pedestal",
+    "Name": "SHD7223",
+    "Images": "10050606-quat-sac-dien-sunhouse-shd7223-2.jpg",
+    "Price": 56.89,
+    "Brand": "Sunhouse",
+    "Blade": 5,
+    "Color": "white",
+    "ID": "17"
+  },
+  {
+    "Category": "pedestal",
+    "Name": "PJ-S40MV-LG",
+    "Images": "quat-dung-sharp-pj-s40mv-lg-1-700x467.jpg",
+    "Price": 65,
+    "Brand": "Sharp",
+    "Blade": 5,
+    "Color": [
+      "white",
+      "grey"
+    ],
+    "ID": "18"
+  },
+  {
+    "Category": "pedestal",
+    "Name": "PJ-L40RV-DG",
+    "Images": "dung-sharp-pj-l40rv-dg-1-700x467.jpg",
+    "Price": 42.48,
+    "Brand": "Sharp",
+    "Blade": 3,
+    "Color": "black",
+    "ID": "19"
+  },
+  {
+    "Category": "pedestal",
+    "Name": "KG745",
+    "Images": "quat-sac-dien-kangaroo-5-canh-kg745-24w-1-700x467.jpg",
+    "Price": 54.72,
+    "Brand": "Kangaroo",
+    "Blade": 5,
+    "Color": [
+      "grey",
+      "white",
+      "blue"
+    ],
+    "ID": "20"
+  }
+]

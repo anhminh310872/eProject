@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-function Products() {
+function Products({ data }) {
   const nav = useNavigate();
   const [showSecondaryNavbar, setShowSecondaryNavbar] = useState(true);
   const [showFilterBox, setShowFilterBox] = useState(false);
@@ -15,6 +15,9 @@ function Products() {
     e.preventDefault();
     setShowFilterBox((prev) => !prev);
   };
+
+  const [dt] = useState(data);
+
   return (
     <>
       <nav className={`secondary-navbar ${showSecondaryNavbar ? 'visible' : ''}`} id="secondary-navbar">
@@ -251,16 +254,20 @@ function Products() {
           </div>
         </div>
       </nav>
-      <div className="card" style={{ width: "18rem" }}  >
-        <img src="/images/3bladepana.png" alt="Example Image" className='hinhsp' />
-
-        <h3>Panasonic FDL</h3>
-
-
-        <a href="#" className="buynow">
-          Buy Now
-        </a>
-
+      <div className="product-list">
+      {dt.map((f, index) =>          
+        <div className="product-card" key={index}>
+          <div className="product-card-img-container">
+          <img src={`./images/products/${f.Images}`} className="product-card-img" alt="" />
+          </div>
+          <div className="product-card-name">
+          {f.Brand} - {f.Name}
+          </div>
+          <div className="product-card-btn">
+            Buy now
+          </div>
+        </div>
+        )}
       </div>
 
     </>
