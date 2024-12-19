@@ -5,6 +5,7 @@ import Home from './Home';
 import AboutUs from './AboutUs';
 import Products from './allproduct';
 import ContactUs from './Contactus';
+import Login from './Login';
 
 function App() {
   const navigate = useNavigate();
@@ -50,6 +51,7 @@ function App() {
         <Route path="/products" element={<Products />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
 
       <footer>

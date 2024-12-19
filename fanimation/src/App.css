@@ -141,7 +141,7 @@ body {
 }
 
 .search-button {
-  padding: 8px 15px;
+  padding: 8px 20px;
   border: none;
   border-radius: 20px;
   background-color: #4A3B4A;
@@ -684,6 +684,8 @@ footer {
   background: linear-gradient(45deg, #6C5F66, #282538); 
   color: #fff;
   padding: 20px 10px;
+  position: relative; /* Đảm bảo footer không bị di chuyển */
+  z-index: 1;
 }
 
 .footer-top {
