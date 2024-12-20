@@ -5,7 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import Home from './Home';
 import AboutUs from './AboutUs';
 import Products from './allproduct';
-import ContactUs from './Contactus';
+import ContactUs from './ContactUs';
 import Login from './Login';
 import SignUp from './SignUp';
 import product from './product.json';
