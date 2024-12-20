@@ -1185,25 +1185,21 @@ body {
   cursor: pointer;
 }
 
-.box-in4 {
+.box-in4{
   display: block;
   background-color: #CBC1BF;
   position: static;
   margin-top: 350px;
-  transform: translateY(-40%);
-  /* Điều chỉnh để căn giữa chính xác */
-  width: 500px;
-  /* Tăng chiều rộng */
-  height: auto;
-  /* Tăng chiều cao nếu cần */
+  transform: translateY(-40%); /* Điều chỉnh để căn giữa chính xác */ 
+  width: 500px; /* Tăng chiều rộng */
+  height: auto; /* Tăng chiều cao nếu cần */
   border-radius: 5px;
 }
-
-.box-in4 h3 {
+.box-in4 h3{
   padding-top: 40px;
   font-size: 36px;
   font-family: Arial, Helvetica, sans-serif;
-
+  
 }
 
 .box-in4 {
@@ -1213,39 +1209,35 @@ body {
   margin-left: 150px;
 }
 
-.rq-in4 input {
+.rq-in4 input{
   border-radius: 10px;
   padding-right: 100px;
   margin-top: -10px;
   border-width: 0px;
   width: 580px;
 }
-
-.box-in4 p {
+.box-in4 p{
   text-align: left;
   padding-left: 70px;
   padding-top: 30px;
 }
-
-.mess textarea {
+.mess textarea{
   margin-top: 0px;
   height: 50px;
   resize: vertical;
-  overflow: auto;
+  overflow:auto;
   border-radius: 10px;
   border-width: 0px;
   text-align: left;
   margin-left: 0px;
   max-height: fit-content;
   width: 580px;
-
+  
 }
-
-.box-in4 p {
+.box-in4 p{
   margin-top: 20px;
   margin-right: 10px;
 }
-
 .sendrp {
   text-align: center;
   margin-top: 10px;
@@ -1256,11 +1248,92 @@ body {
   background-color: #483A49;
   color: #fff;
 }
-
-.imgcontactus {
+.imgcontactus{
   position: absolute;
   right: 0%;
   top: 600px;
 
+}
+.box-in4{
+  display: block;
+  background-color: #CBC1BF;
+  position: static;
+  margin-top: 350px;
+  transform: translateY(-40%); /* Điều chỉnh để căn giữa chính xác */ 
+  width: 500px; /* Tăng chiều rộng */
+  height: auto; /* Tăng chiều cao nếu cần */
+  border-radius: 5px;
+}
+.box-in4 h3{
+  padding-top: 40px;
+  font-size: 36px;
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
 
+.box-in4 {
+  padding: 50px;
+  width: 824px;
+  height: auto;
+  margin-left: 150px;
+}
+
+.rq-in4 input{
+  border-radius: 10px;
+  padding-right: 100px;
+  margin-top: -10px;
+  border-width: 0px;
+  width: 580px;
+}
+.box-in4 p{
+  text-align: left;
+  padding-left: 70px;
+  padding-top: 30px;
+}
+.mess textarea{
+  margin-top: 0px;
+  height: 50px;
+  resize: vertical;
+  overflow:auto;
+  border-radius: 10px;
+  border-width: 0px;
+  text-align: left;
+  margin-left: 0px;
+  max-height: fit-content;
+  width: 580px;
+  
+}
+.box-in4 p{
+  margin-top: 20px;
+  margin-right: 10px;
+}
+.sendrp {
+  text-align: center;
+  margin-top: 10px;
+  border-width: 0px;
+  padding: 12px 24px;
+  font-size: 20px;
+  border-radius: 10px;
+  background-color: #483A49;
+  color: #fff;
+}
+.imgcontactus{
+  position: absolute;
+  right: 0%;
+  top: 600px;
+
+}
+.ggmap {
+  margin-left: 5%;
+  border: 2px solid #000;
+  border-radius: 2px;
+  width: 600px;
+  height: 600px;
+  margin-bottom: 24px;
+  
+  
+}
+.map{
+  width: 100%;
+  height: 100%;
 }
