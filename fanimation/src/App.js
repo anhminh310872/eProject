@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { Link, useNavigate } from 'react-router-dom';
 import Home from './Home';
 import AboutUs from './AboutUs';
@@ -11,6 +11,7 @@ import SignUp from './SignUp';
 import product from './product.json';
 
 function App() {
+  // const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
   return (
     <div className="App">
@@ -126,18 +127,18 @@ function App() {
         <div className="footer-bottom">
           <p>© 2025 Fanimation. All rights reserved.</p>
           <div className="footer-icons">
-            <a href="#">
-              <img src="./images/icon-facebook.png" alt="Facebook" />
-            </a>
-            <a href="#">
+          <Link to="/">
+          <img src="./images/icon-facebook.png" alt="Facebook" />
+          </Link>
+          <Link to="/">
               <img src="./images/icon-tiktok.png" alt="Tiktok" />
-            </a>
-            <a href="#">
+              </Link>
+              <Link to="/">
               <img src="./images/icon-instagram.png" alt="Instagram" />
-            </a>
-            <a href="#">
+              </Link>
+              <Link to="/">
               <img src="./images/icon-youtube.png" alt="YouTube" />
-            </a>
+              </Link>
           </div>
         </div>
       </footer>
