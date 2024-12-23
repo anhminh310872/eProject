@@ -1,16 +1,16 @@
 [
   {
-    "Category": "Ceiling",
+    "Category": "ceiling",
     "Name": "PN001",
     "Images": "10020147-quat-tran-panasonic-f-60mz2.jpg",
     "Price": 46.33,
     "Brand": "Panasonic",
-    "Blade": "3",
+    "Blade": 3,
     "Color": "white",
     "ID": 1
   },
   {
-    "Category": "Ceiling",
+    "Category": "ceiling",
     "Name": "KD001",
     "Images": "10010567-quat-tran-kdk-n56yg-mau-nau-dam.jpg",
     "Price": 76.56,
@@ -23,7 +23,7 @@
     "ID": 2
   },
   {
-    "Category": "Ceiling",
+    "Category": "ceiling",
     "Name": "KD002",
     "Images": "10008672-quat-tran-kdk-m56xr-mau-vang-1.jpg",
     "Price": 112.09,
@@ -33,7 +33,7 @@
     "ID": 3
   },
   {
-    "Category": "Ceiling",
+    "Category": "ceiling",
     "Name": "PN002",
     "Images": "10001771-quat-tran-panasonic-f-56mpg-go.jpg",
     "Price": 97.36,
@@ -46,7 +46,7 @@
     "ID": 4
   },
   {
-    "Category": "Ceiling",
+    "Category": "ceiling",
     "Name": "KD003",
     "Images": "10023282-quat-tran-kdk-t60dw.jpg",
     "Price": 241.65,
@@ -59,7 +59,7 @@
     "ID": 5
   },
   {
-    "Category": "Ceiling",
+    "Category": "ceiling",
     "Name": "KD004",
     "Images": "W56WVĐEN.jpg",
     "Price": 285.43,
@@ -69,7 +69,7 @@
     "ID": 6
   },
   {
-    "Category": "Ceiling",
+    "Category": "ceiling",
     "Name": "MB001",
     "Images": "sfgy3-700x467.jpg",
     "Price": 149.21,
@@ -82,7 +82,7 @@
     "ID": 7
   },
   {
-    "Category": "Ceiling",
+    "Category": "ceiling",
     "Name": "MB002",
     "Images": "ra5cygy2-700x467.jpg",
     "Price": 216.14,
@@ -92,7 +92,7 @@
     "ID": 8
   },
   {
-    "Category": "Ceiling",
+    "Category": "ceiling",
     "Name": "KG001",
     "Images": "quattrankangarookgsf0560516-1-1-700x467.jpg",
     "Price": 90.16,
@@ -102,7 +102,7 @@
     "ID": 9
   },
   {
-    "Category": "Ceiling",
+    "Category": "ceiling",
     "Name": "PN003",
     "Images": "quat-tran-panasonic-f-56xpg-w-1-638610574169660682-700x467.jpg",
     "Price": 137.4,
@@ -154,7 +154,7 @@
     "Images": "10057586-Quạt_đứng_Senko_DTS16091.jpg",
     "Price": 15.75,
     "Brand": "Senko",
-    "Blade": 3,
+    "Blade": 5,
     "Color": [
       "black",
       "orange"
@@ -197,7 +197,7 @@
     "Images": "quat-dung-sharp-pj-s40mv-lg-1-700x467.jpg",
     "Price": 65,
     "Brand": "Sharp",
-    "Blade": 5,
+    "Blade": 3,
     "Color": [
       "white",
       "grey"
