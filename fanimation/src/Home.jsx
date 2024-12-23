@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.css';
 import Carousel from 'react-bootstrap/Carousel';
 
+
 function Home() {
     const nav = useNavigate();
 
@@ -14,27 +15,6 @@ function Home() {
                 <button className="shop-now-btn" onClick={() => nav('/products')}>SHOP NOW</button>
             </section>
 
-            <section className="home-intro home-space">
-                <div className="home-title">Established in 1994</div>
-                <div className="home-intro-grid-row">
-                    <div className="home-intro-grid-column home-intro-grid-column-1">
-                        <img src="./images/home-grid-8.png" alt="" />
-                        <img src="./images/home-grid-10.png" alt="" />
-                    </div>
-                    <div className="home-intro-grid-column home-intro-grid-column-2">
-                        <img src="./images/home-grid-4.png" alt="" />
-                        <div className="home-intro-grid-text">
-                            <p>For over 30 years, we have been a forerunner in realiable cooling technology and stylish, elegant home aesthetics. Offering a wide range of high-quality, reliable fans for every need—whether for your home, office, or business.</p>
-                            <p>Explore our collection today and enjoy the comfort and quality that comes with decades of expertise.</p>
-                            <button className="home-intro-btn" onClick={() => nav('/products')}>All products</button>
-                        </div>
-                    </div>
-                    <div className="home-intro-grid-column home-intro-grid-column-3">
-                        <img src="./images/home-grid-6.png" alt="" />
-                        <img src="./images/home-grid-9.png" alt="" />
-                    </div>
-                </div>
-            </section>
 
             <div className="home-space" />
             <div className="home-title">Browse our latest products</div>
@@ -149,6 +129,26 @@ function Home() {
                             <img src="./images/home-product-list-exhaust.png" className="home-product-list-item-img home-product-list-item-img-exhaust justify-content-center" alt="" />
                         </div>
                         <div className="home-product-list-item-text">Exhaust</div>
+                    </div>
+                </div>
+            </section>
+            <section className="home-intro home-space">
+                <div className="home-title">About Us</div>
+                <div className="home-intro-grid-row">
+                    {/* <div className="home-intro-grid-column home-intro-grid-column-1">
+                        <img src="./images/home-grid-8.png" alt="" />
+                        <img src="./images/home-grid-10.png" alt="" />
+                    </div> */}
+                    <div className="home-intro-grid-column home-intro-grid-column-2">
+                        <img src="./images/home-grid-4.png" alt="" />
+                        <div className="home-intro-grid-text">
+                            <p>For over 30 years, we have been a forerunner in realiable cooling technology and stylish, elegant home aesthetics. Offering a wide range of high-quality, reliable fans for every need—whether for your home, office, or business.</p>
+                            <p>Explore our collection today and enjoy the comfort and quality that comes with decades of expertise.</p>
+                            <button className="home-intro-btn" onClick={() => nav('/products')}>All products</button>
+                        </div>
+                    </div>
+                    <div className="home-intro-grid-column home-intro-grid-column-3">
+                        <img src="./images/home-grid-9.png" alt="" />
                     </div>
                 </div>
             </section>

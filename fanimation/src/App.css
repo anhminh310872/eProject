@@ -41,25 +41,22 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+ 
   font-size: 20px;
 }
 
 h1,
 h2,
 h3 {
-  font-family: 'Montserrat', sans-serif;
+ 
 }
 
-p {
-  font-family: 'Georgia', serif;
-}
 
 body {
   font-size: 20px;
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
+ 
 }
 
 .navbar {
@@ -792,7 +789,7 @@ footer {
   margin: 0 5px;
   padding: 5px;
   filter: invert(100%);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.5s, box-shadow 0.5s;
 }
 
 .footer-icons a img:hover {
@@ -810,7 +807,7 @@ footer {
 }
 
 .collections2024 {
-  font-family: serif;
+ 
   font-size: calc(40px + 6vw);
   color: #efeae7;
   text-shadow: #51424A50 0px 3px 4px, #51424A50 0px 6px 4px;
@@ -827,7 +824,7 @@ footer {
   color: #FFF;
   box-shadow: #00000050 0px 5px 6px;
   text-align: center;
-  font-family: serif;
+
   font-size: calc(20px + 1.5vw);
   transition: 0.5s;
 }
@@ -857,9 +854,9 @@ button {
 }
 
 .home-title {
-  font-family: serif;
+ 
   font-size: 36pt;
-  font-weight: bold;
+  /* font-weight: bold; */
   font-style: italic;
   border-bottom: solid 4px black;
   width: calc(40vw + 300px);
@@ -881,7 +878,7 @@ button {
   color: #FFF;
   box-shadow: #00000050 0px 5px 6px;
   text-align: center;
-  font-family: serif;
+ 
   font-size: calc(10px + 2vw);
   margin: 25px;
   transition: 0.5s;
@@ -910,8 +907,9 @@ button {
 }
 
 .home-intro-grid-text {
-  padding: 20px;
-  font-size: calc(5px + 1vw);
+  padding: 40px;
+  font-size: 20px;
+  padding-right: 20%;
 }
 
 .home-intro-grid-column-1 {
@@ -921,13 +919,18 @@ button {
 
 .home-intro-grid-column-2 {
   flex: 50%;
-  max-width: 50%;
+  max-width: 70%;
 }
 
 .home-intro-grid-column-3 {
-  flex: 25%;
-  max-width: 25%;
+  /* flex: 25%;
+  max-width: 25%; */
+  margin-left: 60%;
+  margin-top: 300px;
+  position: absolute;
+  
 }
+
 
 
 @media screen and (max-width: 1150px) {
@@ -1032,7 +1035,7 @@ button {
 }
 
 .home-product-list-item-text {
-  font-family: serif;
+ 
   margin: 70px 0;
   font-size: 36pt;
 }
@@ -1096,7 +1099,7 @@ button {
   color: #FFF;
   box-shadow: #00000050 0px 5px 6px;
   text-align: center;
-  font-family: serif;
+  
   font-size: calc(28px + 1vw);
   margin: auto;
   transition: 0.5s;
@@ -1108,9 +1111,9 @@ button {
 }
 
 body {
-  background-color: #fdf7f4;
+  background-color: #000
   /* Màu nền trang web */
-  font-family: Arial, sans-serif;
+ 
   /* Font chữ cho toàn bộ trang */
 }
 
@@ -1130,7 +1133,7 @@ body {
   margin: 30px;
   font-size: 36pt;
   font-weight: bold;
-  font-family: serif;
+ 
 }
 
 .product-card {
@@ -1181,7 +1184,7 @@ body {
   width: 140px;
   height: 45px;
   font-size: 15pt;
-  font-family: serif;
+ 
   padding: 5px;
   box-shadow: #00000030 0 6px 6px;
   transition: 0.5s;
@@ -1205,7 +1208,7 @@ body {
 .box-in4 h3{
   padding-top: 40px;
   font-size: 36px;
-  font-family: Arial, Helvetica, sans-serif;
+ 
   
 }
 
@@ -1274,7 +1277,7 @@ body {
 .box-in4 h3{
   padding-top: 40px;
   font-size: 36px;
-  font-family: Arial, Helvetica, sans-serif;
+ 
   
 }
 
@@ -1309,38 +1312,4 @@ body {
   max-height: fit-content;
   width: 580px;
   
-}
-.box-in4 p{
-  margin-top: 20px;
-  margin-right: 10px;
-}
-.sendrp {
-  text-align: center;
-  margin-top: 10px;
-  border-width: 0px;
-  padding: 12px 24px;
-  font-size: 20px;
-  border-radius: 10px;
-  background-color: #483A49;
-  color: #fff;
-}
-.imgcontactus{
-  position: absolute;
-  right: 0%;
-  top: 600px;
-
-}
-.ggmap {
-  margin-left: 5%;
-  border: 2px solid #000;
-  border-radius: 2px;
-  width: 600px;
-  height: 600px;
-  margin-bottom: 24px;
-  
-  
-}
-.map{
-  width: 100%;
-  height: 100%;
 }
