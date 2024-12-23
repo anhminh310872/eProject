@@ -446,18 +446,25 @@ function Products({ data }) {
         </div>
       </nav>
       <div className="product-list">
-        {dt.map((f, index) =>
-          <div className="product-card" key={index}>
-            <div className="product-card-img-container">
-              <img src={`./images/products/${f.Images}`} className="product-card-img" alt="" />
+        {dt.length === 0 ? (
+          <h1>No results found.</h1>
+        ) : (
+          dt.map((product, index) => (
+            <div className="product-card" key={index}>
+              <div className="product-card-img-container">
+                <img src={`./images/products/${product.Images}`} className="product-card-img" alt="" />
+              </div>
+              <div className="product-card-name">
+                {product.Brand} - {product.Name}
+                <div className="product-card-price">
+                  ${product.Price}
+                </div>
+              </div>
+              <div className="product-card-btn" onClick={() => handleBuyNow(product)}>
+                Buy now
+              </div>
             </div>
-            <div className="product-card-name">
-              {f.Brand} - {f.Name}
-            </div>
-            <div className="product-card-btn" onClick={() => handleBuyNow(f)}>
-              Buy now
-            </div>
-          </div>
+          ))
         )}
       </div>
       {popupData && (
