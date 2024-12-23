@@ -1,12 +1,14 @@
 import { useNavigate } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.css';
 import Carousel from 'react-bootstrap/Carousel';
+import './assets/home.css'
 
 
 function Home() {
     const nav = useNavigate();
 
     return (
+        <div home-container>
         <div className="home">
             <section className="top-home">
                 <div className="collections2024">
@@ -152,6 +154,7 @@ function Home() {
                     </div>
                 </div>
             </section>
+        </div>
         </div>
     );
 }

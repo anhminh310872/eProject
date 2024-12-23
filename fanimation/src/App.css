@@ -1,7 +1,10 @@
 @import '@fortawesome/fontawesome-free/css/all.min.css';
 
+
+
 .App {
   text-align: center;
+  background-color: #FFF;
 }
 
 .App-logo {
@@ -469,8 +472,9 @@ section {
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: 50px;
   margin: 0 0 0 5%;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .hero hr {
@@ -802,19 +806,19 @@ footer {
 }
 
 
-.home {
+/* .home {
   background-color: #fdf7f4;
-}
+} */
 
-.collections2024 {
+/* .collections2024 {
  
   font-size: calc(40px + 6vw);
   color: #efeae7;
   text-shadow: #51424A50 0px 3px 4px, #51424A50 0px 6px 4px;
   transition: 0.5s;
-}
+} */
 
-.shop-now-btn {
+/* .shop-now-btn {
   border-radius: 5px;
   background-color: #C0A9A5;
   width: calc(100px + 20vw);
@@ -831,42 +835,42 @@ footer {
 
 .shop-now-btn:hover {
   background-color: #b17a7a;
-}
+} */
 
-.top-home {
+/* .top-home {
   position: relative;
   background-image: url('../public/images/home-banner-1.png');
   background-size: cover;
   padding: 90px 0px;
   transition: 0.5s;
-}
+} */
 
 button {
   cursor: pointer;
 }
 
-.home-space {
+/* .home-space {
   margin-top: 100px;
 }
 
 .home-space-small {
   margin-top: 20px;
-}
+} */
 
-.home-title {
+/* .home-title {
  
   font-size: 36pt;
-  /* font-weight: bold; */
+ 
   font-style: italic;
   border-bottom: solid 4px black;
   width: calc(40vw + 300px);
   margin: auto;
   padding-bottom: 16px;
-}
+} */
 
 .home-intro {
   position: relative;
-}
+/* }
 
 .home-intro-btn {
   border-radius: 5px;
@@ -923,8 +927,7 @@ button {
 }
 
 .home-intro-grid-column-3 {
-  /* flex: 25%;
-  max-width: 25%; */
+ 
   margin-left: 60%;
   margin-top: 300px;
   position: absolute;
@@ -1038,9 +1041,9 @@ button {
  
   margin: 70px 0;
   font-size: 36pt;
-}
+} */
 
-.latest-product-gallery {
+/* .latest-product-gallery {
   margin: 40px;
 }
 
@@ -1112,10 +1115,8 @@ button {
 
 body {
   background-color: #000
-  /* Màu nền trang web */
  
-  /* Font chữ cho toàn bộ trang */
-}
+} */
 
 .contact-us button:hover {
   background-color: #000;
@@ -1195,121 +1196,5 @@ body {
   cursor: pointer;
 }
 
-.box-in4{
-  display: block;
-  background-color: #CBC1BF;
-  position: static;
-  margin-top: 350px;
-  transform: translateY(-40%); /* Điều chỉnh để căn giữa chính xác */ 
-  width: 500px; /* Tăng chiều rộng */
-  height: auto; /* Tăng chiều cao nếu cần */
-  border-radius: 5px;
-}
-.box-in4 h3{
-  padding-top: 40px;
-  font-size: 36px;
- 
-  
-}
 
-.box-in4 {
-  padding: 50px;
-  width: 824px;
-  height: auto;
-  margin-left: 150px;
-}
-
-.rq-in4 input{
-  border-radius: 10px;
-  padding-right: 100px;
-  margin-top: -10px;
-  border-width: 0px;
-  width: 580px;
-}
-.box-in4 p{
-  text-align: left;
-  padding-left: 70px;
-  padding-top: 30px;
-}
-.mess textarea{
-  margin-top: 0px;
-  height: 50px;
-  resize: vertical;
-  overflow:auto;
-  border-radius: 10px;
-  border-width: 0px;
-  text-align: left;
-  margin-left: 0px;
-  max-height: fit-content;
-  width: 580px;
-  
-}
-.box-in4 p{
-  margin-top: 20px;
-  margin-right: 10px;
-}
-.sendrp {
-  text-align: center;
-  margin-top: 10px;
-  border-width: 0px;
-  padding: 12px 24px;
-  font-size: 20px;
-  border-radius: 10px;
-  background-color: #483A49;
-  color: #fff;
-}
-.imgcontactus{
-  position: absolute;
-  right: 0%;
-  top: 600px;
-
-}
-.box-in4{
-  display: block;
-  background-color: #CBC1BF;
-  position: static;
-  margin-top: 350px;
-  transform: translateY(-40%); /* Điều chỉnh để căn giữa chính xác */ 
-  width: 500px; /* Tăng chiều rộng */
-  height: auto; /* Tăng chiều cao nếu cần */
-  border-radius: 5px;
-}
-.box-in4 h3{
-  padding-top: 40px;
-  font-size: 36px;
- 
-  
-}
-
-.box-in4 {
-  padding: 50px;
-  width: 824px;
-  height: auto;
-  margin-left: 150px;
-}
-
-.rq-in4 input{
-  border-radius: 10px;
-  padding-right: 100px;
-  margin-top: -10px;
-  border-width: 0px;
-  width: 580px;
-}
-.box-in4 p{
-  text-align: left;
-  padding-left: 70px;
-  padding-top: 30px;
-}
-.mess textarea{
-  margin-top: 0px;
-  height: 50px;
-  resize: vertical;
-  overflow:auto;
-  border-radius: 10px;
-  border-width: 0px;
-  text-align: left;
-  margin-left: 0px;
-  max-height: fit-content;
-  width: 580px;
-  
 }
