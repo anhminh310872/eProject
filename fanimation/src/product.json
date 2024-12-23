@@ -1,9 +1,9 @@
 [
   {
     "Category": "Ceiling",
-    "Name": "F-60MZ2",
+    "Name": "PN001",
     "Images": "10020147-quat-tran-panasonic-f-60mz2.jpg",
-    "Price": 54.72,
+    "Price": 46.33,
     "Brand": "Panasonic",
     "Blade": "3",
     "Color": "white",
@@ -11,9 +11,9 @@
   },
   {
     "Category": "Ceiling",
-    "Name": "N56YG",
+    "Name": "KD001",
     "Images": "10010567-quat-tran-kdk-n56yg-mau-nau-dam.jpg",
-    "Price": 66.54,
+    "Price": 76.56,
     "Brand": "KDK",
     "Blade": 3,
     "Color": [
@@ -24,9 +24,9 @@
   },
   {
     "Category": "Ceiling",
-    "Name": "M56XR",
+    "Name": "KD002",
     "Images": "10008672-quat-tran-kdk-m56xr-mau-vang-1.jpg",
-    "Price": 133.46,
+    "Price": 112.09,
     "Brand": "KDK",
     "Blade": 4,
     "Color": "Yellow",
@@ -34,9 +34,9 @@
   },
   {
     "Category": "Ceiling",
-    "Name": "F-56MPG-GO",
+    "Name": "PN002",
     "Images": "10001771-quat-tran-panasonic-f-56mpg-go.jpg",
-    "Price": 117.72,
+    "Price": 97.36,
     "Brand": "Panasonic",
     "Blade": 4,
     "Color": [
@@ -47,9 +47,9 @@
   },
   {
     "Category": "Ceiling",
-    "Name": "T60DW",
+    "Name": "KD003",
     "Images": "10023282-quat-tran-kdk-t60dw.jpg",
-    "Price": 285.43,
+    "Price": 241.65,
     "Brand": "KDK",
     "Blade": 5,
     "Color": [
@@ -60,7 +60,7 @@
   },
   {
     "Category": "Ceiling",
-    "Name": "W56WV",
+    "Name": "KD004",
     "Images": "W56WVĐEN.jpg",
     "Price": 285.43,
     "Brand": "KDK",
@@ -70,7 +70,7 @@
   },
   {
     "Category": "Ceiling",
-    "Name": "C56-RA4 SF-GY",
+    "Name": "MB001",
     "Images": "sfgy3-700x467.jpg",
     "Price": 149.21,
     "Brand": "Mitsubishi",
@@ -83,7 +83,7 @@
   },
   {
     "Category": "Ceiling",
-    "Name": "C56-RA5 CY-GY",
+    "Name": "MB002",
     "Images": "ra5cygy2-700x467.jpg",
     "Price": 216.14,
     "Brand": "Mitsubishi",
@@ -93,7 +93,7 @@
   },
   {
     "Category": "Ceiling",
-    "Name": "KGSF056051",
+    "Name": "KG001",
     "Images": "quattrankangarookgsf0560516-1-1-700x467.jpg",
     "Price": 90.16,
     "Brand": "Kangaroo",
@@ -103,7 +103,7 @@
   },
   {
     "Category": "Ceiling",
-    "Name": "F-56XPG-W",
+    "Name": "PN003",
     "Images": "quat-tran-panasonic-f-56xpg-w-1-638610574169660682-700x467.jpg",
     "Price": 137.4,
     "Brand": "Panasonic",
@@ -113,7 +113,7 @@
   },
   {
     "Category": "pedestal",
-    "Name": "SHD7223",
+    "Name": "SH001",
     "Images": "qua-t-sa-c-dien-sunhouse-shd7223-1-700x467.jpg",
     "Price": 66.54,
     "Brand": "Sunhouse",
@@ -123,7 +123,7 @@
   },
   {
     "Category": "pedestal",
-    "Name": "VY636790",
+    "Name": "AV001",
     "Images": "10051530-quat-san-asiavina-vy636790-xam.jpg",
     "Price": 27.17,
     "Brand": "Asiavina",
@@ -136,7 +136,7 @@
   },
   {
     "Category": "pedestal",
-    "Name": "BD1012",
+    "Name": "SK001",
     "Images": "10046884-quat-ban-senko-bd1012-kem-mon-1.jpg",
     "Price": 12.6,
     "Brand": "Senko",
@@ -150,7 +150,7 @@
   },
   {
     "Category": "pedestal",
-    "Name": "DTS1609",
+    "Name": "SK002",
     "Images": "10057586-Quạt_đứng_Senko_DTS16091.jpg",
     "Price": 15.75,
     "Brand": "Senko",
@@ -163,7 +163,7 @@
   },
   {
     "Category": "pedestal",
-    "Name": "LV16-RB SF-GY",
+    "Name": "MB002",
     "Images": "10057401-quat-dung-mitsibishi-lv16-rb-sf-gy-xam-nhat-1.jpg",
     "Price": 94.09,
     "Brand": "Mitsubishi",
@@ -173,7 +173,7 @@
   },
   {
     "Category": "pedestal",
-    "Name": "F-LSA10(W)VN",
+    "Name": "TB001",
     "Images": "quat-dung-toshiba-f-lsa10-w-vn-trang-1-2-700x467.jpg",
     "Price": 45.28,
     "Brand": "Toshiba",
@@ -183,7 +183,7 @@
   },
   {
     "Category": "pedestal",
-    "Name": "SHD7223",
+    "Name": "SH001",
     "Images": "10050606-quat-sac-dien-sunhouse-shd7223-2.jpg",
     "Price": 56.89,
     "Brand": "Sunhouse",
@@ -193,7 +193,7 @@
   },
   {
     "Category": "pedestal",
-    "Name": "PJ-S40MV-LG",
+    "Name": "SP001",
     "Images": "quat-dung-sharp-pj-s40mv-lg-1-700x467.jpg",
     "Price": 65,
     "Brand": "Sharp",
@@ -206,7 +206,7 @@
   },
   {
     "Category": "pedestal",
-    "Name": "PJ-L40RV-DG",
+    "Name": "SP002",
     "Images": "dung-sharp-pj-l40rv-dg-1-700x467.jpg",
     "Price": 42.48,
     "Brand": "Sharp",
@@ -216,7 +216,7 @@
   },
   {
     "Category": "pedestal",
-    "Name": "KG745",
+    "Name": "KG002",
     "Images": "quat-sac-dien-kangaroo-5-canh-kg745-24w-1-700x467.jpg",
     "Price": 54.72,
     "Brand": "Kangaroo",
@@ -230,7 +230,7 @@
   },
   {
     "Category": "wall",
-    "Name": "TC 1626",
+    "Name": "SK003",
     "Images": "10032772-quat-treo-senko-tc1626-mon.jpg",
     "Price": 19.99,
     "Brand": "Senko",
@@ -240,7 +240,7 @@
   },
   {
     "Category": "wall",
-    "Name": "TC 1622",
+    "Name": "SK004",
     "Images": "quat-treo-senko-tc1622-mau-den-cam.jpg",
     "Price": 24.99,
     "Brand": "Senko",
@@ -254,7 +254,7 @@
   },
   {
     "Category": "wall",
-    "Name": "VY357690",
+    "Name": "AV002",
     "Images": "10051533-quat-treo-asiavina-vy357690-trang-1_ifri-1k.jpg",
     "Price": 29.99,
     "Brand": "Asiavina",
@@ -267,7 +267,7 @@
   },
   {
     "Category": "wall",
-    "Name": "VY377990",
+    "Name": "AV003",
     "Images": "10051396-quat-treo-asiavina-vy377990-xam-1.jpg",
     "Price": 34.99,
     "Brand": "Asiavina",
@@ -277,7 +277,7 @@
   },
   {
     "Category": "wall",
-    "Name": "F-WSA20(H)VN",
+    "Name": "TB002",
     "Images": "10036643-quat-treo-toshiba-f-wsa20-h-vn.jpg",
     "Price": 59.99,
     "Brand": "Toshiba",
@@ -290,7 +290,7 @@
   },
   {
     "Category": "wall",
-    "Name": "W16-RA BL",
+    "Name": "MB003",
     "Images": "10051006-quat-treo-tuong-mitsubishi-w16-ra-bl-trang-1.jpg",
     "Price": 89.99,
     "Brand": "Mitsubishi",
@@ -304,7 +304,7 @@
   },
   {
     "Category": "wall",
-    "Name": "W16-RA CY-GY",
+    "Name": "MB004",
     "Images": "10051013-quat-treo-tuong-mitsubishi-w16-ra-cy-gy-xam-dam-1.jpg",
     "Price": 89.99,
     "Brand": "Mitsubishi",
@@ -317,7 +317,7 @@
   },
   {
     "Category": "wall",
-    "Name": "F-409M",
+    "Name": "PN004",
     "Images": "10001194_QUAT-TREO_PANASONIC_F-409M-XANH_01.jpg",
     "Price": 124.99,
     "Brand": "Panasonic",
@@ -327,7 +327,7 @@
   },
   {
     "Category": "wall",
-    "Name": "M40M",
+    "Name": "KD005",
     "Images": "10003154-quat-treo-kdk-m40m-trang-nga-1.jpg",
     "Price": 134.99,
     "Brand": "KDK",
@@ -337,7 +337,7 @@
   },
   {
     "Category": "wall",
-    "Name": "T1680",
+    "Name": "SK005",
     "Images": "treo-senko-t1680-1-1-700x467.jpg",
     "Price": 19.99,
     "Brand": "Senko",
@@ -347,7 +347,7 @@
   },
   {
     "Category": "exhaust",
-    "Name": "EX-20SHC5T",
+    "Name": "MB005",
     "Images": "EX-20SHC5T-1-760x760.jpg",
     "Price": 49.99,
     "Brand": "Mitsubishi",
@@ -357,7 +357,7 @@
   },
   {
     "Category": "exhaust",
-    "Name": "EX-20SKC5T",
+    "Name": "MB006",
     "Images": "EX-20SKC5T-1-760x760.jpg",
     "Price": 79.99,
     "Brand": "Mitsubishi",
@@ -367,7 +367,7 @@
   },
   {
     "Category": "exhaust",
-    "Name": "V-20SL7T",
+    "Name": "MB007",
     "Images": "v-20sl3-6t-e86f723b-ab35-4212-af72-17b60fd6e0c3-555af9d2-ef76-4d2b-b8ff-812cad5ed691.png",
     "Price": 59.99,
     "Brand": "Mitsubishi",
@@ -377,7 +377,7 @@
   },
   {
     "Category": "exhaust",
-    "Name": "EX-30SH5T",
+    "Name": "MB008",
     "Images": "ex-30sh5t-0901e198-2867-4d5e-9861-136d3d04fd49.png",
     "Price": 74.99,
     "Brand": "Mitsubishi",
@@ -387,7 +387,7 @@
   },
   {
     "Category": "exhaust",
-    "Name": "EX-20SKC5T-BW",
+    "Name": "MB009",
     "Images": "ex-20skc5t-bw-742eaa77-b159-4fef-b081-067a373c5948.png",
     "Price": 49.99,
     "Brand": "Mitsubishi",
@@ -400,7 +400,7 @@
   },
   {
     "Category": "exhaust",
-    "Name": "FV-20RL1",
+    "Name": "PN005",
     "Images": "ast-2103388.png.pub.thumb.644.644.png",
     "Price": 69.99,
     "Brand": "Panasonic",
@@ -410,7 +410,7 @@
   },
   {
     "Category": "exhaust",
-    "Name": "FV-20AU1",
+    "Name": "PN006",
     "Images": "ast-2111192.png.pub.thumb.644.644.png",
     "Price": 59.99,
     "Brand": "Panasonic",
@@ -420,7 +420,7 @@
   },
   {
     "Category": "exhaust",
-    "Name": "FV-15AUL1",
+    "Name": "PN007",
     "Images": "ast-2103746.png.pub.thumb.644.644.png",
     "Price": 64.99,
     "Brand": "Panasonic",
@@ -430,7 +430,7 @@
   },
   {
     "Category": "exhaust",
-    "Name": "VRH25J10",
+    "Name": "TB003",
     "Images": "VRH25J10.jpg",
     "Price": 34.99,
     "Brand": "Toshiba",
@@ -444,7 +444,7 @@
   },
   {
     "Category": "exhaust",
-    "Name": "GVE250W",
+    "Name": "SP003",
     "Images": "SHP-GVE250W_0.jpg",
     "Price": 24.99,
     "Brand": "Sharp",
