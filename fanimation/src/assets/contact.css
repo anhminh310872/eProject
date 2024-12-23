@@ -1,0 +1,63 @@
+
+.contact-container  {
+    
+    
+  .title {
+    width: 100%;
+    height: 180px;
+    background-color: #51424a;
+  }
+
+  .titile .sub-title {
+    text-align: left !important;
+  }
+
+  .box-in4 p {
+    margin-top: 20px;
+    margin-right: 10px;
+  }
+  .sendrp {
+    text-align: center;
+    margin-top: 10px;
+    border-width: 0px;
+    padding: 12px 24px;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: #483a49;
+    color: #fff;
+  }
+  .imgcontactus {
+    position: absolute;
+    right: 0%;
+    top: 600px;
+  }
+  .ggmap {
+    margin-left: 5%;
+    border: 2px solid #000;
+    border-radius: 2px;
+    width: 600px;
+    height: 600px;
+    margin-bottom: 24px;
+  }
+  .map {
+    width: 100%;
+    height: 100%;
+  }
+  .address-contactus {
+    padding-left: 700px;
+    margin-top: -500px;
+  }
+  .address-contactus p {
+    white-space: nowrap;
+    font-size: 20px;
+  }
+  .hotline-email-contactus {
+    padding-left: 700px;
+    margin-top: 70px;
+    z-index: 3;
+  }
+  .hotline-email-contactus p {
+    white-space: nowrap;
+    font-size: 20px;
+  }
+}

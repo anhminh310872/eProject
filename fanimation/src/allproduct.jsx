@@ -18,7 +18,115 @@ function Products({ data }) {
     setShowFilterBox((prev) => !prev);
   };
 
-  const [dt] = useState(data);
+  const [dt, setDt] = useState(data);
+  const [filters, setFilters] = useState({
+    color: [],
+    blade: [],
+    brand: [],
+    priceRange: { min: "", max: "" }, // Default initialized price range object
+  });
+
+  const handleCheckboxChange = (field, value, isChecked) => {
+    setFilters((prevFilters) => {
+      const newFilters = { ...prevFilters };
+
+      if (isChecked) {
+        // For number-based filters like blade, use parseInt
+        if (field === "blade") {
+          newFilters[field] = [...newFilters[field], parseInt(value)];
+        } else {
+          newFilters[field] = [...newFilters[field], value];
+        }
+      } else {
+        // Remove value from the filters
+        newFilters[field] = newFilters[field].filter((item) => item !== value);
+      }
+
+      return newFilters;
+    });
+  };
+
+  const handlePriceChange = (e) => {
+    const { name, value } = e.target;
+    setFilters((prevFilters) => ({
+      ...prevFilters,
+      priceRange: {
+        ...prevFilters.priceRange,
+        [name]: value
+      }
+    }));
+  };
+
+  const handlePriceInput = (e) => {
+    const { value } = e.target;
+    if (value.includes('-')) {
+      e.target.value = value.replace('-', '');
+    }
+  };
+
+  const applyFilters = () => {
+    let filteredData = data;
+
+    for (const field in filters) {
+      if (filters[field].length > 0) {
+        filteredData = filteredData.filter((product) => {
+          if (field === 'color') {
+            const colors = Array.isArray(product.Color)
+              ? product.Color
+              : product.Color.split(',').map(color => color.trim());
+
+            if (!filters[field].includes('Other')) {
+              return filters[field].some((filterColor) => {
+                return colors.some((color) => color === filterColor);
+              });
+            }
+            if (filters[field].includes('Other')) {
+              return colors.some((color) => {
+                if (['black', 'white', 'grey'].includes(color)) {
+                  return filters[field].includes(color);
+                }
+                return !['black', 'white', 'grey'].includes(color) || filters[field].includes('Other');
+              });
+            }
+
+            // If no specific conditions are met, return false
+            return false;
+          }
+
+          if (field === 'blade') {
+            return filters[field].includes(product.Blade);
+          }
+
+          if (field === 'brand') {
+            return filters[field].includes(product.Brand);
+          }
+
+          return filters[field].includes(product[field]);
+        });
+      }
+    }
+
+    if (filters.priceRange.min !== "" || filters.priceRange.max !== "") {
+      filteredData = filteredData.filter((product) => {
+        const price = product.Price;
+        const minPrice = filters.priceRange.min ? parseFloat(filters.priceRange.min) : -Infinity;
+        const maxPrice = filters.priceRange.max ? parseFloat(filters.priceRange.max) : Infinity;
+
+        return price >= minPrice && price <= maxPrice;
+      });
+    }
+
+    setDt(filteredData);
+  };
+
+  const clearFilters = () => {
+    setFilters({
+      color: [],
+      blade: [],
+      brand: [],
+      priceRange: { min: "", max: "" }
+    });
+  };
 
   const handleBuyNow = (product) => {
     setPopupData(product);
@@ -129,47 +237,6 @@ function Products({ data }) {
                   <thead>
                     <tr>
                       <th>
-                        <h3>Category</h3>
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <label>
-                          <input type="checkbox" name="category" /> Ceiling
-                        </label>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <label>
-                          <input type="checkbox" name="category" /> Pedestal
-                        </label>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <label>
-                          <input type="checkbox" name="category" /> Wall
-                        </label>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <label>
-                          <input type="checkbox" name="category" /> Accessories
-                        </label>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div className="filter-table">
-                <table>
-                  <thead>
-                    <tr>
-                      <th>
                         <h3>Type</h3>
                       </th>
                     </tr>
@@ -178,28 +245,32 @@ function Products({ data }) {
                     <tr>
                       <td>
                         <label>
-                          <input type="checkbox" name="type" /> 3-Blade
+                          <input type="checkbox" name="type" value="3" checked={filters.blade.includes(3)}
+                            onChange={(e) => handleCheckboxChange('blade', parseInt(e.target.value), e.target.checked)} /> 3 blades
                         </label>
                       </td>
                     </tr>
                     <tr>
                       <td>
                         <label>
-                          <input type="checkbox" name="type" /> 4-Blade
+                          <input type="checkbox" name="type" value="4" checked={filters.blade.includes(4)}
+                            onChange={(e) => handleCheckboxChange('blade', parseInt(e.target.value), e.target.checked)} /> 4 blades
                         </label>
                       </td>
                     </tr>
                     <tr>
                       <td>
                         <label>
-                          <input type="checkbox" name="type" /> 5-Blade
+                          <input type="checkbox" name="type" value="5" checked={filters.blade.includes(5)}
+                            onChange={(e) => handleCheckboxChange('blade', parseInt(e.target.value), e.target.checked)} /> 5 blades
                         </label>
                       </td>
                     </tr>
                     <tr>
                       <td>
                         <label>
-                          <input type="checkbox" name="type" /> 6-Blade
+                          <input type="checkbox" name="type" value="6" checked={filters.blade.includes(6)}
+                            onChange={(e) => handleCheckboxChange('blade', parseInt(e.target.value), e.target.checked)} /> 6+ blades
                         </label>
                       </td>
                     </tr>
@@ -219,21 +290,25 @@ function Products({ data }) {
                     <tr>
                       <th>
                         <label>
-                          <input
+                          $ <input
                             type="number"
                             placeholder="From..."
-                            name="price-from"
-                            min={0}
-                          />
-                          <input
+                            value={filters.priceRange.min}
+                            onChange={handlePriceChange}
+                            onInput={handlePriceInput}
+                            name="min"
+                            min="0"
+                          /> ➔
+                          $ <input
                             type="number"
                             placeholder="To..."
-                            name="price-to"
-                            min={0}
+                            value={filters.priceRange.max}
+                            onChange={handlePriceChange}
+                            onInput={handlePriceInput}
+                            name="max"
+                            min="0"
                           />
                         </label>
-                        <br />
-                        <button className="apply-button" id='button-price'>Apply</button>
                       </th>
                     </tr>
                   </tbody>
@@ -252,28 +327,32 @@ function Products({ data }) {
                     <tr>
                       <td>
                         <label>
-                          <input type="checkbox" name="color" /> White
+                          <input type="checkbox" name="color" value="white" checked={filters.color.includes("white")}
+                            onChange={(e) => handleCheckboxChange('color', e.target.value, e.target.checked)} /> White
                         </label>
                       </td>
                     </tr>
                     <tr>
                       <td>
                         <label>
-                          <input type="checkbox" name="color" /> Black
+                          <input type="checkbox" name="color" value="black" checked={filters.color.includes("black")}
+                            onChange={(e) => handleCheckboxChange('color', e.target.value, e.target.checked)} /> Black
                         </label>
                       </td>
                     </tr>
                     <tr>
                       <td>
                         <label>
-                          <input type="checkbox" name="color" /> Gray
+                          <input type="checkbox" name="color" value="grey" checked={filters.color.includes("grey")}
+                            onChange={(e) => handleCheckboxChange('color', e.target.value, e.target.checked)} /> Grey
                         </label>
                       </td>
                     </tr>
                     <tr>
                       <td>
                         <label>
-                          <input type="checkbox" name="color" /> Other Color
+                          <input type="checkbox" name="color" value="Other" checked={filters.color.includes("Other")}
+                            onChange={(e) => handleCheckboxChange('color', e.target.value, e.target.checked)} /> Other colors
                         </label>
                       </td>
                     </tr>
@@ -293,37 +372,74 @@ function Products({ data }) {
                     <tr>
                       <td>
                         <label>
-                          <input type="checkbox" name="brands" /> Brand 1
+                          <input type="checkbox" name="brands" value="Panasonic" checked={filters.brand.includes("Panasonic")}
+                            onChange={(e) => handleCheckboxChange('brand', e.target.value, e.target.checked)} /> Panasonic
+                        </label>
+                      </td>
+                      <td>
+                        <label>
+                          <input type="checkbox" name="brands" value="Sharp" checked={filters.brand.includes("Sharp")}
+                            onChange={(e) => handleCheckboxChange('brand', e.target.value, e.target.checked)} /> Sharp
                         </label>
                       </td>
                     </tr>
                     <tr>
                       <td>
                         <label>
-                          <input type="checkbox" name="brands" /> Brand 2
+                          <input type="checkbox" name="brands" value="Mitsubishi" checked={filters.brand.includes("Mitsubishi")}
+                            onChange={(e) => handleCheckboxChange('brand', e.target.value, e.target.checked)} /> Mitsubishi
+                        </label>
+                      </td>
+                      <td>
+                        <label>
+                          <input type="checkbox" name="brands" value="KDK" checked={filters.brand.includes("KDK")}
+                            onChange={(e) => handleCheckboxChange('brand', e.target.value, e.target.checked)} /> KDK
                         </label>
                       </td>
                     </tr>
                     <tr>
                       <td>
                         <label>
-                          <input type="checkbox" name="brands" /> Brand 3
+                          <input type="checkbox" name="brands" value="Toshiba" checked={filters.brand.includes("Toshiba")}
+                            onChange={(e) => handleCheckboxChange('brand', e.target.value, e.target.checked)} /> Toshiba
+                        </label>
+                      </td>
+                      <td>
+                        <label>
+                          <input type="checkbox" name="brands" value="Kangaroo" checked={filters.brand.includes("Kangaroo")}
+                            onChange={(e) => handleCheckboxChange('brand', e.target.value, e.target.checked)} /> Kangaroo
                         </label>
                       </td>
                     </tr>
                     <tr>
                       <td>
                         <label>
-                          <input type="checkbox" name="brands" /> Brand 4
+                          <input type="checkbox" name="brands" value="Senko" checked={filters.brand.includes("Senko")}
+                            onChange={(e) => handleCheckboxChange('brand', e.target.value, e.target.checked)} /> Senko
+                        </label>
+                      </td>
+                      <td>
+                        <label>
+                          <input type="checkbox" name="brands" value="Asiavina" checked={filters.brand.includes("Asiavina")}
+                            onChange={(e) => handleCheckboxChange('brand', e.target.value, e.target.checked)} /> Asiavina
+                        </label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label>
+                          <input type="checkbox" name="brands" value="Sunhouse" checked={filters.brand.includes("Sunhouse")}
+                            onChange={(e) => handleCheckboxChange('brand', e.target.value, e.target.checked)} /> Sunhouse
                         </label>
                       </td>
                     </tr>
                   </tbody>
                 </table>
               </div>
+
               <div className="buttons-container">
-                <button className="clear-button">Clear</button>
-                <button className="apply-button">Apply</button>
+                <button className="clear-button" onClick={clearFilters}>Clear</button>
+                <button className="apply-button" onClick={applyFilters}>Apply</button>
               </div>
             </div>
           </div>
