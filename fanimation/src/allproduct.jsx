@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './product.css';
 
 function Products({ data }) {
   const nav = useNavigate();
   const [showSecondaryNavbar, setShowSecondaryNavbar] = useState(true);
   const [showFilterBox, setShowFilterBox] = useState(false);
+  const [popupData, setPopupData] = useState(null);
 
   const toggleSecondaryNavbar = (e) => {
     e.preventDefault();
@@ -124,6 +126,79 @@ function Products({ data }) {
       brand: [],
       priceRange: { min: "", max: "" }
     });
+  };
+
+  const handleBuyNow = (product) => {
+    setPopupData(product);
+    console.log("Popup Data:", product);
+  };
+  const closePopup = () => {
+    setPopupData(null); // Đóng popup
+  };
+
+  const ReviewSection = () => {
+    const [userRating, setUserRating] = useState(0);
+    const [hoverRating, setHoverRating] = useState(0);
+    const [userFeedback, setUserFeedback] = useState("");
+    const [reviews, setReviews] = useState([
+      { rating: 5, feedback: "Amazing product! Highly recommend it." },
+      { rating: 4, feedback: "Very good quality but a bit expensive." },
+    ]);
+
+    const handleRating = (rating) => setUserRating(rating);
+
+    const submitReview = () => {
+      if (userRating && userFeedback.trim()) {
+        setReviews([...reviews, { rating: userRating, feedback: userFeedback }]);
+        setUserRating(0);
+        setUserFeedback("");
+      }
+    };
+
+    return (
+      <div className="review-section">
+        <h2><strong>User Reviews</strong></h2>
+        <div className="rating-input">
+          <h3>Rate this product</h3>
+          <div className="stars">
+            {[1, 2, 3, 4, 5].map((star) => (
+              <span
+                key={star}
+                className={`star ${hoverRating >= star || userRating >= star ? "active" : ""}`}
+                onMouseEnter={() => setHoverRating(star)}
+                onMouseLeave={() => setHoverRating(0)}
+                onClick={() => handleRating(star)}
+              >
+                ★
+              </span>
+            ))}
+          </div>
+          <textarea
+            placeholder="Write your feedback here..."
+            value={userFeedback}
+            onChange={(e) => setUserFeedback(e.target.value)}
+          ></textarea>
+          <button className="review-button" onClick={submitReview} disabled={!userRating || !userFeedback.trim()}>
+            Submit Review
+          </button>
+        </div>
+        <div className="review-list">
+          <h3>Reviews Of Others</h3>
+          {reviews.map((review, index) => (
+            <div key={index} className="review-item">
+              <div className="review-stars">
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <span key={star} className={`star ${review.rating >= star ? "active" : ""}`}>
+                    ★
+                  </span>
+                ))}
+              </div>
+              <p>{review.feedback}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
   };
 
   return (
@@ -371,28 +446,54 @@ function Products({ data }) {
         </div>
       </nav>
       <div className="product-list">
-        {dt.length === 0 ? (
-          <h1>No results found.</h1>
-        ) : (
-          dt.map((product, index) => (
-            <div className="product-card" key={index}>
-              <div className="product-card-img-container">
-                <img src={`./images/products/${product.Images}`} className="product-card-img" alt="" />
-              </div>
-              <div className="product-card-name">
-                {product.Brand} - {product.Name}
-                <div className="product-card-price">
-                  ${product.Price}
-                </div>
-              </div>
-              <div className="product-card-btn">
-                Buy now
-              </div>
+        {dt.map((f, index) =>
+          <div className="product-card" key={index}>
+            <div className="product-card-img-container">
+              <img src={`./images/products/${f.Images}`} className="product-card-img" alt="" />
             </div>
-          ))
+            <div className="product-card-name">
+              {f.Brand} - {f.Name}
+            </div>
+            <div className="product-card-btn" onClick={() => handleBuyNow(f)}>
+              Buy now
+            </div>
+          </div>
         )}
       </div>
+      {popupData && (
+        <div className="popup-overlay" onClick={closePopup}>
+          <div className="popup-container" onClick={(e) => e.stopPropagation()}>
+            <button className="popup-close" onClick={closePopup}>
+              ×
+            </button>
+            <div className="popup-image">
+            <img src={`./images/products/${popupData.Images}`} alt={popupData.Name} />
+            </div>
+            <div className="popup-content">
+              <h1><strong>{popupData.Brand}- {popupData.Name}</strong></h1>
+              <h3><strong>Outstanding features</strong></h3>
+              <div>
+                {popupData.Description && Array.isArray(popupData.Description) ? (
+                  popupData.Description.map((desc, index) => (
+                    <p key={index}>{desc}</p>
+                  ))
+                ) : (
+                  <p>No description available.</p>
+                )}
+              </div>
 
+              <div className="price">Price: ${popupData.Price}</div>
+              <div className="popup-buttons">
+                <button className="add-to-card" onClick={() => alert('Product added to cart!')}>
+                  Add to Cart
+                </button>
+                <button className="buy-now">Buy Now</button>
+              </div>
+              <ReviewSection />
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 }
