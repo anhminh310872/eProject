@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './product.css';
+
+import './assets/product.css'
 
 function Products({ data }) {
   const nav = useNavigate();

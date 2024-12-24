@@ -7,6 +7,7 @@ function ContactUs() {
     <div className="contact-container">
       <div className="title">
         <p className="sub-title">Contact Us</p>
+        <hr />
       </div>
 
       <div className="box-in4">
