@@ -41,25 +41,22 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+ 
   font-size: 20px;
 }
 
 h1,
 h2,
 h3 {
-  font-family: 'Montserrat', sans-serif;
+ 
 }
 
-p {
-  font-family: 'Georgia', serif;
-}
 
 body {
   font-size: 20px;
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
+ 
 }
 
 .navbar {
@@ -346,8 +343,9 @@ body {
 }
 
 .filter-table {
-  flex: 1;
+  flex: 50%;
   padding: 10px;
+  width: 50%;
   box-sizing: border-box;
   overflow: auto;
 }
@@ -362,12 +360,13 @@ body {
 .filter-elements h3 {
   font-size: 18px;
   font-weight: bold;
-  margin-bottom: 10px;
   color: #6c4a71;
-  border-bottom: 2px solid #6c4a71;
   padding-bottom: 5px;
 }
 
+.filter-table tbody {
+  border-top: 2px solid #6c4a71;
+}
 
 .filter-elements input[type="number"] {
   width: calc(40% - 10px);
@@ -790,7 +789,7 @@ footer {
   margin: 0 5px;
   padding: 5px;
   filter: invert(100%);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.5s, box-shadow 0.5s;
 }
 
 .footer-icons a img:hover {
@@ -808,7 +807,7 @@ footer {
 }
 
 .collections2024 {
-  font-family: serif;
+ 
   font-size: calc(40px + 6vw);
   color: #efeae7;
   text-shadow: #51424A50 0px 3px 4px, #51424A50 0px 6px 4px;
@@ -825,7 +824,7 @@ footer {
   color: #FFF;
   box-shadow: #00000050 0px 5px 6px;
   text-align: center;
-  font-family: serif;
+
   font-size: calc(20px + 1.5vw);
   transition: 0.5s;
 }
@@ -855,9 +854,9 @@ footer {
 }
 
 .home-title {
-  font-family: serif;
+ 
   font-size: 36pt;
-  font-weight: bold;
+  /* font-weight: bold; */
   font-style: italic;
   border-bottom: solid 4px black;
   width: calc(40vw + 300px);
@@ -879,7 +878,7 @@ footer {
   color: #FFF;
   box-shadow: #00000050 0px 5px 6px;
   text-align: center;
-  font-family: serif;
+ 
   font-size: calc(10px + 2vw);
   margin: 25px;
   transition: 0.5s;
@@ -908,8 +907,9 @@ footer {
 }
 
 .home-intro-grid-text {
-  padding: 20px;
-  font-size: calc(5px + 1vw);
+  padding: 40px;
+  font-size: 20px;
+  padding-right: 20%;
 }
 
 .home-intro-grid-column-1 {
@@ -919,13 +919,18 @@ footer {
 
 .home-intro-grid-column-2 {
   flex: 50%;
-  max-width: 50%;
+  max-width: 70%;
 }
 
 .home-intro-grid-column-3 {
-  flex: 25%;
-  max-width: 25%;
+  /* flex: 25%;
+  max-width: 25%; */
+  margin-left: 60%;
+  margin-top: 300px;
+  position: absolute;
+  
 }
+
 
 
 @media screen and (max-width: 1150px) {
@@ -1030,7 +1035,7 @@ footer {
 }
 
 .home-product-list-item-text {
-  font-family: serif;
+ 
   margin: 70px 0;
   font-size: 36pt;
 }
@@ -1094,7 +1099,7 @@ footer {
   color: #FFF;
   box-shadow: #00000050 0px 5px 6px;
   text-align: center;
-  font-family: serif;
+  
   font-size: calc(28px + 1vw);
   margin: auto;
   transition: 0.5s;
@@ -1106,9 +1111,9 @@ footer {
 }
 
 body {
-  background-color: #fdf7f4;
+  background-color: #000
   /* Màu nền trang web */
-  font-family: Arial, sans-serif;
+ 
   /* Font chữ cho toàn bộ trang */
 }
 
@@ -1128,7 +1133,7 @@ body {
   margin: 30px;
   font-size: 36pt;
   font-weight: bold;
-  font-family: serif;
+ 
 }
 
 .product-card {
@@ -1161,9 +1166,14 @@ body {
 
 .product-card-name {
   color: #190019;
-  font-size: 18pt;
+  font-size: 17pt;
   font-family: serif;
   margin-top: 15px;
+}
+
+.product-card-price {
+  font-size: 12pt;
+  color:#777;
 }
 
 .product-card-btn {
@@ -1174,7 +1184,7 @@ body {
   width: 140px;
   height: 45px;
   font-size: 15pt;
-  font-family: serif;
+ 
   padding: 5px;
   box-shadow: #00000030 0 6px 6px;
   transition: 0.5s;
@@ -1185,25 +1195,21 @@ body {
   cursor: pointer;
 }
 
-.box-in4 {
+.box-in4{
   display: block;
   background-color: #CBC1BF;
   position: static;
   margin-top: 350px;
-  transform: translateY(-40%);
-  /* Điều chỉnh để căn giữa chính xác */
-  width: 500px;
-  /* Tăng chiều rộng */
-  height: auto;
-  /* Tăng chiều cao nếu cần */
+  transform: translateY(-40%); /* Điều chỉnh để căn giữa chính xác */ 
+  width: 500px; /* Tăng chiều rộng */
+  height: auto; /* Tăng chiều cao nếu cần */
   border-radius: 5px;
 }
-
-.box-in4 h3 {
+.box-in4 h3{
   padding-top: 40px;
   font-size: 36px;
-  font-family: Arial, Helvetica, sans-serif;
-
+ 
+  
 }
 
 .box-in4 {
@@ -1213,39 +1219,35 @@ body {
   margin-left: 150px;
 }
 
-.rq-in4 input {
+.rq-in4 input{
   border-radius: 10px;
   padding-right: 100px;
   margin-top: -10px;
   border-width: 0px;
   width: 580px;
 }
-
-.box-in4 p {
+.box-in4 p{
   text-align: left;
   padding-left: 70px;
   padding-top: 30px;
 }
-
-.mess textarea {
+.mess textarea{
   margin-top: 0px;
   height: 50px;
   resize: vertical;
-  overflow: auto;
+  overflow:auto;
   border-radius: 10px;
   border-width: 0px;
   text-align: left;
   margin-left: 0px;
   max-height: fit-content;
   width: 580px;
-
+  
 }
-
-.box-in4 p {
+.box-in4 p{
   margin-top: 20px;
   margin-right: 10px;
 }
-
 .sendrp {
   text-align: center;
   margin-top: 10px;
@@ -1256,11 +1258,58 @@ body {
   background-color: #483A49;
   color: #fff;
 }
-
-.imgcontactus {
+.imgcontactus{
   position: absolute;
   right: 0%;
   top: 600px;
 
+}
+.box-in4{
+  display: block;
+  background-color: #CBC1BF;
+  position: static;
+  margin-top: 350px;
+  transform: translateY(-40%); /* Điều chỉnh để căn giữa chính xác */ 
+  width: 500px; /* Tăng chiều rộng */
+  height: auto; /* Tăng chiều cao nếu cần */
+  border-radius: 5px;
+}
+.box-in4 h3{
+  padding-top: 40px;
+  font-size: 36px;
+ 
+  
+}
 
+.box-in4 {
+  padding: 50px;
+  width: 824px;
+  height: auto;
+  margin-left: 150px;
+}
+
+.rq-in4 input{
+  border-radius: 10px;
+  padding-right: 100px;
+  margin-top: -10px;
+  border-width: 0px;
+  width: 580px;
+}
+.box-in4 p{
+  text-align: left;
+  padding-left: 70px;
+  padding-top: 30px;
+}
+.mess textarea{
+  margin-top: 0px;
+  height: 50px;
+  resize: vertical;
+  overflow:auto;
+  border-radius: 10px;
+  border-width: 0px;
+  text-align: left;
+  margin-left: 0px;
+  max-height: fit-content;
+  width: 580px;
+  
 }
