@@ -7,7 +7,13 @@
     "Brand": "Panasonic",
     "Blade": 3,
     "Color": "white",
-    "ID": 1
+    "ID": 1,
+    "Description": [
+                    "Panasonic brand - Japan, made in Malaysia.",
+                    "Large capacity 66W, fan blade diameter 150 cm helps cool the room quickly and evenly.",
+                    "Durable ball bearing motor , smooth operation without noise.",
+                    "5 wind levels , meeting different cooling needs."
+    ]
   },
   {
     "Category": "ceiling",
