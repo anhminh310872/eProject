@@ -1,0 +1,215 @@
+.hero {
+    background-color: #51424A;
+    color: white;
+    text-align: left;
+    padding: 50px 0;
+  }
+  
+  .hero h1 {
+    font-size: 50px;
+    margin: 0 0 0 5%;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .hero hr {
+    width: 100px;
+    height: 3px;
+    background-color: white;
+    border: none;
+    margin: 20px 0 0 6%;
+  }
+  
+  .trusted-brands {
+    color: #333;
+    background-color: #f6ede6;
+    text-align: center;
+    padding: 50px 0;
+  }
+  
+  .trusted-brands h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+  .brand-logos {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .brand-logos img {
+    width: 100%;
+    max-width: 120px;
+    height: 47px;
+    object-fit: contain;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .company-overview {
+    background-color: #f6ede6;
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .company-overview .overview-header h5 {
+    font-size: 1rem;
+    color: #51424a;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  
+  .company-overview .overview-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .company-overview .overview-stats {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  
+  .company-overview .overview-stats div h3 {
+    font-size: 2rem;
+    color: #51424a;
+    margin-bottom: 5px;
+  }
+  
+  .company-overview .overview-stats div p {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .company-overview .overview-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+  }
+  
+  .company-overview .image-wrapper img {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 45px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .company-overview .text-wrapper {
+    max-width: 500px;
+    text-align: left;
+  }
+  
+  .company-overview .text-wrapper span {
+    display: block;
+    font-size: 0.9rem;
+    color: #9a7d7d;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .company-overview .text-wrapper h3 {
+    font-size: 2rem;
+    margin: 15px 0;
+    color: #51424a;
+  }
+  
+  .company-overview .text-wrapper ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+  }
+  
+  .company-overview .text-wrapper ul li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    position: relative;
+    padding-left: 20px;
+    color: #333;
+  }
+  
+  .company-overview .text-wrapper ul li::before {
+    content: "•";
+    color: #51424a;
+    font-size: 1.2rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  .company-overview .text-wrapper button {
+    background-color: #51424a;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .company-overview .text-wrapper button:hover {
+    background-color: #333;
+  }
+  
+  .founders {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  
+  .founders h4 {
+    font-size: 25px;
+    margin-bottom: 0px;
+  }
+  
+  .founders p {
+    font-size: 18px;
+    margin-top: 10px;
+    font-style: italic;
+  }
+  
+  .team-section button {
+    background-color: #51424a;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .team-section h2 {
+    margin: 0px 15% 25px;
+  }
+  
+  .team-section h5 {
+    margin: 5px 15%;
+    color: #4F67F9;
+  }
+  
+  .team-section h2,
+  .team-section button {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  .team-section button {
+    float: right;
+    margin-right: 20%;
+    /* Adjust the margin as needed */
+  }
+  
+  .team-section button:hover {
+    background-color: #333;
+  }

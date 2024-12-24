@@ -1,175 +1,230 @@
+.title {
+  max-width: 100%;
+  height: 180px;
+  background-color: #51424a;
+}
 
+.title .sub-title {
+  text-align: left;
+  color: #fff;
+  padding-top: 50px;
+  font-size: 50px;
+  margin: 0 0 0 5%;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-    
-  .title {
-    max-width: 100%;
-    height: 180px;
-    background-color: #51424a;
-  }
-  
-  .title .sub-title {
-    text-align: left;
-    color: #fff;
-    padding-top: 50px;
-    font-size: 50px;
-    margin: 0 0 0 5%;
-    /* padding-left: 50px; */
-    font-family: Arial, Helvetica, sans-serif ;
-    
+.title hr {
+  width: 100px;
+  height: 3px;
+  background-color: white;
+  border: none;
+  margin: 20px 0 0 6%;
+}
+
+.box-in4 {
+  display: block;
+  background-color: #CBC1BF;
+  position: static;
+  margin-top: 350px;
+  transform: translateY(-40%);
+  width: 500px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.box-in4 h3 {
+  padding-top: 40px;
+  font-size: 36px;
+}
+
+.box-in4 {
+  padding: 50px;
+  width: 824px;
+  height: auto;
+  margin-left: 150px;
+}
+
+.rq-in4 input {
+  border-radius: 10px;
+  padding-right: 100px;
+  margin-top: -10px;
+  border-width: 0px;
+  width: 580px;
+}
+
+.box-in4 p {
+  text-align: left;
+  padding-left: 70px;
+  padding-top: 30px;
+}
+
+.mess textarea {
+  margin-top: 0px;
+  height: 50px;
+  resize: vertical;
+  overflow: auto;
+  border-radius: 10px;
+  border-width: 0px;
+  text-align: left;
+  margin-left: 0px;
+  max-height: fit-content;
+  width: 580px;
+}
+
+.box-in4 p {
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+.sendrp {
+  text-align: center;
+  margin-top: 10px;
+  border-width: 0px;
+  padding: 12px 24px;
+  font-size: 20px;
+  border-radius: 10px;
+  background-color: #483A49;
+  color: #fff;
+}
+
+.imgcontactus {
+  position: absolute;
+  right: 0%;
+  top: 600px;
+}
+
+.box-in4 {
+  display: block;
+  background-color: #CBC1BF;
+  position: static;
+  margin-top: 350px;
+  transform: translateY(-40%);
+  width: 500px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.box-in4 h3 {
+  padding-top: 40px;
+  font-size: 36px;
+}
+
+.box-in4 {
+  padding: 50px;
+  width: 824px;
+  height: auto;
+  margin-left: 150px;
+}
+
+.rq-in4 input {
+  border-radius: 10px;
+  padding-right: 100px;
+  margin-top: -10px;
+  border-width: 0px;
+  width: 580px;
+}
+
+.box-in4 p {
+  text-align: left;
+  padding-left: 70px;
+  padding-top: 30px;
+}
+
+.mess textarea {
+  margin-top: 0px;
+  height: 50px;
+  resize: vertical;
+  overflow: auto;
+  border-radius: 10px;
+  border-width: 0px;
+  text-align: left;
+  margin-left: 0px;
+  max-height: fit-content;
+  width: 580px;
+}
+
+.ggmap {
+  margin-left: 5%;
+  border: 2px solid #000;
+  border-radius: 2px;
+  width: 600px;
+  height: 600px;
+  margin-bottom: 24px;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+}
+
+.address-contactus {
+  padding-left: 700px;
+  margin-top: -500px;
+}
+
+.address-contactus p {
+  white-space: nowrap;
+  font-size: 20px;
+}
+
+.hotline-email-contactus {
+  padding-left: 700px;
+  margin-top: 70px;
+  z-index: 3;
+}
+
+.hotline-email-contactus p {
+  white-space: nowrap;
+  font-size: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .imgcontactus {
+      display: none;
   }
 
-  .title hr {
-    width: 100px;
-    height: 3px;
-    background-color: white;
-    border: none;
-    margin: 20px 0 0 6%;
-  }
-  .box-in4{
-    display: block;
-    background-color: #CBC1BF;
-    position: static;
-    margin-top: 350px;
-    transform: translateY(-40%); /* Điều chỉnh để căn giữa chính xác */ 
-    width: 500px; /* Tăng chiều rộng */
-    height: auto; /* Tăng chiều cao nếu cần */
-    border-radius: 5px;
-  }
-  .box-in4 h3{
-    padding-top: 40px;
-    font-size: 36px;
-   
-    
-  }
-  
   .box-in4 {
-    padding: 50px;
-    width: 824px;
-    height: auto;
-    margin-left: 150px;
+      width: 90%;
+      margin-left: 5%;
+      padding: 20px;
   }
-  
-  .rq-in4 input{
-    border-radius: 10px;
-    padding-right: 100px;
-    margin-top: -10px;
-    border-width: 0px;
-    width: 580px;
+
+  .box-in4 h3 {
+      font-size: 28px;
   }
-  .box-in4 p{
-    text-align: left;
-    padding-left: 70px;
-    padding-top: 30px;
+
+  .rq-in4 input {
+      width: 100%;
+      padding-right: 20px;
   }
-  .mess textarea{
-    margin-top: 0px;
-    height: 50px;
-    resize: vertical;
-    overflow:auto;
-    border-radius: 10px;
-    border-width: 0px;
-    text-align: left;
-    margin-left: 0px;
-    max-height: fit-content;
-    width: 580px;
-    
+
+  .mess textarea {
+      width: 100%;
   }
-  .box-in4 p{
-    margin-top: 20px;
-    margin-right: 10px;
-  }
+
   .sendrp {
-    text-align: center;
-    margin-top: 10px;
-    border-width: 0px;
-    padding: 12px 24px;
-    font-size: 20px;
-    border-radius: 10px;
-    background-color: #483A49;
-    color: #fff;
-  }
-  .imgcontactus{
-    position: absolute;
-    right: 0%;
-    top: 600px;
-  
-  }
-  .box-in4{
-    display: block;
-    background-color: #CBC1BF;
-    position: static;
-    margin-top: 350px;
-    transform: translateY(-40%); /* Điều chỉnh để căn giữa chính xác */ 
-    width: 500px; /* Tăng chiều rộng */
-    height: auto; /* Tăng chiều cao nếu cần */
-    border-radius: 5px;
-  }
-  .box-in4 h3{
-    padding-top: 40px;
-    font-size: 36px;
-   
-    
-  }
-  
-  .box-in4 {
-    padding: 50px;
-    width: 824px;
-    height: auto;
-    margin-left: 150px;
-  }
-  
-  .rq-in4 input{
-    border-radius: 10px;
-    padding-right: 100px;
-    margin-top: -10px;
-    border-width: 0px;
-    width: 580px;
-  }
-  .box-in4 p{
-    text-align: left;
-    padding-left: 70px;
-    padding-top: 30px;
-  }
-  .mess textarea{
-    margin-top: 0px;
-    height: 50px;
-    resize: vertical;
-    overflow:auto;
-    border-radius: 10px;
-    border-width: 0px;
-    text-align: left;
-    margin-left: 0px;
-    max-height: fit-content;
-    width: 580px;
-    
-  }
-  .ggmap {
-    margin-left: 5%;
-    border: 2px solid #000;
-    border-radius: 2px;
-    width: 600px;
-    height: 600px;
-    margin-bottom: 24px;
-  }
-  .map {
-    width: 100%;
-    height: 100%;
-  }
-  .address-contactus {
-    padding-left: 700px;
-    margin-top: -500px;
-  }
-  .address-contactus p {
-    white-space: nowrap;
-    font-size: 20px;
-  }
-  .hotline-email-contactus {
-    padding-left: 700px;
-    margin-top: 70px;
-    z-index: 3;
-  }
-  .hotline-email-contactus p {
-    white-space: nowrap;
-    font-size: 20px;
+      font-size: 18px;
+      padding: 10px 20px;
   }
 
+  .address-contactus {
+      padding-left: 0;
+      margin-top: 20px;
+  }
+
+  .hotline-email-contactus {
+      padding-left: 0;
+      margin-top: 20px;
+  }
+
+  .ggmap {
+      margin-bottom: 80px; /* Thêm khoảng trống để tránh bị che */
+  }
+
+  .footer {
+    position: static; /* Đảm bảo footer nằm cuối */
+    margin-top: 150px; /* Tăng khoảng cách giữa nội dung và footer */
+    padding-top: 20px;
+}
+}
