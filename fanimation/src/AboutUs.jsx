@@ -27,8 +27,9 @@ function AboutUs() {
   </section>
   <section className="company-overview">
     <div className="overview-header">
-      <h5>About the Company</h5>
-      <h2>We Made it for You.</h2>
+      <h2>About the Company</h2>
+      <h4>For over 30 years, we have been a forerunner in realiable cooling technology and stylish, elegant home aesthetics. Offering a wide range of high-quality, reliable fans for every need—whether for your home, office, or business.</h4>
+      <h4>Explore our collection today and enjoy the comfort and quality that comes with decades of expertise.</h4><br/>
     </div>
     <div className="overview-stats">
       <div>
