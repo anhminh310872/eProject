@@ -453,7 +453,7 @@ function Products({ data }) {
           dt.map((product, index) => (
             <div className="product-card" key={index}>
               <div className="product-card-img-container">
-                <img src={`./images/products/${product.Images}`} className="product-card-img" alt="" />
+                <img src={`./images/products/${product.Images[0]}`} className="product-card-img" alt="" />
               </div>
               <div className="product-card-name">
                 {product.Brand} - {product.Name}
@@ -475,7 +475,8 @@ function Products({ data }) {
               ×
             </button>
             <div className="popup-image">
-            <img src={`./images/products/${popupData.Images}`} alt={popupData.Name} />
+            {/* thay cái này với popup */}
+            <img src={`./images/products/${popupData.Images[0]}`} alt={popupData.Name} />
             </div>
             <div className="popup-content">
               <h1><strong>{popupData.Brand}- {popupData.Name}</strong></h1>

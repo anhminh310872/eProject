@@ -2,23 +2,29 @@
   {
     "Category": "ceiling",
     "Name": "PN001",
-    "Images": "10020147-quat-tran-panasonic-f-60mz2.jpg",
+    "Images": [
+      "10020147-quat-tran-panasonic-f-60mz2.jpg",
+      "10020147-quat-tran-panasonic-f-60mz2-s-2_9za0-kf.jpg"
+    ],
     "Price": 46.33,
     "Brand": "Panasonic",
     "Blade": 3,
     "Color": "white",
     "ID": 1,
     "Description": [
-                    "Panasonic brand - Japan, made in Malaysia.",
-                    "Large capacity 66W, fan blade diameter 150 cm helps cool the room quickly and evenly.",
-                    "Durable ball bearing motor , smooth operation without noise.",
-                    "5 wind levels , meeting different cooling needs."
+      "Panasonic brand - Japan, made in Malaysia.",
+      "Large capacity 66W, fan blade diameter 150 cm helps cool the room quickly and evenly.",
+      "Durable ball bearing motor , smooth operation without noise.",
+      "5 wind levels , meeting different cooling needs."
     ]
   },
   {
     "Category": "ceiling",
     "Name": "KD001",
-    "Images": "10010567-quat-tran-kdk-n56yg-mau-nau-dam.jpg",
+    "Images": [
+      "10010567-quat-tran-kdk-n56yg-mau-nau-dam.jpg",
+      "10010567-quat-tran-kdk-n56yg-mau-nau-dam-2.jpg"
+    ],
     "Price": 76.56,
     "Brand": "KDK",
     "Blade": 3,
@@ -31,7 +37,11 @@
   {
     "Category": "ceiling",
     "Name": "KD002",
-    "Images": "10008672-quat-tran-kdk-m56xr-mau-vang-1.jpg",
+    "Images": [
+      "10008672-quat-tran-kdk-m56xr-mau-vang-1.jpg",
+      "10008672-quat-tran-kdk-m56xr-mau-vang-2.jpg",
+      "10008672-quat-tran-kdk-m56xr-mau-vang-3.jpg"
+    ],
     "Price": 112.09,
     "Brand": "KDK",
     "Blade": 4,
@@ -41,7 +51,9 @@
   {
     "Category": "ceiling",
     "Name": "PN002",
-    "Images": "10001771-quat-tran-panasonic-f-56mpg-go.jpg",
+    "Images": [
+      "10001771-quat-tran-panasonic-f-56mpg-go.jpg"
+    ],
     "Price": 97.36,
     "Brand": "Panasonic",
     "Blade": 4,
@@ -54,7 +66,9 @@
   {
     "Category": "ceiling",
     "Name": "KD003",
-    "Images": "10023282-quat-tran-kdk-t60dw.jpg",
+    "Images": [
+      "10023282-quat-tran-kdk-t60dw.jpg"
+    ],
     "Price": 241.65,
     "Brand": "KDK",
     "Blade": 5,
@@ -67,7 +81,9 @@
   {
     "Category": "ceiling",
     "Name": "KD004",
-    "Images": "W56WVĐEN.jpg",
+    "Images": [
+      "W56WVĐEN.jpg"
+    ],
     "Price": 285.43,
     "Brand": "KDK",
     "Blade": 4,
@@ -77,7 +93,11 @@
   {
     "Category": "ceiling",
     "Name": "MB001",
-    "Images": "sfgy3-700x467.jpg",
+    "Images": [
+      "sfgy3-700x467.jpg",
+      "sfgy2-700x467.jpg",
+      "sfgy4-700x467.jpg"
+    ],
     "Price": 149.21,
     "Brand": "Mitsubishi",
     "Blade": 4,
@@ -90,7 +110,11 @@
   {
     "Category": "ceiling",
     "Name": "MB002",
-    "Images": "ra5cygy2-700x467.jpg",
+    "Images": [
+      "ra5cygy2-700x467.jpg",
+      "ra5cygy3-700x467.jpg",
+      "ra5cygy4-700x467.jpg"
+    ],
     "Price": 216.14,
     "Brand": "Mitsubishi",
     "Blade": 5,
@@ -100,7 +124,11 @@
   {
     "Category": "ceiling",
     "Name": "KG001",
-    "Images": "quattrankangarookgsf0560516-1-1-700x467.jpg",
+    "Images": [
+      "quattrankangarookgsf0560516-1-1-700x467.jpg",
+      "quattrankangarookgsf0560512-1-700x467.jpg",
+      "quatkangaroo-700x467.jpg"
+    ],
     "Price": 90.16,
     "Brand": "Kangaroo",
     "Blade": 5,
@@ -110,7 +138,11 @@
   {
     "Category": "ceiling",
     "Name": "PN003",
-    "Images": "quat-tran-panasonic-f-56xpg-w-1-638610574169660682-700x467.jpg",
+    "Images": [
+      "quat-tran-panasonic-f-56xpg-w-1-638610574169660682-700x467.jpg",
+      "quat-tran-panasonic-f-56xpg-w-2-638610572224768228-700x467.jpg",
+      "quat-tran-panasonic-f-56xpg-w-3-638610572233000430-700x467.jpg"
+    ],
     "Price": 137.4,
     "Brand": "Panasonic",
     "Blade": 4,
@@ -120,7 +152,10 @@
   {
     "Category": "pedestal",
     "Name": "SH001",
-    "Images": "qua-t-sa-c-dien-sunhouse-shd7223-1-700x467.jpg",
+    "Images": [
+      "qua-t-sa-c-dien-sunhouse-shd7223-1-700x467.jpg",
+      "qua-t-sa-c-dien-sunhouse-shd7223-2-700x467.jpg"
+    ],
     "Price": 66.54,
     "Brand": "Sunhouse",
     "Blade": 5,
@@ -130,7 +165,12 @@
   {
     "Category": "pedestal",
     "Name": "AV001",
-    "Images": "10051530-quat-san-asiavina-vy636790-xam.jpg",
+    "Images": [
+      "10051530-quat-san-asiavina-vy636790-xam.jpg",
+      "10051530-quat-san-asiavina-vy636790-xam-2.jpg",
+      "10051530-quat-san-asiavina-vy636790-xam-3.jpg",
+      "10051530-quat-san-asiavina-vy636790-xam-4.jpg"
+    ],
     "Price": 27.17,
     "Brand": "Asiavina",
     "Blade": 6,
@@ -143,7 +183,9 @@
   {
     "Category": "pedestal",
     "Name": "SK001",
-    "Images": "10046884-quat-ban-senko-bd1012-kem-mon-1.jpg",
+    "Images": [
+      "10046884-quat-ban-senko-bd1012-kem-mon-1.jpg"
+    ],
     "Price": 12.6,
     "Brand": "Senko",
     "Blade": 3,
@@ -157,7 +199,9 @@
   {
     "Category": "pedestal",
     "Name": "SK002",
-    "Images": "10057586-Quạt_đứng_Senko_DTS16091.jpg",
+    "Images": [
+      "10057586-Quạt_đứng_Senko_DTS16091.jpg"
+    ],
     "Price": 15.75,
     "Brand": "Senko",
     "Blade": 5,
@@ -170,7 +214,11 @@
   {
     "Category": "pedestal",
     "Name": "MB002",
-    "Images": "10057401-quat-dung-mitsibishi-lv16-rb-sf-gy-xam-nhat-1.jpg",
+    "Images": [
+      "10057401-quat-dung-mitsibishi-lv16-rb-sf-gy-xam-nhat-1.jpg",
+      "10057401-quat-dung-mitsibishi-lv16-rb-sf-gy-xam-nhat-.jpg",
+      "10057401-quat-dung-mitsibishi-lv16-rb-sf-gy-xam-nhat-2.jpg"
+    ],
     "Price": 94.09,
     "Brand": "Mitsubishi",
     "Blade": 3,
@@ -180,7 +228,10 @@
   {
     "Category": "pedestal",
     "Name": "TB001",
-    "Images": "quat-dung-toshiba-f-lsa10-w-vn-trang-1-2-700x467.jpg",
+    "Images": [
+      "quat-dung-toshiba-f-lsa10-w-vn-trang-1-2-700x467.jpg",
+      "quat-dung-toshiba-f-lsa10-w-vn-trang-2-1-700x467.jpg"
+    ],
     "Price": 45.28,
     "Brand": "Toshiba",
     "Blade": 5,
@@ -190,7 +241,11 @@
   {
     "Category": "pedestal",
     "Name": "SH001",
-    "Images": "10050606-quat-sac-dien-sunhouse-shd7223-2.jpg",
+    "Images": [
+      "10050606-quat-sac-dien-sunhouse-shd7223-2.jpg",
+      "10050606-quat-sac-dien-sunhouse-shd7223-1.jpg",
+      "10050606-quat-sac-dien-sunhouse-shd7223-3.jpg"
+    ],
     "Price": 56.89,
     "Brand": "Sunhouse",
     "Blade": 5,
@@ -200,7 +255,11 @@
   {
     "Category": "pedestal",
     "Name": "SP001",
-    "Images": "quat-dung-sharp-pj-s40mv-lg-1-700x467.jpg",
+    "Images": [
+      "quat-dung-sharp-pj-s40mv-lg-1-700x467.jpg",
+      "quat-dung-sharp-pj-s40mv-lg-2-700x467.jpg",
+      "quat-dung-sharp-pj-s40mv-lg-3-700x467.jpg"
+    ],
     "Price": 65,
     "Brand": "Sharp",
     "Blade": 3,
@@ -213,7 +272,10 @@
   {
     "Category": "pedestal",
     "Name": "SP002",
-    "Images": "dung-sharp-pj-l40rv-dg-1-700x467.jpg",
+    "Images": [
+      "dung-sharp-pj-l40rv-dg-1-700x467.jpg",
+      "dung-sharp-pj-l40rv-dg-2-700x467"
+    ],
     "Price": 42.48,
     "Brand": "Sharp",
     "Blade": 3,
@@ -223,7 +285,11 @@
   {
     "Category": "pedestal",
     "Name": "KG002",
-    "Images": "quat-sac-dien-kangaroo-5-canh-kg745-24w-1-700x467.jpg",
+    "Images": [
+      "quat-sac-dien-kangaroo-5-canh-kg745-24w-1-700x467.jpg",
+      "quat-sac-dien-kangaroo-5-canh-kg745-24w-2-700x467.jpg",
+      "quat-sac-dien-kangaroo-5-canh-kg745-24w-3-700x467.jpg"
+    ],
     "Price": 54.72,
     "Brand": "Kangaroo",
     "Blade": 5,
@@ -237,7 +303,9 @@
   {
     "Category": "wall",
     "Name": "SK003",
-    "Images": "10032772-quat-treo-senko-tc1626-mon.jpg",
+    "Images": [
+      "10032772-quat-treo-senko-tc1626-mon.jpg"
+    ],
     "Price": 19.99,
     "Brand": "Senko",
     "Blade": 3,
@@ -247,7 +315,9 @@
   {
     "Category": "wall",
     "Name": "SK004",
-    "Images": "quat-treo-senko-tc1622-mau-den-cam.jpg",
+    "Images": [
+      "quat-treo-senko-tc1622-mau-den-cam.jpg"
+    ],
     "Price": 24.99,
     "Brand": "Senko",
     "Blade": 6,
@@ -261,7 +331,9 @@
   {
     "Category": "wall",
     "Name": "AV002",
-    "Images": "10051533-quat-treo-asiavina-vy357690-trang-1_ifri-1k.jpg",
+    "Images": [
+      "10051533-quat-treo-asiavina-vy357690-trang-1_ifri-1k.jpg"
+    ],
     "Price": 29.99,
     "Brand": "Asiavina",
     "Blade": 3,
@@ -274,7 +346,9 @@
   {
     "Category": "wall",
     "Name": "AV003",
-    "Images": "10051396-quat-treo-asiavina-vy377990-xam-1.jpg",
+    "Images": [
+      "10051396-quat-treo-asiavina-vy377990-xam-1.jpg"
+    ],
     "Price": 34.99,
     "Brand": "Asiavina",
     "Blade": 3,
@@ -284,7 +358,10 @@
   {
     "Category": "wall",
     "Name": "TB002",
-    "Images": "10036643-quat-treo-toshiba-f-wsa20-h-vn.jpg",
+    "Images": [
+      "10036643-quat-treo-toshiba-f-wsa20-h-vn.jpg",
+      "10036643-quat-treo-toshiba-f-wsa20-h-vn-2_3o9p-uu.jpg"
+    ],
     "Price": 59.99,
     "Brand": "Toshiba",
     "Blade": 3,
@@ -297,7 +374,9 @@
   {
     "Category": "wall",
     "Name": "MB003",
-    "Images": "10051006-quat-treo-tuong-mitsubishi-w16-ra-bl-trang-1.jpg",
+    "Images": [
+      "10051006-quat-treo-tuong-mitsubishi-w16-ra-bl-trang-1.jpg"
+    ],
     "Price": 89.99,
     "Brand": "Mitsubishi",
     "Blade": 3,
@@ -311,7 +390,9 @@
   {
     "Category": "wall",
     "Name": "MB004",
-    "Images": "10051013-quat-treo-tuong-mitsubishi-w16-ra-cy-gy-xam-dam-1.jpg",
+    "Images": [
+      "10051013-quat-treo-tuong-mitsubishi-w16-ra-cy-gy-xam-dam-1.jpg"
+    ],
     "Price": 89.99,
     "Brand": "Mitsubishi",
     "Blade": 3,
@@ -324,7 +405,11 @@
   {
     "Category": "wall",
     "Name": "PN004",
-    "Images": "10001194_QUAT-TREO_PANASONIC_F-409M-XANH_01.jpg",
+    "Images": [
+      "10001194_QUAT-TREO_PANASONIC_F-409M-XANH_01.jpg",
+      "10001194_QUAT-TREO_PANASONIC_F-409M-XANH_02.jpg",
+      "10001194_QUAT-TREO_PANASONIC_F-409M-XANH_03.jpg"
+    ],
     "Price": 124.99,
     "Brand": "Panasonic",
     "Blade": 3,
@@ -334,7 +419,10 @@
   {
     "Category": "wall",
     "Name": "KD005",
-    "Images": "10003154-quat-treo-kdk-m40m-trang-nga-1.jpg",
+    "Images": [
+      "10003154-quat-treo-kdk-m40m-trang-nga-1.jpg",
+      "10003154-quat-treo-kdk-m40m-trang-nga-2.jpg"
+    ],
     "Price": 134.99,
     "Brand": "KDK",
     "Blade": 3,
@@ -344,7 +432,11 @@
   {
     "Category": "wall",
     "Name": "SK005",
-    "Images": "treo-senko-t1680-1-1-700x467.jpg",
+    "Images": [
+      "treo-senko-t1680-1-1-700x467.jpg",
+      "treo-senko-t1680-2-700x467.jpg",
+      "treo-senko-t1680-3-700x467.jpg"
+    ],
     "Price": 19.99,
     "Brand": "Senko",
     "Blade": 3,
@@ -354,7 +446,9 @@
   {
     "Category": "exhaust",
     "Name": "MB005",
-    "Images": "EX-20SHC5T-1-760x760.jpg",
+    "Images": [
+      "EX-20SHC5T-1-760x760.jpg"
+    ],
     "Price": 49.99,
     "Brand": "Mitsubishi",
     "Blade": 5,
@@ -364,7 +458,9 @@
   {
     "Category": "exhaust",
     "Name": "MB006",
-    "Images": "EX-20SKC5T-1-760x760.jpg",
+    "Images": [
+      "EX-20SKC5T-1-760x760.jpg"
+    ],
     "Price": 79.99,
     "Brand": "Mitsubishi",
     "Blade": 5,
@@ -374,7 +470,9 @@
   {
     "Category": "exhaust",
     "Name": "MB007",
-    "Images": "v-20sl3-6t-e86f723b-ab35-4212-af72-17b60fd6e0c3-555af9d2-ef76-4d2b-b8ff-812cad5ed691.png",
+    "Images": [
+      "v-20sl3-6t-e86f723b-ab35-4212-af72-17b60fd6e0c3-555af9d2-ef76-4d2b-b8ff-812cad5ed691.png"
+    ],
     "Price": 59.99,
     "Brand": "Mitsubishi",
     "Blade": 6,
@@ -384,7 +482,9 @@
   {
     "Category": "exhaust",
     "Name": "MB008",
-    "Images": "ex-30sh5t-0901e198-2867-4d5e-9861-136d3d04fd49.png",
+    "Images": [
+      "ex-30sh5t-0901e198-2867-4d5e-9861-136d3d04fd49.png"
+    ],
     "Price": 74.99,
     "Brand": "Mitsubishi",
     "Blade": 5,
@@ -394,7 +494,9 @@
   {
     "Category": "exhaust",
     "Name": "MB009",
-    "Images": "ex-20skc5t-bw-742eaa77-b159-4fef-b081-067a373c5948.png",
+    "Images": [
+      "ex-20skc5t-bw-742eaa77-b159-4fef-b081-067a373c5948.png"
+    ],
     "Price": 49.99,
     "Brand": "Mitsubishi",
     "Blade": 5,
@@ -407,7 +509,9 @@
   {
     "Category": "exhaust",
     "Name": "PN005",
-    "Images": "ast-2103388.png.pub.thumb.644.644.png",
+    "Images": [
+      "ast-2103388.png.pub.thumb.644.644.png"
+    ],
     "Price": 69.99,
     "Brand": "Panasonic",
     "Blade": 5,
@@ -417,7 +521,9 @@
   {
     "Category": "exhaust",
     "Name": "PN006",
-    "Images": "ast-2111192.png.pub.thumb.644.644.png",
+    "Images": [
+      "ast-2111192.png.pub.thumb.644.644.png"
+    ],
     "Price": 59.99,
     "Brand": "Panasonic",
     "Blade": 5,
@@ -427,7 +533,9 @@
   {
     "Category": "exhaust",
     "Name": "PN007",
-    "Images": "ast-2103746.png.pub.thumb.644.644.png",
+    "Images": [
+      "ast-2103746.png.pub.thumb.644.644.png"
+    ],
     "Price": 64.99,
     "Brand": "Panasonic",
     "Blade": 4,
@@ -437,7 +545,9 @@
   {
     "Category": "exhaust",
     "Name": "TB003",
-    "Images": "VRH25J10.jpg",
+    "Images": [
+      "VRH25J10.jpg"
+    ],
     "Price": 34.99,
     "Brand": "Toshiba",
     "Blade": 6,
@@ -451,7 +561,9 @@
   {
     "Category": "exhaust",
     "Name": "SP003",
-    "Images": "SHP-GVE250W_0.jpg",
+    "Images": [
+      "SHP-GVE250W_0.jpg"
+    ],
     "Price": 24.99,
     "Brand": "Sharp",
     "Blade": 5,
