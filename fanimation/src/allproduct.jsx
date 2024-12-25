@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 
 import './assets/product.css'
 
-
 function Products({ data }) {
   const nav = useNavigate();
   const [showSecondaryNavbar, setShowSecondaryNavbar] = useState(true);
