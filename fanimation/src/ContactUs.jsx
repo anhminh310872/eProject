@@ -5,10 +5,12 @@ function ContactUs() {
   
   return (
     <div className="contact-container">
-      <div className="title">
-        <p className="sub-title">Contact Us</p>
-        <hr />
-      </div>
+      <section>
+        <div className="hero">
+          <h1>Contact Us</h1>
+          <hr />
+        </div>
+      </section>
 
       <div className="box-in4">
         <h3>Request Information</h3>
@@ -32,7 +34,7 @@ function ContactUs() {
       <hr />
 
       <div className="ggmap">
-        <iframe
+        <iframe title="Our office"
           className="map"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.267408022309!2d106.67984617594756!3d10.790819589358854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528d4a7c59c09%3A0x8e2f7cbc924be1db!2zMzkxYSDEkC4gTmFtIEvhu7MgS2jhu59pIE5naMSpYSwgUGjGsOG7nW5nIDE0LCBRdeG6rW4gMywgSOG7kyBDaMOtIE1pbmgsIFZpZXRuYW0!5e0!3m2!1sen!2s!4v1734636266531!5m2!1sen!2s"
           style={{ border: 0 }}
