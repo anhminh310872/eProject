@@ -9,6 +9,7 @@ import ContactUs from './ContactUs';
 import Login from './Login';
 import SignUp from './SignUp';
 import product from './product.json';
+import FAQ from './FaQ';
 
 function App() {
   // const [menuOpen, setMenuOpen] = useState(false);
@@ -26,7 +27,7 @@ function App() {
                 <Link to="/about-us">About Us</Link>
               </li>
               <li>
-                <Link to="/Contact-us">Contact Us</Link>
+                <Link to="/contact-us">Contact Us</Link>
               </li>
               <li>
               <input type="text" placeholder="Search..." className="search-box" />
@@ -57,6 +58,7 @@ function App() {
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/faq" element={<FAQ />} />
       </Routes>
 
       <footer>
@@ -89,7 +91,10 @@ function App() {
                 <Link to="/about-us">About Us</Link>
               </li>
               <li>
-                <Link to="/Contact-us">Contact Us</Link>
+                <Link to="/contact-us">Contact Us</Link>
+              </li>
+              <li>
+                <Link to="/faq">FAQ</Link>
               </li>
             </ul>
           </div>
