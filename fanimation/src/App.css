@@ -616,3 +616,33 @@ footer {
 
 
 }
+
+.ticker-container {
+  width: 100%;
+  height:auto;
+  background-color: #000;
+  color: white;
+  text-align: center;
+  overflow: hidden; 
+}
+
+.ticker {
+  padding-top:3px;
+  display: flex;
+  justify-content: start;
+  animation: scroll-left 20s linear infinite;
+  font-size:10pt;
+  height:30px;
+  white-space: nowrap;
+  margin: 0;
+  font-family: "Courier New", Courier, monospace;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%); /* Start off-screen (right) */
+  }
+  100% {
+    transform: translateX(-100%); /* End off-screen (left) */
+  }
+}

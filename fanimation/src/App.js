@@ -1,4 +1,4 @@
-// import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import { Link, useNavigate } from 'react-router-dom';
@@ -11,9 +11,47 @@ import SignUp from './SignUp';
 import product from './product.json';
 import FAQ from './FaQ';
 
+function getDate() {
+  const today = new Date();
+  const month = today.getMonth() + 1;
+  const year = today.getFullYear();
+  const date = today.getDate();
+  return `${date}/${month}/${year}`;
+}
+
+function getTime() {
+  const now = new Date();
+  const hour = now.getHours();
+  const minute = String(now.getMinutes()).padStart(2,'0'); 
+  const second = String(now.getSeconds()).padStart(2,'0');  
+  return `${hour}:${minute}:${second}`;
+}
+
 function App() {
   // const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
+
+  const [location, setLocation] = useState({ lat: null, lng: null });
+    const currentDate = useState(getDate());
+    const currentTime = useState(getTime());
+
+  const getGeolocation = () => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          setLocation({
+            lat: position.coords.latitude.toFixed(2),
+            lng: position.coords.longitude.toFixed(2),
+          });
+        }
+      );
+    }
+  };
+
+  useEffect(() => {
+    getGeolocation();
+  }, []);
+
   return (
     <div className="App">
       <header>
@@ -102,19 +140,19 @@ function App() {
             <h3>Categories</h3>
             <ul>
               <li>
-                <Link to="/allproducts">All Products</Link>
+                <Link to="/products">All Products</Link>
               </li>
               <li>
-                <Link to="/ceiling">Ceiling</Link>
+                <Link to="/products#ceiling">Ceiling</Link>
               </li>
               <li>
-                <Link to="/Pedestal">Pedestal</Link>
+                <Link to="/products#pedestal">Pedestal</Link>
               </li>
               <li>
-                <Link to="/wall">Wall</Link>
+                <Link to="/products#wall">Wall</Link>
               </li>
               <li>
-                <Link to="/accessories">Accessories</Link>
+                <Link to="/products#accessories">Accessories</Link>
               </li>
             </ul>
           </div>
@@ -147,6 +185,13 @@ function App() {
           </div>
         </div>
       </footer>
+      <div className="ticker-container">
+      <div className="ticker">
+      <p>
+          Latitude: {location.lat}, Longitude: {location.lng}&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{currentDate}&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{currentTime}
+        </p>
+      </div>
+    </div>
     </div>
   );
 }
