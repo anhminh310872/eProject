@@ -4,6 +4,50 @@ import { useNavigate } from 'react-router-dom';
 import './assets/product.css'
 
 function Products({ data }) {
+
+  const [isCartVisible, setCartVisible] = useState(false);
+  const [cart, setCart] = useState([]);
+
+  const toggleCart = () => {
+    setCartVisible(!isCartVisible);
+    const mainContent = document.querySelector(".main-content");
+    if (mainContent) {
+      mainContent.classList.toggle("shifted", !isCartVisible);
+    }
+  };
+
+  const handleQuantityChange = (productId, change) => {
+    setCartItems((prevCartItems) =>
+      prevCartItems
+        .map((item) =>
+          item.id === productId ? { ...item, quantity: Math.max(1, item.quantity + change) } : item
+        )
+        .filter((item) => item.quantity > 0)
+    );
+  };
+
+  const [cartItems, setCartItems] = useState([]);
+
+  const handleAddToCart = (product) => {
+    console.log("Adding to cart:", product);
+    setCartItems((prevCartItems) => {
+      const existingProductIndex = prevCartItems.findIndex((item) => item.id === product.id);
+      
+      if (existingProductIndex !== -1) {
+        const updatedCart = [...prevCartItems];
+        updatedCart[existingProductIndex].quantity += 1;
+        console.log("Updated cart:", updatedCart);
+        return updatedCart;
+      } else {
+        const updatedCart = [...prevCartItems, { ...product, quantity: 1 }];
+        console.log("New product added:", updatedCart);
+        return updatedCart;
+      }
+    });
+  };
+  
+  
+
   const nav = useNavigate();
   const [showSecondaryNavbar, setShowSecondaryNavbar] = useState(true);
   const [showFilterBox, setShowFilterBox] = useState(false);
@@ -446,6 +490,8 @@ function Products({ data }) {
           </div>
         </div>
       </nav>
+
+      <div className="main-content">
       <div className="product-list">
         {dt.length === 0 ? (
           <h1>No results found.</h1>
@@ -467,7 +513,10 @@ function Products({ data }) {
             </div>
           ))
         )}
+        </div>
       </div>
+
+
       {popupData && (
         <div className="popup-overlay" onClick={closePopup}>
           <div className="popup-container" onClick={(e) => e.stopPropagation()}>
@@ -493,7 +542,10 @@ function Products({ data }) {
 
               <div className="price">Price: ${popupData.Price}</div>
               <div className="popup-buttons">
-                <button className="add-to-card" onClick={() => alert('Product added to cart!')}>
+                <button className="add-to-card" onClick={() => {
+    handleAddToCart(popupData);
+    alert('Product added to cart!');
+  }}>
                   Add to Cart
                 </button>
                 <button className="buy-now">Buy Now</button>
@@ -503,6 +555,50 @@ function Products({ data }) {
           </div>
         </div>
       )}
+      <div className='showcart'>
+        <div className={`cart-button ${isCartVisible ? 'show' : ''}`} onClick={() => toggleCart()}>
+          <div className="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+          </div>
+          <div className="cart-quantity">
+            0
+          </div>
+        </div>
+
+        <div className={`carttab ${isCartVisible ? 'show' : ''}`}>
+          <h1>Shopping cart</h1>
+          <div className="listcart">
+          {cartItems.length === 0 ? (
+    <p>Your cart is empty</p>
+  ) : (
+    cartItems.map((item, index) => (
+            <div className="item" key={index}>
+              <div className="image">
+              <img src={`./images/products/${item.Images[0]}`} alt={item.Name} />
+              </div>
+              <div className="name">{item.Name}</div>
+        <div className="price">${item.Price}</div>
+        <div className="quantity">
+        <span className="minus" onClick={() => handleQuantityChange(item.id, -1)}>
+            <i className="fa-solid fa-minus" />
+          </span>
+          <span>{item.quantity}</span>
+          <span className="plus" onClick={() => handleQuantityChange(item.id, 1)}>
+            <i className="fa-solid fa-plus" />
+          </span>
+              </div>
+            </div>
+          ))
+        )}
+      </div>
+          <div className="btncart">
+          <h3>Total: ${cartItems.reduce((total, item) => total + item.Price * item.quantity, 0)}</h3>
+            <button className="purchase">
+              <strong>Purchase</strong>
+            </button>
+          </div>
+        </div>
+      </div>
     </>
   );
 }
