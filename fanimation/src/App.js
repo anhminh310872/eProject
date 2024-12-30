@@ -16,39 +16,78 @@ function App() {
   const navigate = useNavigate();
   return (
     <div className="App">
-      <header>
-        <nav className="navbar">
-          <div className="left-section">
-            <ul className="nav-links">
-              <li>
-                <Link to="/products">Products</Link>
-              </li>
-              <li>
-                <Link to="/about-us">About Us</Link>
-              </li>
-              <li>
-                <Link to="/contact-us">Contact Us</Link>
-              </li>
-              <li>
-              <input type="text" placeholder="Search..." className="search-box" />
-              </li>
-              <li>
-              <button className="search-button">Search</button>
-              </li>
-            </ul>
-          </div>
-          <div className="right-section">
-            <div className="logo" onClick={() => navigate('/')}>
-              <img src="./images/logo.png" alt="Fanimation Logo" />
+      <div class="wrapper">
+        <button class="menu-button">
+        <i class="fa-solid fa-bars"></i>
+        </button>
+        <ul class="menu">
+            <li>
+            <Link to="/products">
+            <i class="fa-solid fa-box-open"></i>
+                    </Link>
+                    <span class="tooltip">Product</span>
+            </li>
+            <li>
+            <Link to="/about-us">
+            <i class="fa-solid fa-circle-info"></i>
+                    </Link>
+                    <span class="tooltip">About Us</span>
+            </li>
+            <li>
+            <Link to="/contact-us">
+            <i class="fa-solid fa-headset"></i>
+                    </Link>
+                    <span class="tooltip">Contact Us</span>
+            </li>
+            <div class="search-container">
+                <div class="input-wrapper">
+                    <input type="text" id="inputField" placeholder=" " />
+                    <label for="inputField">Search</label>
+                </div>
+                <button class="search-button">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
             </div>
-            <div className="auth-icons">
-              <Link to="/login" className="auth-icon">
-                <i className="fas fa-user"></i>
-              </Link>
+        </ul>
+        <div class="right-section">
+            <div class="logo">
+                  <img src="./images/logo.png" alt="Fanimation Logo" />
             </div>
-          </div>
-        </nav>
-      </header>
+            <div class="auth-icons">
+                <Link to="/login" class="auth-icon">
+                    <i class="fas fa-user"></i>
+                </Link>
+            </div>
+        </div>   
+    </div>
+    <div class="dropdown-menu">
+        <li>
+            <div class="search-container">
+                <div class="input-wrapper">
+                    <input type="text" id="inputField" placeholder=" " />
+                    <label for="inputField">Search</label>
+                </div>
+                <button class="search-button">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+        </li>
+        <li>
+            <Link to="/products">
+                <span class="dropdown-content">Product</span>
+            </Link>
+        </li>
+        <li>
+            <Link to="/about-us">
+                <span class="dropdown-content">About Us</span>
+            </Link>
+        </li>
+        <li>
+            <Link to="/contact-us">
+                <span class="dropdown-content">Contact Us</span>
+            </Link>
+        </li>
+    </div>
 
 
       <Routes>
