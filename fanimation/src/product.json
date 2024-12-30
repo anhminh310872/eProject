@@ -30,9 +30,15 @@
     "Blade": 3,
     "Color": [
       "brown",
-      "black"
+      "white"
     ],
-    "ID": 2
+    "ID": 2,
+    "Description": [
+      "KDK brand - Japan, made in Malaysia.",
+      "Large capacity 50W, fan blade diameter 140 cm helps cool the room efficiently and evenly.",
+      "Durable DC motor, smooth operation with low noise level.",
+      "5 wind levels with remote control, meeting various cooling needs."
+    ]
   },
   {
     "Category": "ceiling",
@@ -40,19 +46,31 @@
     "Images": [
       "10008672-quat-tran-kdk-m56xr-mau-vang-1.jpg",
       "10008672-quat-tran-kdk-m56xr-mau-vang-2.jpg",
-      "10008672-quat-tran-kdk-m56xr-mau-vang-3.jpg"
+      "10008672-quat-tran-kdk-m56xr-mau-vang-3.jpg",
+      "b_m56xr-bach-kim.jpg"
     ],
     "Price": 112.09,
     "Brand": "KDK",
     "Blade": 4,
-    "Color": "Yellow",
-    "ID": 3
+    "Color": [
+      "yellow",
+      "grey"
+    ],
+    "ID": 3,
+    "Description": [
+      "KDK brand - Japan, made in Malaysia.",
+      "Powerful 56W motor with fan blade diameter 140 cm for effective cooling in larger spaces.",
+      "Available in two elegant colors: Gold and Platinum, complementing various interior styles.",
+      "Durable motor design, smooth and quiet operation for maximum comfort.",
+      "5 wind levels with remote control, offering flexibility to meet different cooling preferences."
+    ]
   },
   {
     "Category": "ceiling",
     "Name": "PN002",
     "Images": [
-      "10001771-quat-tran-panasonic-f-56mpg-go.jpg"
+      "10001771-quat-tran-panasonic-f-56mpg-go.jpg",
+      "10001770-quat-tran-panasonic-f-56mpg-bac.jpg"
     ],
     "Price": 97.36,
     "Brand": "Panasonic",
@@ -61,7 +79,14 @@
       "yellow",
       "grey"
     ],
-    "ID": 4
+    "ID": 4,
+    "Description": [
+      "Panasonic brand - Japan, made in Malaysia.",
+      "Large capacity 59W with fan blade diameter 140 cm for efficient and even cooling.",
+      "Available in two colors: Gold (F-56MPG-GO) and Silver (F-56MPG-S), suitable for various interior styles.",
+      "Durable motor with smooth and quiet operation, ensuring long-lasting performance.",
+      "3 wind levels with remote control, providing versatile cooling options for different needs."
+    ]
   },
   {
     "Category": "ceiling",
@@ -73,22 +98,39 @@
     "Brand": "KDK",
     "Blade": 5,
     "Color": [
-      "white",
       "grey"
     ],
-    "ID": 5
+    "ID": 5,
+    "Description": [
+      "KDK brand - Japan, made in Malaysia.",
+      "Five blades with a 150 cm (60 inches) span, powered by a DC motor for efficient and energy-saving performance.",
+      "Equipped with 1/f Yuragi function and 3D blade design, providing smooth and strong airflow with low noise.",
+      "Durable PPG material blades enhance longevity and reliability.",
+      "Comes with an LCD wireless remote controller offering 9 speed settings, sleep mode, and an 8-hour ON/OFF timer for versatile cooling options."
+    ]
   },
   {
     "Category": "ceiling",
     "Name": "KD004",
     "Images": [
-      "W56WVĐEN.jpg"
+      "W56WVĐEN.jpg",
+      "b_web-w56wv-w.jpg"
     ],
     "Price": 285.43,
     "Brand": "KDK",
     "Blade": 4,
-    "Color": "black",
-    "ID": 6
+    "Color": [
+      "black",
+      "grey"
+    ],
+    "ID": 6,
+    "Description": [
+      "Large capacity 56W, fan blade diameter 140 cm provides effective cooling for the room.",
+      "Durable DC motor, smooth and energy-efficient operation with minimal noise.",
+      "7 wind levels, equipped with 1/f Yuragi function for natural breeze, meeting various cooling needs.",
+      "Elegant design, available in two colors: white and black, suitable for modern interiors.",
+      "Comes with LCD remote control for convenient operation and a safety cable for added protection."
+    ]
   },
   {
     "Category": "ceiling",
@@ -96,16 +138,24 @@
     "Images": [
       "sfgy3-700x467.jpg",
       "sfgy2-700x467.jpg",
-      "sfgy4-700x467.jpg"
+      "sfgy4-700x467.jpg",
+      "quat-tran-mitsubishi-c56-ra4-xam-dam-510x464.png"
     ],
     "Price": 149.21,
     "Brand": "Mitsubishi",
     "Blade": 4,
     "Color": [
       "white",
-      "grey"
+      "grey",
+      "black"
     ],
-    "ID": 7
+    "ID": 7,
+    "Description": [
+      "Panasonic brand - Japan, made in Malaysia.",
+      "Large capacity 66W, fan blade diameter 150 cm helps cool the room quickly and evenly.",
+      "Durable ball bearing motor, smooth operation without noise.",
+      "5 wind levels, meeting different cooling needs"
+    ]
   },
   {
     "Category": "ceiling",
@@ -113,13 +163,21 @@
     "Images": [
       "ra5cygy2-700x467.jpg",
       "ra5cygy3-700x467.jpg",
-      "ra5cygy4-700x467.jpg"
+      "ra5cygy4-700x467.jpg",
+      "quat-tran-mitsubishi-c56-ra4-xam-dam-510x464.png"
     ],
     "Price": 216.14,
     "Brand": "Mitsubishi",
     "Blade": 5,
     "Color": "black",
-    "ID": 8
+    "ID": 8,
+    "Description": [
+      "Mitsubishi brand - Japan, made in Malaysia.",
+      "Power 55W, fan blade diameter 140 cm helps cool the room quickly and evenly.",
+      "Durable ball bearing motor, smooth operation without noise.",
+      "5 wind levels, meeting different cooling needs.",
+      "2 colors: white and gray, suitable for various interior spaces."
+    ]
   },
   {
     "Category": "ceiling",
@@ -133,7 +191,13 @@
     "Brand": "Kangaroo",
     "Blade": 5,
     "Color": "white",
-    "ID": 9
+    "ID": 9,
+    "Description": [
+      "Kangaroo brand - Vietnam, made in China.",
+      "60W capacity, 50cm fan blade diameter provides strong wind and effective cooling.",
+      "Pure copper motor, durable and smooth operation.",
+      "3 adjustable wind levels, meeting different cooling needs."
+    ]
   },
   {
     "Category": "ceiling",
@@ -147,7 +211,8 @@
     "Brand": "Panasonic",
     "Blade": 4,
     "Color": "white",
-    "ID": 10
+    "ID": 10,
+    "Description": []
   },
   {
     "Category": "pedestal",
@@ -160,7 +225,14 @@
     "Brand": "Sunhouse",
     "Blade": 5,
     "Color": "white",
-    "ID": 11
+    "ID": 11,
+    "Description": [
+      "Brand Sunhouse - Vietnam, made in China.",
+      "Power 24W, equipped with 5 fan blades for strong and effective cooling.",
+      "Operates continuously for 5 to 16 hours after a full charge (12-15 hours charging time).",
+      "Integrated LED indicator for charging status and a convenient timer function.",
+      "Supports oscillation for evenly distributed airflow across the room."
+    ]
   },
   {
     "Category": "pedestal",
@@ -178,7 +250,8 @@
       "white",
       "grey"
     ],
-    "ID": 12
+    "ID": 12,
+    "Description": []
   },
   {
     "Category": "pedestal",
@@ -194,7 +267,14 @@
       "blue",
       "purple"
     ],
-    "ID": 13
+    "ID": 13,
+    "Description": [
+      "Brand: Senko - Vietnam, Made in: Vietnam.",
+      "Power: 45W, Fan Blade Diameter: 40 cm, providing strong and stable airflow.",
+      "Motor: Durable motor for smooth operation and energy-efficient performance.",
+      "Wind Levels: 3 adjustable wind levels, suitable for various needs.",
+      "Color: White, suitable for various interior spaces."
+    ]
   },
   {
     "Category": "pedestal",
@@ -209,7 +289,14 @@
       "black",
       "orange"
     ],
-    "ID": 14
+    "ID": 14,
+    "Description": [
+      "Brand: Senko - Vietnam, Made in: Vietnam.",
+      "Power: 45W, Fan Blade Diameter: 40 cm providing strong and stable airflow.",
+      "Motor: Durable motor for smooth operation and energy-efficient performance.",
+      "Wind Levels: 3 adjustable wind levels, suitable for various needs.",
+      "Color: Black, suitable for various interior spaces."
+    ]
   },
   {
     "Category": "pedestal",
@@ -217,13 +304,28 @@
     "Images": [
       "10057401-quat-dung-mitsibishi-lv16-rb-sf-gy-xam-nhat-1.jpg",
       "10057401-quat-dung-mitsibishi-lv16-rb-sf-gy-xam-nhat-.jpg",
-      "10057401-quat-dung-mitsibishi-lv16-rb-sf-gy-xam-nhat-2.jpg"
+      "10057401-quat-dung-mitsibishi-lv16-rb-sf-gy-xam-nhat-2.jpg",
+      "quat-dung-lv16-rv-cy-gy-do-dam1-955748b9-8c58-4d16-84b4-1ef04a844733.png",
+      "quat-dung-lv16-rv-cy-gy-xam-dam1-5224cdb7-3fc3-4d63-839c-db7a7f153537.png",
+      "quat-dung-lv16-rv-xanh-ecf440f2-b58d-45af-8f30-547489cacbae.png"
     ],
     "Price": 94.09,
     "Brand": "Mitsubishi",
     "Blade": 3,
-    "Color": "grey",
-    "ID": 15
+    "Color": [
+      "grey",
+      "red",
+      "black",
+      "blue"
+    ],
+    "ID": 15,
+    "Description": [
+      "Brand: Mitsubishi - Japan, Made in: Vietnam.",
+      "Power: 46W, Fan Blade Diameter: 40 cm providing strong and stable airflow.",
+      "Motor: Durable motor for smooth operation and energy-efficient performance.",
+      "Wind Levels: 3 adjustable wind levels, suitable for various needs.",
+      "Color: Available in four colors: grey, black, blue, and red, suitable for various interior spaces."
+    ]
   },
   {
     "Category": "pedestal",
@@ -236,7 +338,13 @@
     "Brand": "Toshiba",
     "Blade": 5,
     "Color": "white",
-    "ID": 16
+    "ID": 16,
+    "Description": [
+      "Brand: Panasonic - Japan, Made in: Vietnam.",
+      "Power: 50W, Fan Blade Diameter: 140 cm for efficient and even room cooling.",
+      "Motor: Durable DC motor for smooth operation and low noise performance.",
+      "Wind Levels: 5 adjustable wind levels with remote control, meeting various cooling needs."
+    ]
   },
   {
     "Category": "pedestal",
@@ -250,7 +358,15 @@
     "Brand": "Sunhouse",
     "Blade": 5,
     "Color": "white",
-    "ID": 17
+    "ID": 17,
+    "Description": [
+      "Brand Sunhouse - Vietnam, made in China.",
+      "Power 24W, equipped with 5 fan blades for strong and effective cooling.",
+      "Operates continuously for 5 to 16 hours after a full charge (12-15 hours charging time).",
+      "Integrated LED indicator for charging status and a convenient timer function.",
+      "Supports oscillation for evenly distributed airflow across the room.",
+      "Elegant white design, suitable for various interior spaces."
+    ]
   },
   {
     "Category": "pedestal",
@@ -267,7 +383,8 @@
       "white",
       "grey"
     ],
-    "ID": 18
+    "ID": 18,
+    "Description": []
   },
   {
     "Category": "pedestal",
@@ -280,7 +397,8 @@
     "Brand": "Sharp",
     "Blade": 3,
     "Color": "black",
-    "ID": 19
+    "ID": 19,
+    "Description": []
   },
   {
     "Category": "pedestal",
@@ -298,7 +416,14 @@
       "white",
       "blue"
     ],
-    "ID": 20
+    "ID": 20,
+    "Description": [
+      "Brand: Kangaroo - Vietnam, Made in: Vietnam.",
+      "Power: 24W, Fan Blade Diameter: Compact size suitable for personal and small-space cooling.",
+      "Motor: Durable motor for efficient operation and long-lasting performance.",
+      "Wind Levels: Multiple adjustable wind levels to cater to different cooling needs.",
+      "Color: Modern design, available in sleek and stylish finishes."
+    ]
   },
   {
     "Category": "wall",
@@ -310,7 +435,13 @@
     "Brand": "Senko",
     "Blade": 3,
     "Color": "blue",
-    "ID": 21
+    "ID": 21,
+    "Description": [
+      "Brand: Senko - Vietnam, Made in: Vietnam.",
+      "Power: 47W, Fan Blade Diameter: 39 cm providing strong and stable airflow.",
+      "Motor: Durable motor for smooth operation and energy efficiency.",
+      "Wind Levels: 3 adjustable wind levels, ideal for various cooling needs."
+    ]
   },
   {
     "Category": "wall",
@@ -326,7 +457,14 @@
       "orange",
       "black"
     ],
-    "ID": 22
+    "ID": 22,
+    "Description": [
+      "Brand: Senko - Vietnam, Made in: Vietnam.",
+      "Power: 47W, Fan Blade Diameter: 39 cm providing consistent and powerful airflow.",
+      "Motor: High-quality motor ensuring smooth operation and energy efficiency.",
+      "Wind Levels: 3 adjustable wind levels to suit different cooling needs.",
+      "Color: Available in various colors, blending well with interior decor."
+    ]
   },
   {
     "Category": "wall",
@@ -341,7 +479,13 @@
       "grey",
       "white"
     ],
-    "ID": 23
+    "ID": 23,
+    "Description": [
+      "Brand: ASIAvina - Vietnam, Made in: Vietnam.",
+      "Power: 45W, Fan Blade Diameter: 40 cm providing strong and stable airflow.",
+      "Motor: Durable motor for smooth operation and energy-efficient performance.",
+      "Wind Levels: 3 adjustable wind levels, suitable for various cooling needs."
+    ]
   },
   {
     "Category": "wall",
@@ -353,7 +497,13 @@
     "Brand": "Asiavina",
     "Blade": 3,
     "Color": "grey",
-    "ID": 24
+    "ID": 24,
+    "Description": [
+      "Brand: ASIAvina - Vietnam, Made in: Vietnam.",
+      "Power: 45W, Fan Blade Diameter: 40 cm providing consistent and powerful airflow.",
+      "Motor: Durable motor ensuring smooth operation and energy-efficient performance.",
+      "Wind Levels: 3 adjustable wind levels to suit various cooling needs."
+    ]
   },
   {
     "Category": "wall",
@@ -369,7 +519,13 @@
       "white",
       "blue"
     ],
-    "ID": 25
+    "ID": 25,
+    "Description": [
+      "Brand: Panasonic - Japan, Made in: Vietnam.",
+      "Power: 50W, Fan Blade Diameter: 40 cm providing strong and stable airflow.",
+      "Motor: Durable motor for smooth operation and energy-efficient performance.",
+      "Wind Levels: 3 adjustable wind levels, suitable for different cooling needs."
+    ]
   },
   {
     "Category": "wall",
@@ -385,7 +541,13 @@
       "white",
       "blue"
     ],
-    "ID": 26
+    "ID": 26,
+    "Description": [
+      "Brand: Mitsubishi - Japan, Made in: Vietnam.",
+      "Power: 45W, Fan Blade Diameter: 40 cm providing strong and stable airflow.",
+      "Motor: Durable motor for smooth operation and energy-efficient performance.",
+      "Wind Levels: 3 adjustable wind levels, suitable for various cooling needs."
+    ]
   },
   {
     "Category": "wall",
@@ -400,7 +562,13 @@
       "grey",
       "black"
     ],
-    "ID": 27
+    "ID": 27,
+    "Description": [
+      "Brand: Mitsubishi - Japan, Made in: Vietnam.",
+      "Power: 45W, Fan Blade Diameter: 40 cm providing strong and stable airflow.",
+      "Motor: Durable motor for smooth operation and energy-efficient performance.",
+      "Wind Levels: 3 adjustable wind levels, suitable for various cooling needs."
+    ]
   },
   {
     "Category": "wall",
@@ -414,20 +582,36 @@
     "Brand": "Panasonic",
     "Blade": 3,
     "Color": "blue",
-    "ID": 28
+    "ID": 28,
+    "Description": [
+      "Brand: Panasonic - Japan, Made in: Vietnam.",
+      "Power: 45W, Fan Blade Diameter: 40 cm providing strong and stable airflow.",
+      "Motor: Durable motor for smooth operation and energy-efficient performance.",
+      "Wind Levels: 3 adjustable wind levels, suitable for various cooling needs."
+    ]
   },
   {
     "Category": "wall",
     "Name": "KD005",
     "Images": [
       "10003154-quat-treo-kdk-m40m-trang-nga-1.jpg",
-      "10003154-quat-treo-kdk-m40m-trang-nga-2.jpg"
+      "10003154-quat-treo-kdk-m40m-trang-nga-2.jpg",
+      "R.png"
     ],
     "Price": 134.99,
     "Brand": "KDK",
     "Blade": 3,
-    "Color": "white",
-    "ID": 29
+    "Color": [
+      "white",
+      "brown"
+    ],
+    "ID": 29,
+    "Description": [
+      "Brand: KDK - Japan, Made in: Malaysia.",
+      "Power: 40W, Fan Blade Diameter: 40 cm providing strong and stable airflow.",
+      "Motor: Durable motor for smooth operation and energy-efficient performance.",
+      "Wind Levels: 3 adjustable wind levels, suitable for various cooling needs."
+    ]
   },
   {
     "Category": "wall",
@@ -441,7 +625,14 @@
     "Brand": "Senko",
     "Blade": 3,
     "Color": "grey",
-    "ID": 30
+    "ID": 30,
+    "Description": [
+      "Brand: Senko - Vietnam, Made in: Vietnam.",
+      "Power: 45W, Fan Blade Diameter: 40 cm providing strong and stable airflow.",
+      "Motor: Durable motor for smooth operation and energy-efficient performance.",
+      "Wind Levels: 3 adjustable wind levels, suitable for various cooling needs.",
+      "Color: White, suitable for a wide range of interior spaces."
+    ]
   },
   {
     "Category": "exhaust",

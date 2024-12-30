@@ -143,16 +143,19 @@ function App() {
                 <Link to="/products">All Products</Link>
               </li>
               <li>
-                <Link to="/products#ceiling">Ceiling</Link>
+                <Link to="/products/ceiling">Ceiling</Link>
               </li>
               <li>
-                <Link to="/products#pedestal">Pedestal</Link>
+                <Link to="/products/pedestal">Pedestal</Link>
               </li>
               <li>
-                <Link to="/products#wall">Wall</Link>
+                <Link to="/products/wall">Wall</Link>
               </li>
               <li>
-                <Link to="/products#accessories">Accessories</Link>
+                <Link to="/products/exhaust">Exhaust</Link>
+              </li>
+              <li>
+                <Link to="/products/accessories">Accessories</Link>
               </li>
             </ul>
           </div>

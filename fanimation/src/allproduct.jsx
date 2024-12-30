@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import Carousel from 'react-bootstrap/Carousel';
 import './assets/product.css'
 
 function Products({ data }) {
@@ -483,8 +483,8 @@ function Products({ data }) {
               </div>
 
               <div className="buttons-container">
-                <button className="clear-button" onClick={clearFilters}>Clear</button>
-                <button className="apply-button" onClick={applyFilters}>Apply</button>
+                <button variant="danger" className="clear-button" onClick={clearFilters}>Clear</button>
+                <button variant="success" className="apply-button" onClick={applyFilters}>Apply</button>
               </div>
             </div>
           </div>
@@ -508,7 +508,7 @@ function Products({ data }) {
                 </div>
               </div>
               <div className="product-card-btn" onClick={() => handleBuyNow(product)}>
-                Buy now
+                More Info
               </div>
             </div>
           ))
@@ -548,7 +548,6 @@ function Products({ data }) {
   }}>
                   Add to Cart
                 </button>
-                <button className="buy-now">Buy Now</button>
               </div>
               <ReviewSection />
             </div>
