@@ -5,72 +5,22 @@
 .App {
   text-align: center;
   background-color: #FFF;
+  padding-top: 80px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-body {
- 
-  font-size: 20px;
-}
-
-h1,
-h2,
-h3 {
- opacity: 1;
-}
-
 
 body {
   font-size: 20px;
   margin: 0;
-  padding: 0;
  
 }
 
 .wrapper {
-  position: fixed; /* Ghim navbar vào vị trí cố định trên màn hình */
-  top: 0; /* Đặt navbar ở trên cùng */
-    position: relative;
+  position: fixed;
+  top: 0;
     height: 80px;
-    width: 100%; /* Đặt chiều rộng của navbar bằng 100% */
+    width: 100%;
     max-width: 100%; 
     background-color: #CAC0BE;
-    border-radius: 17px;
     padding: 0 20px;
     box-shadow: 3px 7px 2px rgba(0, 0, 0, 0.1);
     z-index: 1000;
@@ -89,12 +39,13 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    cursor: pointer;
   }
   
-  .tooltip {
+  .menu .tooltip {
     position: absolute;
     left: 0;
-    top: 25; /* Tooltip nằm ở vị trí ban đầu với icon */
+    top: 25px;
     height: 40px;
     width: 100px;
     background: #CAC0BE;
@@ -106,9 +57,9 @@ body {
     font-weight: 500;
     pointer-events: none;
     margin: 0 10px;
-    transition: transform 0.6s ease, opacity 0.4s ease; /* Hiệu ứng mượt */
-    opacity: 1; /* Tooltip luôn hiển thị */
-    z-index: 10;
+    transition: transform 0.6s ease, opacity 0.4s ease;
+    opacity: 1;
+    z-index: 9999;
   }
   
   .wrapper ul li a {
@@ -117,30 +68,28 @@ body {
     font-size: 1.5em;
     text-decoration: none;
     margin: 0 50px;
-    opacity: 0; /* Icon mặc định ẩn */
-    transform: translateY(40px); /* Icon được đẩy xuống thấp hơn */
-    transition: transform 0.5s ease, opacity 0.4s ease; /* Hiệu ứng mượt */
+    opacity: 0;
+    transform: translateY(40px);
+    transition: transform 0.5s ease, opacity 0.4s ease;
   }
   
   .wrapper ul li:hover .tooltip {
-    transform: translateY(-22px); /* Tooltip chạy lên */
+    transform: translateY(-22px);
     color: #6D6067;
   }
   
   .wrapper ul li:hover a {
-    opacity: 1; /* Icon hiện ra */
-    transform: translateY(15px); /* Icon trở về vị trí ban đầu */
+    opacity: 1;
+    transform: translateY(15px);
     color: #6D6067;
   }
   
-  /* Wrapper cho input và label */
   .input-wrapper {
   position: relative;
   width: 190px;
   margin: 20px 0 20px 20px;
   }
   
-  /* Style cho input */
   .input-wrapper input {
   background-color: #CAC0BE;
   width: 95%;
@@ -152,12 +101,10 @@ body {
   transition: border-color 0.3s;
   }
   
-  /* Đổi màu viền khi focus */
   .input-wrapper input:focus {
   border-color: #6D6067;
   }
-  
-  /* Label nằm đè lên ô input */
+
   .input-wrapper label {
   position: absolute;
   top: 50%;
@@ -169,7 +116,6 @@ body {
   transition: all 0.3s;
   }
   
-  /* Khi input có giá trị hoặc được focus, label di chuyển lên trên */
   .input-wrapper input:focus + label{
   top: -2px;
   left: 10px;
@@ -178,13 +124,23 @@ body {
   background: #CAC0BE;
   padding: 0 5px;
   }
+
+  .input-wrapper input:focus + label,
+  .input-wrapper input:not(:placeholder-shown) + label {
+  top: -2px;
+  left: 10px;
+  font-size: 16px;
+  color: #6D6067;
+  background: #CAC0BE;
+  padding: 0 5px;
+}
+
   .search-container {
   display: flex;
   align-items: center;
   gap: 10px;
   }
   
-  /* Style cho nút search */
   .search-button {
   background-color: transparent;
   border: none;
@@ -228,7 +184,7 @@ body {
   }
   
   .menu-button {
-  display: none; /* Ẩn nút menu ở màn hình lớn */
+  display: none; 
   }
   .right-section {
   position: absolute;
@@ -236,15 +192,14 @@ body {
   right: 1%;
   display: flex;
   align-items: center;
-  justify-content: flex-end; /* Đẩy các nội dung sang bên phải */
-  gap: 2%; /* Khoảng cách giữa logo và icon */
-  margin-left: auto; /* Đẩy toàn bộ phần này sang bên phải */
+  justify-content: flex-end;
+  gap: 2%;
+  margin-left: auto;
   }
   
   .logo img {
-  filter: invert(100%);
-  height: 40px; /* Điều chỉnh kích thước logo */
-  width: auto; /* Giữ tỉ lệ gốc của logo */
+  height: 40px;
+  width: auto;
   }
   
   .auth-icons {
@@ -273,30 +228,43 @@ body {
   transform: scale(1.1);
   }
   
-  .dropdown-menu{
+  .custom-menu-dropdown{
   display: none;
   position: absolute;
-  list-style: none;
   color: white;
   background-color: #CAC0BE ;
   height: 0;
   left: auto;
   top: 57px;
-  border-radius: 15px;
   overflow: hidden;
   width: 300px;
   transition: height 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
   
-  .dropdown-menu li{
+  .content-dropdown {
   padding: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
+  list-style: none;
+  transition: background-color 0.7s ease, color 0.7s ease;
+  }
+
+  #content-dropdown{
+    cursor: pointer;
+  }
+
+  #content-dropdown:hover{
+    transform: scale(1.1);
+    color: #6D6067;
+    font-weight: bold;
   }
   
-  .dropdown-menu.open {
+  .custom-menu-dropdown.open {
+    display: block;
   height: 270px;
+  z-index: 1000;
   }
   
   @media (max-width: 940px) {
@@ -308,7 +276,7 @@ body {
     }
   
     .wrapper ul li {
-        line-height: 65px;
+        line-height: 55px;
     }
   
     .wrapper ul li a {
@@ -322,13 +290,12 @@ body {
       margin: 10px 0 10px 10px;
     }
     
-    /* Style cho input */
     .input-wrapper input {
       padding: 10px 10px 10px 15px;
       font-size: 10px;
     }
   
-    .tooltip {
+    .menu .tooltip {
         height: 15px;
         width: 75px;
         line-height: 22.5px;
