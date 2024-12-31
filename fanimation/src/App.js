@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import { Link, useNavigate } from 'react-router-dom';
@@ -22,12 +22,31 @@ function getDate() {
 function getTime() {
   const now = new Date();
   const hour = now.getHours();
-  const minute = String(now.getMinutes()).padStart(2,'0'); 
-  const second = String(now.getSeconds()).padStart(2,'0');  
+  const minute = String(now.getMinutes()).padStart(2, '0');
+  const second = String(now.getSeconds()).padStart(2, '0');
   return `${hour}:${minute}:${second}`;
 }
 
 function App() {
+
+  const parallaxRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const parallaxOffset = scrollY * -0.3;
+      if (parallaxRef.current) {
+        parallaxRef.current.style.transform = `translateY(${parallaxOffset}px)`;
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const navigate = useNavigate();
 
@@ -36,8 +55,8 @@ function App() {
   };
 
   const [location, setLocation] = useState({ lat: null, lng: null });
-    const currentDate = useState(getDate());
-    const currentTime = useState(getTime());
+  const currentDate = useState(getDate());
+  const currentTime = useState(getTime());
 
   const getGeolocation = () => {
     if (navigator.geolocation) {
@@ -58,72 +77,75 @@ function App() {
 
   return (
     <div className="App">
-      <div className="wrapper">
+      <div className="wrapper" ref={parallaxRef}>
         <button className="menu-button" onClick={toggleDropdown}>
-        <i className="fa-solid fa-bars" ></i>
+          <i className="fa-solid fa-bars" ></i>
         </button>
         <ul className="menu">
-            <li onClick={() => navigate("/products")}>
+          <li onClick={() => navigate("/products")}>
             <Link to="/products">
-            <i className="fa-solid fa-box-open"></i>
-                    </Link>
-                    <span className="tooltip">Product</span>
-            </li>
-            <li onClick={() => navigate("/about-us")}>
+              <i className="fa-solid fa-box-open"></i>
+            </Link>
+            <span className="tooltip">Product</span>
+          </li>
+          <li onClick={() => navigate("/about-us")}>
             <Link to="/about-us">
-            <i className="fa-solid fa-circle-info"></i>
-                    </Link>
-                    <span className="tooltip">About Us</span>
-            </li>
-            <li onClick={() => navigate("/contact-us")}>
+              <i className="fa-solid fa-circle-info"></i>
+            </Link>
+            <span className="tooltip">About Us</span>
+          </li>
+          <li onClick={() => navigate("/contact-us")}>
             <Link to="/contact-us">
-            <i className="fa-solid fa-headset"></i>
-                    </Link>
-                    <span className="tooltip">Contact Us</span>
-            </li>
-            <div className="search-container">
-                <div className="input-wrapper">
-                    <input type="text" id="inputField" placeholder=" " />
-                    <label for="inputField">Search</label>
-                </div>
-                <button className="search-button">
-                <i className="fa-solid fa-magnifying-glass"></i>
-                </button>
+              <i className="fa-solid fa-headset"></i>
+            </Link>
+            <span className="tooltip">Contact Us</span>
+          </li>
+          <div className="search-container">
+            <div className="input-wrapper">
+              <input type="text" id="inputField" placeholder=" " />
+              <label for="inputField">Search</label>
             </div>
+            <button className="search-button">
+              <i className="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
         </ul>
         <div className="right-section">
-            <div className="logo" onClick={() => navigate("/")}>
-                  <img src="./images/logo.png" alt="Fanimation Logo" />
-            </div>
-            <div className="auth-icons">
-                <Link to="/login" className="auth-icon">
-                    <i className="fas fa-user"></i>
-                </Link>
-            </div>
-        </div>   
-    </div>
-    <div className={`custom-menu-dropdown ${dropdownOpen ? 'open' : ''}`}>
+          <div className="visitor-count">
+            Visitor count: 1
+          </div>
+          <div className="logo" onClick={() => navigate("/")}>
+            <img src="./images/logo.png" alt="Fanimation Logo" />
+          </div>
+          <div className="auth-icons">
+            <Link to="/login" className="auth-icon">
+              <i className="fas fa-user"></i>
+            </Link>
+          </div>
+        </div>
+      </div>
+      <div className={`custom-menu-dropdown ${dropdownOpen ? 'open' : ''}`}>
         <li className="content-dropdown">
-            <div className="search-container">
-                <div className="input-wrapper">
-                    <input type="text" id="inputField" placeholder=" " />
-                    <label for="inputField">Search</label>
-                </div>
-                <button className="search-button">
-                <i className="fa-solid fa-magnifying-glass"></i>
-                </button>
+          <div className="search-container">
+            <div className="input-wrapper">
+              <input type="text" id="inputField" placeholder=" " />
+              <label for="inputField">Search</label>
             </div>
+            <button className="search-button">
+              <i className="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
         </li>
         <li id="content-dropdown" className="content-dropdown" onClick={() => navigate("/products")}>
-              Product
+          Product
         </li>
         <li id="content-dropdown" className="content-dropdown" onClick={() => navigate("/about-us")} >
-             About Us
+          About Us
         </li>
         <li id="content-dropdown" className="content-dropdown" onClick={() => navigate("/contact-us")}>
-            Contact Us
+          Contact Us
         </li>
-    </div>
+      </div>
 
 
       <Routes>
@@ -210,28 +232,28 @@ function App() {
         <div className="footer-bottom">
           <p>© 2025 Fanimation. All rights reserved.</p>
           <div className="footer-icons">
-          <Link to="/">
-          <img src="./images/icon-facebook.png" alt="Facebook" />
-          </Link>
-          <Link to="/">
+            <Link to="/">
+              <img src="./images/icon-facebook.png" alt="Facebook" />
+            </Link>
+            <Link to="/">
               <img src="./images/icon-tiktok.png" alt="Tiktok" />
-              </Link>
-              <Link to="/">
+            </Link>
+            <Link to="/">
               <img src="./images/icon-instagram.png" alt="Instagram" />
-              </Link>
-              <Link to="/">
+            </Link>
+            <Link to="/">
               <img src="./images/icon-youtube.png" alt="YouTube" />
-              </Link>
+            </Link>
           </div>
         </div>
       </footer>
       <div className="ticker-container">
-      <div className="ticker">
-      <p>
-          Latitude: {location.lat}, Longitude: {location.lng}&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{currentDate}&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{currentTime}
-        </p>
+        <div className="ticker">
+          <p>
+            Latitude: {location.lat}, Longitude: {location.lng}&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{currentDate}&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{currentTime}
+          </p>
+        </div>
       </div>
-    </div>
     </div>
   );
 }
