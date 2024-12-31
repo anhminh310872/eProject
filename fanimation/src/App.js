@@ -1,5 +1,6 @@
 // import React, { useState } from 'react';
 import './App.css';
+import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { Link, useNavigate } from 'react-router-dom';
 import Home from './Home';
@@ -12,80 +13,78 @@ import product from './product.json';
 import FAQ from './FaQ';
 
 function App() {
-  // const [menuOpen, setMenuOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
   const navigate = useNavigate();
+
+  const toggleDropdown = () => {
+    setDropdownOpen(!dropdownOpen);
+  };
   return (
     <div className="App">
-      <div class="wrapper">
-        <button class="menu-button">
-        <i class="fa-solid fa-bars"></i>
+      <div className="wrapper">
+        <button className="menu-button" onClick={toggleDropdown}>
+        <i className="fa-solid fa-bars" ></i>
         </button>
-        <ul class="menu">
-            <li>
+        <ul className="menu">
+            <li onClick={() => navigate("/products")}>
             <Link to="/products">
-            <i class="fa-solid fa-box-open"></i>
+            <i className="fa-solid fa-box-open"></i>
                     </Link>
-                    <span class="tooltip">Product</span>
+                    <span className="tooltip">Product</span>
             </li>
-            <li>
+            <li onClick={() => navigate("/about-us")}>
             <Link to="/about-us">
-            <i class="fa-solid fa-circle-info"></i>
+            <i className="fa-solid fa-circle-info"></i>
                     </Link>
-                    <span class="tooltip">About Us</span>
+                    <span className="tooltip">About Us</span>
             </li>
-            <li>
+            <li onClick={() => navigate("/contact-us")}>
             <Link to="/contact-us">
-            <i class="fa-solid fa-headset"></i>
+            <i className="fa-solid fa-headset"></i>
                     </Link>
-                    <span class="tooltip">Contact Us</span>
+                    <span className="tooltip">Contact Us</span>
             </li>
-            <div class="search-container">
-                <div class="input-wrapper">
+            <div className="search-container">
+                <div className="input-wrapper">
                     <input type="text" id="inputField" placeholder=" " />
                     <label for="inputField">Search</label>
                 </div>
-                <button class="search-button">
-                <i class="fa-solid fa-magnifying-glass"></i>
+                <button className="search-button">
+                <i className="fa-solid fa-magnifying-glass"></i>
                 </button>
             </div>
         </ul>
-        <div class="right-section">
-            <div class="logo">
+        <div className="right-section">
+            <div className="logo" onClick={() => navigate("/")}>
                   <img src="./images/logo.png" alt="Fanimation Logo" />
             </div>
-            <div class="auth-icons">
-                <Link to="/login" class="auth-icon">
-                    <i class="fas fa-user"></i>
+            <div className="auth-icons">
+                <Link to="/login" className="auth-icon">
+                    <i className="fas fa-user"></i>
                 </Link>
             </div>
         </div>   
     </div>
-    <div class="dropdown-menu">
-        <li>
-            <div class="search-container">
-                <div class="input-wrapper">
+    <div className={`custom-menu-dropdown ${dropdownOpen ? 'open' : ''}`}>
+        <li className="content-dropdown">
+            <div className="search-container">
+                <div className="input-wrapper">
                     <input type="text" id="inputField" placeholder=" " />
                     <label for="inputField">Search</label>
                 </div>
-                <button class="search-button">
-                <i class="fa-solid fa-magnifying-glass"></i>
+                <button className="search-button">
+                <i className="fa-solid fa-magnifying-glass"></i>
                 </button>
             </div>
         </li>
-        <li>
-            <Link to="/products">
-                <span class="dropdown-content">Product</span>
-            </Link>
+        <li id="content-dropdown" className="content-dropdown" onClick={() => navigate("/products")}>
+              Product
         </li>
-        <li>
-            <Link to="/about-us">
-                <span class="dropdown-content">About Us</span>
-            </Link>
+        <li id="content-dropdown" className="content-dropdown" onClick={() => navigate("/about-us")} >
+             About Us
         </li>
-        <li>
-            <Link to="/contact-us">
-                <span class="dropdown-content">Contact Us</span>
-            </Link>
+        <li id="content-dropdown" className="content-dropdown" onClick={() => navigate("/contact-us")}>
+            Contact Us
         </li>
     </div>
 
