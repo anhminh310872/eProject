@@ -5,10 +5,11 @@
   }
   .top-home {
     position: relative;
-   
+   background-image: './public/images/home-banner-1.png';
     background-size: cover;
     padding: 90px 0px;
     transition: 0.5s;
+    opacity: 0.8;
   }
   .collections2024 {
  

@@ -3,7 +3,6 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Carousel from 'react-bootstrap/Carousel';
 import './assets/home.css'
 
-
 function Home() {
     const nav = useNavigate();
 
@@ -146,7 +145,6 @@ function Home() {
                         <div className="home-intro-grid-text">
                             <p>For over 30 years, we have been a forerunner in realiable cooling technology and stylish, elegant home aesthetics. Offering a wide range of high-quality, reliable fans for every need—whether for your home, office, or business.</p>
                             <p>Explore our collection today and enjoy the comfort and quality that comes with decades of expertise.</p>
-                            <button className="home-intro-btn" onClick={() => nav('/products')}>All products</button>
                         </div>
                     </div>
                     <div className="home-intro-grid-column home-intro-grid-column-3">
