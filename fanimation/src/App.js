@@ -58,6 +58,11 @@ function App() {
 
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const navigate = useNavigate();
+  const [productdropdown, setproductdropdown] = useState(false);
+
+  const toggleproduct = () => {
+    setproductdropdown(!productdropdown);
+  }
 
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
@@ -99,7 +104,7 @@ function App() {
     <div className="App">
       <div className="wrapper" ref={parallaxRef}>
         <button className="menu-button" onClick={toggleDropdown}>
-          <i className="fa-solid fa-bars"></i>
+          <i className="fa-solid fa-bars" ></i>
         </button>
         <ul className="menu">
           <li onClick={() => navigate("/products")}>
@@ -123,7 +128,7 @@ function App() {
           <div className="search-container">
             <div className="input-wrapper">
               <input type="text" id="inputField" placeholder=" " />
-              <label htmlFor="inputField">Search</label>
+              <label for="inputField">Search</label>
             </div>
             <button className="search-button">
               <i className="fa-solid fa-magnifying-glass"></i>
@@ -150,16 +155,28 @@ function App() {
           <div className="search-container">
             <div className="input-wrapper">
               <input type="text" id="inputField" placeholder=" " />
-              <label htmlFor="inputField">Search</label>
+              <label for="inputField">Search</label>
             </div>
             <button className="search-button">
               <i className="fa-solid fa-magnifying-glass"></i>
             </button>
           </div>
         </li>
-        <li id="content-dropdown" className="content-dropdown" onClick={() => navigate("/products")}>
+        <li id="content-dropdown" className="content-dropdown" onClick={toggleproduct}>
           Product
+          <i
+            className={`fa-solid fa-chevron-${productdropdown ? "up" : "down"}`}
+            style={{ marginLeft: "10px" }}
+          ></i>
         </li>
+        <div className={`product-dropdown ${productdropdown ? 'open' : ''}`}>
+          <li>All Products</li>
+          <li>Ceiling</li>
+          <li>Pedestal</li>
+          <li>Wall</li>
+          <li>Exhaust</li>
+          <li>Accessories</li>
+        </div>
         <li id="content-dropdown" className="content-dropdown" onClick={() => navigate("/about-us")} >
           About Us
         </li>
