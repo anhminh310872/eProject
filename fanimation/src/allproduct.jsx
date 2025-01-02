@@ -1,11 +1,28 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import Carousel from 'react-bootstrap/Carousel';
+import React, { useState, useEffect, useRef } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import './assets/product.css'
 
 import { useLocation } from 'react-router-dom';
 
 function Products({ data }) {
+
+  const parallaxRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const parallaxOffset = scrollY * -0.3;
+      if (parallaxRef.current) {
+        parallaxRef.current.style.transform = `translateY(${parallaxOffset}px)`;
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const [isCartVisible, setCartVisible] = useState(false);
   const [cart, setCart] = useState([]);
@@ -17,9 +34,9 @@ function Products({ data }) {
       mainContent.classList.toggle("shifted", !isCartVisible);
     }
   };
-  
-    const location = useLocation();
-    const filteredData = location.state?.filteredData || [];
+
+  const location = useLocation();
+  const filteredData = location.state?.filteredData || [];
 
   const handleQuantityChange = (productId, change) => {
     setCartItems((prevCartItems) =>
@@ -37,7 +54,7 @@ function Products({ data }) {
     console.log("Adding to cart:", product);
     setCartItems((prevCartItems) => {
       const existingProductIndex = prevCartItems.findIndex((item) => item.ID === product.ID);
-      
+
       if (existingProductIndex !== -1) {
         const updatedCart = [...prevCartItems];
         updatedCart[existingProductIndex].quantity += 1;
@@ -50,8 +67,8 @@ function Products({ data }) {
       }
     });
   };
-  
-  
+
+
 
   const nav = useNavigate();
   const [showSecondaryNavbar, setShowSecondaryNavbar] = useState(true);
@@ -250,30 +267,30 @@ function Products({ data }) {
 
   return (
     <>
-      <nav className={`secondary-navbar ${showSecondaryNavbar ? 'visible' : ''}`} id="secondary-navbar">
+      <nav className={`secondary-navbar ${showSecondaryNavbar ? 'visible' : ''}`} id="secondary-navbar" ref={parallaxRef}>
         <ul>
           <li id="filter-icon" onClick={toggleFilterBox}>
             <a href="#" >
-              <img src="./images/icon-filter.png" alt="Filter Icon" />
+              <img src="/images/icon-filter.png" alt="Filter Icon" />
             </a>
           </li>
           <li>
-            <a href="#">All Products</a>
+            <Link to="/products" style={{fontWeight:"bold"}}>All Products</Link>
           </li>
           <li>
-            <a href="#">Ceiling</a>
+            <Link to="/products/ceiling">Ceiling</Link>
           </li>
           <li>
-            <a href="#">Pedestal</a>
+            <Link to="/products/pedestal">Pedestal</Link>
           </li>
           <li>
-            <a href="#">Wall</a>
+            <Link to="/products/wall">Wall</Link>
           </li>
           <li>
-            <a href="#">Exhaust</a>
+            <Link to="/products/exhaust">Exhaust</Link>
           </li>
           <li>
-            <a href="#">Accessories</a>
+            <Link to="/products/accessories">Accessories</Link>
           </li>
         </ul>
         <div className={`filter-box-container ${showFilterBox ? 'show' : ''}`} id="filter-box-container">
@@ -494,27 +511,27 @@ function Products({ data }) {
       </nav>
 
       <div className="main-content">
-      <div className="product-list">
-        {dt.length === 0 ? (
-          <h1>No results found.</h1>
-        ) : (
-          dt.map((product, index) => (
-            <div className="product-card" key={index}>
-              <div className="product-card-img-container">
-                <img src={`./images/products/${product.Images[0]}`} className="product-card-img" alt="" />
-              </div>
-              <div className="product-card-name">
-                {product.Brand} - {product.Name}
-                <div className="product-card-price">
-                  ${product.Price}
+        <div className="product-list">
+          {dt.length === 0 ? (
+            <h1>No results found.</h1>
+          ) : (
+            dt.map((product, index) => (
+              <div className="product-card" key={index}>
+                <div className="product-card-img-container">
+                  <img src={`/images/products/${product.Images[0]}`} className="product-card-img" alt="" />
+                </div>
+                <div className="product-card-name">
+                  {product.Brand} - {product.Name}
+                  <div className="product-card-price">
+                    ${product.Price}
+                  </div>
+                </div>
+                <div className="product-card-btn" onClick={() => handleBuyNow(product)}>
+                  More Info
                 </div>
               </div>
-              <div className="product-card-btn" onClick={() => handleBuyNow(product)}>
-                More Info
-              </div>
-            </div>
-          ))
-        )}
+            ))
+          )}
         </div>
       </div>
 
@@ -526,8 +543,8 @@ function Products({ data }) {
               ×
             </button>
             <div className="popup-image">
-            {/* thay cái này với popup */}
-            <img src={`./images/products/${popupData.Images[0]}`} alt={popupData.Name} />
+              {/* thay cái này với popup */}
+              <img src={`/images/products/${popupData.Images[0]}`} alt={popupData.Name} />
             </div>
             <div className="popup-content">
               <h1><strong>{popupData.Brand}- {popupData.Name}</strong></h1>
@@ -545,9 +562,9 @@ function Products({ data }) {
               <div className="price">Price: ${popupData.Price}</div>
               <div className="popup-buttons">
                 <button className="add-to-card" onClick={() => {
-    handleAddToCart(popupData);
-    alert('Product added to cart!');
-  }}>
+                  handleAddToCart(popupData);
+                  alert('Product added to cart!');
+                }}>
                   Add to Cart
                 </button>
               </div>
@@ -570,31 +587,31 @@ function Products({ data }) {
         <div className={`carttab ${isCartVisible ? 'show' : ''}`}>
           <h1>Shopping cart</h1>
           <div className="listcart">
-          {cartItems.length === 0 ? (
-    <p>Your cart is empty</p>
-  ) : (
-    cartItems.map((item, index) => (
-            <div className="item" key={index}>
-              <div className="image">
-              <img src={`./images/products/${item.Images[0]}`} alt={item.Name} />
-              </div>
-              <div className="name">{item.Name}</div>
-        <div className="price">${item.Price}</div>
-        <div className="quantity">
-        <span className="minus" onClick={() => handleQuantityChange(item.id, -1)}>
-            <i className="fa-solid fa-minus" />
-          </span>
-          <span>{item.quantity}</span>
-          <span className="plus" onClick={() => handleQuantityChange(item.id, 1)}>
-            <i className="fa-solid fa-plus" />
-          </span>
-              </div>
-            </div>
-          ))
-        )}
-      </div>
+            {cartItems.length === 0 ? (
+              <p>Your cart is empty</p>
+            ) : (
+              cartItems.map((item, index) => (
+                <div className="item" key={index}>
+                  <div className="image">
+                    <img src={`/images/products/${item.Images[0]}`} alt={item.Name} />
+                  </div>
+                  <div className="name">{item.Name}</div>
+                  <div className="price">${item.Price}</div>
+                  <div className="quantity">
+                    <span className="minus" onClick={() => handleQuantityChange(item.id, -1)}>
+                      <i className="fa-solid fa-minus" />
+                    </span>
+                    <span>{item.quantity}</span>
+                    <span className="plus" onClick={() => handleQuantityChange(item.id, 1)}>
+                      <i className="fa-solid fa-plus" />
+                    </span>
+                  </div>
+                </div>
+              ))
+            )}
+          </div>
           <div className="btncart">
-          <h3>Total: ${cartItems.reduce((total, item) => Math.round(total + item.Price * item.quantity * 100.0) / 100.0, 0)}</h3>
+            <h3>Total: ${cartItems.reduce((total, item) => Math.round(total + item.Price * item.quantity * 100.0) / 100.0, 0)}</h3>
             <button className="purchase">
               <strong>Purchase</strong>
             </button>
