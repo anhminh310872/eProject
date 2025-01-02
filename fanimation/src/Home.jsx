@@ -120,25 +120,25 @@ function Home() {
                 <div className="home-title">All products</div>
                 <div className="home-product-list-row">
                     {/* update link to each individual category of item later */}
-                    <div className="home-product-list-item" onClick={() => nav('/products')}>
+                    <div className="home-product-list-item" onClick={() => nav('/products/wall')}>
                         <div className="home-product-list-item-img-frame">
                             <img src="./images/home-product-list-wall.png" className="home-product-list-item-img home-product-list-item-img-wall  justify-content-center" alt="" />
                         </div>
                         <div className="home-product-list-item-text">Wall</div>
                     </div>
-                    <div className="home-product-list-item" onClick={() => nav('/products')}>
+                    <div className="home-product-list-item" onClick={() => nav('/products/ceiling')}>
                         <div className="home-product-list-item-img-frame">
                             <img src="./images/home-product-list-ceiling.png" className="home-product-list-item-img home-product-list-item-img-ceiling justify-content-center" alt="" />
                         </div>
                         <div className="home-product-list-item-text">Ceiling</div>
                     </div>
-                    <div className="home-product-list-item" onClick={() => nav('/products')}>
+                    <div className="home-product-list-item" onClick={() => nav('/products/pedestal')}>
                         <div className="home-product-list-item-img-frame justify-content-center">
                             <img src="./images/home-product-list-pedestal.png" className="home-product-list-item-img home-product-list-item-img-pedestal" alt="" />
                         </div>
                         <div className="home-product-list-item-text">Pedestal</div>
                     </div>
-                    <div className="home-product-list-item" onClick={() => nav('/products')}>
+                    <div className="home-product-list-item" onClick={() => nav('/products/exhaust')}>
                         <div className="home-product-list-item-img-frame">
                             <img src="./images/home-product-list-exhaust.png" className="home-product-list-item-img home-product-list-item-img-exhaust justify-content-center" alt="" />
                         </div>

@@ -1,0 +1,107 @@
+[
+  {
+    "Category": "accessories",
+    "Name": "SH003",
+    "Images": [
+      "sunhouse-acc-1.png"
+    ],
+    "Price": 24.99,
+    "Brand": "Sunhouse",
+    "Blade": 3,
+    "Color": "white",
+    "ID": 41,
+    "Description": [
+      "Brand Sunhouse - Vietnam, made in China.",
+      "Power 24W, equipped with 3 fan blades for strong and effective cooling.",
+      "Operates continuously for 5 to 16 hours after a full charge (12-15 hours charging time).",
+      "Integrated LED indicator for charging status and a convenient timer function.",
+      "Supports oscillation for evenly distributed airflow across the room."
+    ]
+  },
+  {
+    "Category": "accessories",
+    "Name": "SH004",
+    "Images": [
+      "1(529).jpg"
+    ],
+    "Price": 14.99,
+    "Brand": "Sunhouse",
+    "Blade": 3,
+    "Color": "white",
+    "ID": 42,
+    "Description": [
+      "Brand Sunhouse - Vietnam, made in China.",
+      "Power 24W, equipped with 3 fan blades for strong and effective cooling.",
+      "Operates continuously for 5 to 16 hours after a full charge (12-15 hours charging time).",
+      "Integrated LED indicator for charging status and a convenient timer function.",
+      "Supports oscillation for evenly distributed airflow across the room."
+    ]
+  },
+  {
+    "Category": "accessories",
+    "Name": "TB004",
+    "Images": [
+      "toshiba-acc-1.png"
+    ],
+    "Price": 24.99,
+    "Brand": "Toshiba",
+    "Blade": 5,
+    "Color": [
+      "white",
+      "yellow"
+    ],
+    "ID": 43,
+    "Description": [
+      "Brand Toshiba - Vietnam, made in China.",
+      "Power 24W, equipped with 5 fan blades for strong and effective cooling.",
+      "Operates continuously for 5 to 16 hours after a full charge (12-15 hours charging time).",
+      "Integrated LED indicator for charging status and a convenient timer function.",
+      "Supports oscillation for evenly distributed airflow across the room."
+    ]
+  },
+  {
+    "Category": "accessories",
+    "Name": "KD006",
+    "Images": [
+      "kdk-acc-1.png"
+    ],
+    "Price": 7.99,
+    "Brand": "KDK",
+    "Blade": 0,
+    "Color": "white",
+    "ID": 44,
+    "Description": [
+      "Replaceable remote for all KDK fans."
+    ]
+  },
+  {
+    "Category": "accessories",
+    "Name": "SH005",
+    "Images": [
+      "sunhouse-acc-2.png"
+    ],
+    "Price": 7.99,
+    "Brand": "Sunhouse",
+    "Blade": 0,
+    "Color": "white",
+    "ID": 45,
+    "Description": [
+      "Replaceable remote for all Sunhouse fans."
+    ]
+  },
+  {
+    "Category": "accessories",
+    "Name": "SK006",
+    "Images": [
+      "senko-acc-1.png"
+    ],
+    "Price": 9.99,
+    "Brand": "Senko",
+    "Blade": 0,
+    "Color": "white",
+    "ID": 46,
+    "Description": [
+      "Replaceable remote for all Senko fans."
+    ]
+  }
+]

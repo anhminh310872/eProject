@@ -1,0 +1,213 @@
+[
+  {
+    "Category": "pedestal",
+    "Name": "SH001",
+    "Images": [
+      "qua-t-sa-c-dien-sunhouse-shd7223-1-700x467.jpg",
+      "qua-t-sa-c-dien-sunhouse-shd7223-2-700x467.jpg"
+    ],
+    "Price": 66.54,
+    "Brand": "Sunhouse",
+    "Blade": 5,
+    "Color": "white",
+    "ID": 11,
+    "Description": [
+      "Brand Sunhouse - Vietnam, made in China.",
+      "Power 24W, equipped with 5 fan blades for strong and effective cooling.",
+      "Operates continuously for 5 to 16 hours after a full charge (12-15 hours charging time).",
+      "Integrated LED indicator for charging status and a convenient timer function.",
+      "Supports oscillation for evenly distributed airflow across the room."
+    ]
+  },
+  {
+    "Category": "pedestal",
+    "Name": "AV001",
+    "Images": [
+      "10051530-quat-san-asiavina-vy636790-xam.jpg",
+      "10051530-quat-san-asiavina-vy636790-xam-2.jpg",
+      "10051530-quat-san-asiavina-vy636790-xam-3.jpg",
+      "10051530-quat-san-asiavina-vy636790-xam-4.jpg"
+    ],
+    "Price": 27.17,
+    "Brand": "Asiavina",
+    "Blade": 6,
+    "Color": [
+      "white",
+      "grey"
+    ],
+    "ID": 12,
+    "Description": []
+  },
+  {
+    "Category": "pedestal",
+    "Name": "SK001",
+    "Images": [
+      "10046884-quat-ban-senko-bd1012-kem-mon-1.jpg"
+    ],
+    "Price": 12.6,
+    "Brand": "Senko",
+    "Blade": 3,
+    "Color": [
+      "grey",
+      "blue",
+      "purple"
+    ],
+    "ID": 13,
+    "Description": [
+      "Brand: Senko - Vietnam, Made in: Vietnam.",
+      "Power: 45W, Fan Blade Diameter: 40 cm, providing strong and stable airflow.",
+      "Motor: Durable motor for smooth operation and energy-efficient performance.",
+      "Wind Levels: 3 adjustable wind levels, suitable for various needs.",
+      "Color: White, suitable for various interior spaces."
+    ]
+  },
+  {
+    "Category": "pedestal",
+    "Name": "SK002",
+    "Images": [
+      "10057586-Quạt_đứng_Senko_DTS16091.jpg"
+    ],
+    "Price": 15.75,
+    "Brand": "Senko",
+    "Blade": 5,
+    "Color": [
+      "black",
+      "orange"
+    ],
+    "ID": 14,
+    "Description": [
+      "Brand: Senko - Vietnam, Made in: Vietnam.",
+      "Power: 45W, Fan Blade Diameter: 40 cm providing strong and stable airflow.",
+      "Motor: Durable motor for smooth operation and energy-efficient performance.",
+      "Wind Levels: 3 adjustable wind levels, suitable for various needs.",
+      "Color: Black, suitable for various interior spaces."
+    ]
+  },
+  {
+    "Category": "pedestal",
+    "Name": "MB002",
+    "Images": [
+      "10057401-quat-dung-mitsibishi-lv16-rb-sf-gy-xam-nhat-1.jpg",
+      "10057401-quat-dung-mitsibishi-lv16-rb-sf-gy-xam-nhat-.jpg",
+      "10057401-quat-dung-mitsibishi-lv16-rb-sf-gy-xam-nhat-2.jpg",
+      "quat-dung-lv16-rv-cy-gy-do-dam1-955748b9-8c58-4d16-84b4-1ef04a844733.png",
+      "quat-dung-lv16-rv-cy-gy-xam-dam1-5224cdb7-3fc3-4d63-839c-db7a7f153537.png",
+      "quat-dung-lv16-rv-xanh-ecf440f2-b58d-45af-8f30-547489cacbae.png"
+    ],
+    "Price": 94.09,
+    "Brand": "Mitsubishi",
+    "Blade": 3,
+    "Color": [
+      "grey",
+      "red",
+      "black",
+      "blue"
+    ],
+    "ID": 15,
+    "Description": [
+      "Brand: Mitsubishi - Japan, Made in: Vietnam.",
+      "Power: 46W, Fan Blade Diameter: 40 cm providing strong and stable airflow.",
+      "Motor: Durable motor for smooth operation and energy-efficient performance.",
+      "Wind Levels: 3 adjustable wind levels, suitable for various needs.",
+      "Color: Available in four colors: grey, black, blue, and red, suitable for various interior spaces."
+    ]
+  },
+  {
+    "Category": "pedestal",
+    "Name": "TB001",
+    "Images": [
+      "quat-dung-toshiba-f-lsa10-w-vn-trang-1-2-700x467.jpg",
+      "quat-dung-toshiba-f-lsa10-w-vn-trang-2-1-700x467.jpg"
+    ],
+    "Price": 45.28,
+    "Brand": "Toshiba",
+    "Blade": 5,
+    "Color": "white",
+    "ID": 16,
+    "Description": [
+      "Brand: Panasonic - Japan, Made in: Vietnam.",
+      "Power: 50W, Fan Blade Diameter: 140 cm for efficient and even room cooling.",
+      "Motor: Durable DC motor for smooth operation and low noise performance.",
+      "Wind Levels: 5 adjustable wind levels with remote control, meeting various cooling needs."
+    ]
+  },
+  {
+    "Category": "pedestal",
+    "Name": "SH002",
+    "Images": [
+      "10050606-quat-sac-dien-sunhouse-shd7223-2.jpg",
+      "10050606-quat-sac-dien-sunhouse-shd7223-1.jpg",
+      "10050606-quat-sac-dien-sunhouse-shd7223-3.jpg"
+    ],
+    "Price": 56.89,
+    "Brand": "Sunhouse",
+    "Blade": 5,
+    "Color": "white",
+    "ID": 17,
+    "Description": [
+      "Brand Sunhouse - Vietnam, made in China.",
+      "Power 24W, equipped with 5 fan blades for strong and effective cooling.",
+      "Operates continuously for 5 to 16 hours after a full charge (12-15 hours charging time).",
+      "Integrated LED indicator for charging status and a convenient timer function.",
+      "Supports oscillation for evenly distributed airflow across the room.",
+      "Elegant white design, suitable for various interior spaces."
+    ]
+  },
+  {
+    "Category": "pedestal",
+    "Name": "SP001",
+    "Images": [
+      "quat-dung-sharp-pj-s40mv-lg-1-700x467.jpg",
+      "quat-dung-sharp-pj-s40mv-lg-2-700x467.jpg",
+      "quat-dung-sharp-pj-s40mv-lg-3-700x467.jpg"
+    ],
+    "Price": 65,
+    "Brand": "Sharp",
+    "Blade": 3,
+    "Color": [
+      "white",
+      "grey"
+    ],
+    "ID": 18,
+    "Description": []
+  },
+  {
+    "Category": "pedestal",
+    "Name": "SP002",
+    "Images": [
+      "dung-sharp-pj-l40rv-dg-1-700x467.jpg",
+      "dung-sharp-pj-l40rv-dg-2-700x467"
+    ],
+    "Price": 42.48,
+    "Brand": "Sharp",
+    "Blade": 3,
+    "Color": "black",
+    "ID": 19,
+    "Description": []
+  },
+  {
+    "Category": "pedestal",
+    "Name": "KG002",
+    "Images": [
+      "quat-sac-dien-kangaroo-5-canh-kg745-24w-1-700x467.jpg",
+      "quat-sac-dien-kangaroo-5-canh-kg745-24w-2-700x467.jpg",
+      "quat-sac-dien-kangaroo-5-canh-kg745-24w-3-700x467.jpg"
+    ],
+    "Price": 54.72,
+    "Brand": "Kangaroo",
+    "Blade": 5,
+    "Color": [
+      "grey",
+      "white",
+      "blue"
+    ],
+    "ID": 20,
+    "Description": [
+      "Brand: Kangaroo - Vietnam, Made in: Vietnam.",
+      "Power: 24W, Fan Blade Diameter: Compact size suitable for personal and small-space cooling.",
+      "Motor: Durable motor for efficient operation and long-lasting performance.",
+      "Wind Levels: Multiple adjustable wind levels to cater to different cooling needs.",
+      "Color: Modern design, available in sleek and stylish finishes."
+    ]
+  }
+]

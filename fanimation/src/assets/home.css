@@ -280,6 +280,7 @@ body {
 
 .home-product-list-item:hover {
   background-color: #C0A9A5;
+  cursor:pointer;
 }
 
 .home-product-list-item-img {
