@@ -153,7 +153,7 @@ function App() {
           <i class="fa-solid fa-eye"></i> {viewCount}
           </div>
           <div className="logo" onClick={() => navigate("/")}>
-            <img src="./images/logo.png" alt="Fanimation Logo" />
+            <img src="/images/logo.png" alt="Fanimation Logo" />
           </div>
           <div className="auth-icons">
             <Link to="/login" className="auth-icon">
@@ -182,12 +182,12 @@ function App() {
           ></i>
         </li>
         <div className={`product-dropdown ${productdropdown ? 'open' : ''}`}>
-          <li>All Products</li>
-          <li>Ceiling</li>
-          <li>Pedestal</li>
-          <li>Wall</li>
-          <li>Exhaust</li>
-          <li>Accessories</li>
+          <li onClick={() => navigate("/products")} >All Products</li>
+          <li onClick={() => navigate("/products/ceiling")} >Ceiling</li>
+          <li onClick={() => navigate("/products/pedestal")} >Pedestal</li>
+          <li onClick={() => navigate("/products/wall")} >Wall</li>
+          <li onClick={() => navigate("/products/exhaust")} >Exhaust</li>
+          <li onClick={() => navigate("/products/accessories")} >Accessories</li>
         </div>
         <li id="content-dropdown" className="content-dropdown" onClick={() => navigate("/about-us")} >
           About Us
@@ -215,7 +215,7 @@ function App() {
         <div className="footer-top">
           <div className="footer-column">
             <img
-              src="./images/logo.png"
+              src="/images/logo.png"
               alt="Fanimation Logo"
               className="footer-logo"
             />
@@ -286,16 +286,16 @@ function App() {
           <p>© 2025 Fanimation. All rights reserved.</p>
           <div className="footer-icons">
             <Link to="/">
-              <img src="./images/icon-facebook.png" alt="Facebook" />
+              <img src="/images/icon-facebook.png" alt="Facebook" />
             </Link>
             <Link to="/">
-              <img src="./images/icon-tiktok.png" alt="Tiktok" />
+              <img src="/images/icon-tiktok.png" alt="Tiktok" />
             </Link>
             <Link to="/">
-              <img src="./images/icon-instagram.png" alt="Instagram" />
+              <img src="/images/icon-instagram.png" alt="Instagram" />
             </Link>
             <Link to="/">
-              <img src="./images/icon-youtube.png" alt="YouTube" />
+              <img src="/images/icon-youtube.png" alt="YouTube" />
             </Link>
           </div>
         </div>
