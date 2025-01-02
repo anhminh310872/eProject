@@ -36,7 +36,7 @@ function Products({ data }) {
   const handleAddToCart = (product) => {
     console.log("Adding to cart:", product);
     setCartItems((prevCartItems) => {
-      const existingProductIndex = prevCartItems.findIndex((item) => item.id === product.id);
+      const existingProductIndex = prevCartItems.findIndex((item) => item.ID === product.ID);
       
       if (existingProductIndex !== -1) {
         const updatedCart = [...prevCartItems];
@@ -73,7 +73,7 @@ function Products({ data }) {
     color: [],
     blade: [],
     brand: [],
-    priceRange: { min: "", max: "" }, // Default initialized price range object
+    priceRange: { min: "", max: "" },
   });
 
   const handleCheckboxChange = (field, value, isChecked) => {
@@ -81,14 +81,12 @@ function Products({ data }) {
       const newFilters = { ...prevFilters };
 
       if (isChecked) {
-        // For number-based filters like blade, use parseInt
         if (field === "blade") {
           newFilters[field] = [...newFilters[field], parseInt(value)];
         } else {
           newFilters[field] = [...newFilters[field], value];
         }
       } else {
-        // Remove value from the filters
         newFilters[field] = newFilters[field].filter((item) => item !== value);
       }
 
@@ -139,7 +137,6 @@ function Products({ data }) {
               });
             }
 
-            // If no specific conditions are met, return false
             return false;
           }
 
@@ -183,7 +180,7 @@ function Products({ data }) {
     console.log("Popup Data:", product);
   };
   const closePopup = () => {
-    setPopupData(null); // Đóng popup
+    setPopupData(null);
   };
 
   const ReviewSection = () => {
@@ -569,6 +566,7 @@ function Products({ data }) {
           </div>
         </div>
 
+
         <div className={`carttab ${isCartVisible ? 'show' : ''}`}>
           <h1>Shopping cart</h1>
           <div className="listcart">
@@ -596,7 +594,7 @@ function Products({ data }) {
         )}
       </div>
           <div className="btncart">
-          <h3>Total: ${cartItems.reduce((total, item) => total + item.Price * item.quantity, 0)}</h3>
+          <h3>Total: ${cartItems.reduce((total, item) => Math.round(total + item.Price * item.quantity * 100.0) / 100.0, 0)}</h3>
             <button className="purchase">
               <strong>Purchase</strong>
             </button>

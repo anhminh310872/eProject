@@ -1,3 +1,7 @@
+.contact-container {
+  background-color: #fdf7f4;
+}
+
 .title {
   max-width: 100%;
   height: 180px;
@@ -143,13 +147,18 @@
   width: 580px;
 }
 
+.map-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
 .ggmap {
-  margin-left: 5%;
   border: 2px solid #000;
   border-radius: 2px;
-  width: 600px;
-  height: 600px;
-  margin-bottom: 24px;
+  width: 550px;
+  height: 550px;
+  margin: 40px;
 }
 
 .map {
@@ -157,74 +166,19 @@
   height: 100%;
 }
 
-.address-contactus {
-  padding-left: 700px;
-  margin-top: -500px;
+.contact-info {
+  margin: 20px;
+  width: 45%;
 }
 
-.address-contactus p {
-  white-space: nowrap;
-  font-size: 20px;
+.contact-logo {
+  width: 300px;
+  height: auto;
+  margin-top: 30px;
+  margin-left: -40px;
 }
 
-.hotline-email-contactus {
-  padding-left: 700px;
-  margin-top: 70px;
-  z-index: 3;
-}
-
-.hotline-email-contactus p {
-  white-space: nowrap;
-  font-size: 20px;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .imgcontactus {
-      display: none;
-  }
-
-  .box-in4 {
-      width: 90%;
-      margin-left: 5%;
-      padding: 20px;
-  }
-
-  .box-in4 h3 {
-      font-size: 28px;
-  }
-
-  .rq-in4 input {
-      width: 100%;
-      padding-right: 20px;
-  }
-
-  .mess textarea {
-      width: 100%;
-  }
-
-  .sendrp {
-      font-size: 18px;
-      padding: 10px 20px;
-  }
-
-  .address-contactus {
-      padding-left: 0;
-      margin-top: 20px;
-  }
-
-  .hotline-email-contactus {
-      padding-left: 0;
-      margin-top: 20px;
-  }
-
-  .ggmap {
-      margin-bottom: 80px; /* Thêm khoảng trống để tránh bị che */
-  }
-
-  .footer {
-    position: static; /* Đảm bảo footer nằm cuối */
-    margin-top: 150px; /* Tăng khoảng cách giữa nội dung và footer */
-    padding-top: 20px;
-}
+.contact-info-section {
+  margin: 50px 20px;
+  text-align: left;
 }

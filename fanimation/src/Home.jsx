@@ -7,8 +7,21 @@ function Home() {
     const nav = useNavigate();
 
     return (
-        <div home-container>
+        <div className="home-container">
         <div className="home">
+            <div className="top-carousel">
+            <Carousel controls={false} interval={4000} wrap={true}>
+      <Carousel.Item>
+        <img src="./images/home-banner-1.png" alt="" className="top-carousel-img" />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img src="./images/home-banner-2.png" alt="" className="top-carousel-img" />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img src="./images/home-banner-3.png" alt="" className="top-carousel-img" />
+      </Carousel.Item>
+    </Carousel>
+            </div>
             <section className="top-home">
                 <div className="collections2024">
                     2024 COLLECTIONS
@@ -22,7 +35,7 @@ function Home() {
             <section className="latest-product-gallery">
                 {/* update link to each individual category of item later */}
                 <div className="latest-product-gallery-carousel">
-                    <Carousel interval={5000} pause={'hover'} variant={'dark'}>
+                    <Carousel interval={5000} pause={'hover'} variant={'dark'} wrap={true}>
                         <Carousel.Item>
                             <img
                                 className="d-block w-100"
@@ -33,11 +46,11 @@ function Home() {
                             <Carousel.Caption>
                                 <div className="latest-product-gallery-caption">
                                     <h4>KDK W56WV Ceiling Fan</h4>
-                                    <p>5.690.000 đ</p>
+                                    <p>$285.43</p>
                                 </div>
                                 <div className="latest-product-gallery-caption-small">
                                     <h6>KDK W56WV Ceiling Fan</h6>
-                                    <p>5.690.000 đ</p>
+                                    <p>$285.43</p>
                                 </div>
                             </Carousel.Caption>
                         </Carousel.Item>
@@ -51,11 +64,11 @@ function Home() {
                             <Carousel.Caption>
                                 <div className="latest-product-gallery-caption">
                                     <h4>KDK M56XR Ceiling Fan</h4>
-                                    <p>3.390.000 đ</p>
+                                    <p>$112.09</p>
                                 </div>
                                 <div className="latest-product-gallery-caption-small">
                                     <h6>KDK M56XR Ceiling Fan</h6>
-                                    <p>3.390.000 đ</p>
+                                    <p>$112.09</p>
                                 </div>
                             </Carousel.Caption>
                         </Carousel.Item>
@@ -69,11 +82,11 @@ function Home() {
                             <Carousel.Caption>
                                 <div className="latest-product-gallery-caption">
                                     <h4>Kangaroo KGSF056051 Ceiling Fan</h4>
-                                    <p>2.290.000 đ</p>
+                                    <p>$90.16</p>
                                 </div>
                                 <div className="latest-product-gallery-caption-small">
                                     <h6>Kangaroo KGSF056051 Ceiling Fan</h6>
-                                    <p>2.290.000 đ</p>
+                                    <p>$90.16</p>
                                 </div>
                             </Carousel.Caption>
                         </Carousel.Item>
@@ -87,11 +100,11 @@ function Home() {
                             <Carousel.Caption>
                                 <div className="latest-product-gallery-caption">
                                     <h4>Mitsubishi C56-RA5 CY-GY</h4>
-                                    <p>5.490.000 đ</p>
+                                    <p>$216.14</p>
                                 </div>
                                 <div className="latest-product-gallery-caption-small">
                                     <h6>Mitsubishi C56-RA5 CY-GY</h6>
-                                    <p>5.490.000 đ</p>
+                                    <p>$216.14</p>
                                 </div>
                             </Carousel.Caption>
                         </Carousel.Item>
@@ -107,25 +120,25 @@ function Home() {
                 <div className="home-title">All products</div>
                 <div className="home-product-list-row">
                     {/* update link to each individual category of item later */}
-                    <div className="home-product-list-item" onClick={() => nav('/products')}>
+                    <div className="home-product-list-item" onClick={() => nav('/products/wall')}>
                         <div className="home-product-list-item-img-frame">
                             <img src="./images/home-product-list-wall.png" className="home-product-list-item-img home-product-list-item-img-wall  justify-content-center" alt="" />
                         </div>
                         <div className="home-product-list-item-text">Wall</div>
                     </div>
-                    <div className="home-product-list-item" onClick={() => nav('/products')}>
+                    <div className="home-product-list-item" onClick={() => nav('/products/ceiling')}>
                         <div className="home-product-list-item-img-frame">
                             <img src="./images/home-product-list-ceiling.png" className="home-product-list-item-img home-product-list-item-img-ceiling justify-content-center" alt="" />
                         </div>
                         <div className="home-product-list-item-text">Ceiling</div>
                     </div>
-                    <div className="home-product-list-item" onClick={() => nav('/products')}>
+                    <div className="home-product-list-item" onClick={() => nav('/products/pedestal')}>
                         <div className="home-product-list-item-img-frame justify-content-center">
                             <img src="./images/home-product-list-pedestal.png" className="home-product-list-item-img home-product-list-item-img-pedestal" alt="" />
                         </div>
                         <div className="home-product-list-item-text">Pedestal</div>
                     </div>
-                    <div className="home-product-list-item" onClick={() => nav('/products')}>
+                    <div className="home-product-list-item" onClick={() => nav('/products/exhaust')}>
                         <div className="home-product-list-item-img-frame">
                             <img src="./images/home-product-list-exhaust.png" className="home-product-list-item-img home-product-list-item-img-exhaust justify-content-center" alt="" />
                         </div>

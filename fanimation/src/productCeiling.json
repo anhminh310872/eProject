@@ -1,0 +1,217 @@
+[
+  {
+    "Category": "ceiling",
+    "Name": "PN001",
+    "Images": [
+      "10020147-quat-tran-panasonic-f-60mz2.jpg",
+      "10020147-quat-tran-panasonic-f-60mz2-s-2_9za0-kf.jpg"
+    ],
+    "Price": 46.33,
+    "Brand": "Panasonic",
+    "Blade": 3,
+    "Color": "white",
+    "ID": 1,
+    "Description": [
+      "Panasonic brand - Japan, made in Malaysia.",
+      "Large capacity 66W, fan blade diameter 150 cm helps cool the room quickly and evenly.",
+      "Durable ball bearing motor , smooth operation without noise.",
+      "5 wind levels , meeting different cooling needs."
+    ]
+  },
+  {
+    "Category": "ceiling",
+    "Name": "KD001",
+    "Images": [
+      "10010567-quat-tran-kdk-n56yg-mau-nau-dam.jpg",
+      "10010567-quat-tran-kdk-n56yg-mau-nau-dam-2.jpg"
+    ],
+    "Price": 76.56,
+    "Brand": "KDK",
+    "Blade": 3,
+    "Color": [
+      "brown",
+      "white"
+    ],
+    "ID": 2,
+    "Description": [
+      "KDK brand - Japan, made in Malaysia.",
+      "Large capacity 50W, fan blade diameter 140 cm helps cool the room efficiently and evenly.",
+      "Durable DC motor, smooth operation with low noise level.",
+      "5 wind levels with remote control, meeting various cooling needs."
+    ]
+  },
+  {
+    "Category": "ceiling",
+    "Name": "KD002",
+    "Images": [
+      "10008672-quat-tran-kdk-m56xr-mau-vang-1.jpg",
+      "10008672-quat-tran-kdk-m56xr-mau-vang-2.jpg",
+      "10008672-quat-tran-kdk-m56xr-mau-vang-3.jpg",
+      "b_m56xr-bach-kim.jpg"
+    ],
+    "Price": 112.09,
+    "Brand": "KDK",
+    "Blade": 4,
+    "Color": [
+      "yellow",
+      "grey"
+    ],
+    "ID": 3,
+    "Description": [
+      "KDK brand - Japan, made in Malaysia.",
+      "Powerful 56W motor with fan blade diameter 140 cm for effective cooling in larger spaces.",
+      "Available in two elegant colors: Gold and Platinum, complementing various interior styles.",
+      "Durable motor design, smooth and quiet operation for maximum comfort.",
+      "5 wind levels with remote control, offering flexibility to meet different cooling preferences."
+    ]
+  },
+  {
+    "Category": "ceiling",
+    "Name": "PN002",
+    "Images": [
+      "10001771-quat-tran-panasonic-f-56mpg-go.jpg",
+      "10001770-quat-tran-panasonic-f-56mpg-bac.jpg"
+    ],
+    "Price": 97.36,
+    "Brand": "Panasonic",
+    "Blade": 4,
+    "Color": [
+      "yellow",
+      "grey"
+    ],
+    "ID": 4,
+    "Description": [
+      "Panasonic brand - Japan, made in Malaysia.",
+      "Large capacity 59W with fan blade diameter 140 cm for efficient and even cooling.",
+      "Available in two colors: Gold (F-56MPG-GO) and Silver (F-56MPG-S), suitable for various interior styles.",
+      "Durable motor with smooth and quiet operation, ensuring long-lasting performance.",
+      "3 wind levels with remote control, providing versatile cooling options for different needs."
+    ]
+  },
+  {
+    "Category": "ceiling",
+    "Name": "KD003",
+    "Images": [
+      "10023282-quat-tran-kdk-t60dw.jpg"
+    ],
+    "Price": 241.65,
+    "Brand": "KDK",
+    "Blade": 5,
+    "Color": [
+      "grey"
+    ],
+    "ID": 5,
+    "Description": [
+      "KDK brand - Japan, made in Malaysia.",
+      "Five blades with a 150 cm (60 inches) span, powered by a DC motor for efficient and energy-saving performance.",
+      "Equipped with 1/f Yuragi function and 3D blade design, providing smooth and strong airflow with low noise.",
+      "Durable PPG material blades enhance longevity and reliability.",
+      "Comes with an LCD wireless remote controller offering 9 speed settings, sleep mode, and an 8-hour ON/OFF timer for versatile cooling options."
+    ]
+  },
+  {
+    "Category": "ceiling",
+    "Name": "KD004",
+    "Images": [
+      "W56WVĐEN.jpg",
+      "b_web-w56wv-w.jpg"
+    ],
+    "Price": 285.43,
+    "Brand": "KDK",
+    "Blade": 4,
+    "Color": [
+      "black",
+      "grey"
+    ],
+    "ID": 6,
+    "Description": [
+      "Large capacity 56W, fan blade diameter 140 cm provides effective cooling for the room.",
+      "Durable DC motor, smooth and energy-efficient operation with minimal noise.",
+      "7 wind levels, equipped with 1/f Yuragi function for natural breeze, meeting various cooling needs.",
+      "Elegant design, available in two colors: white and black, suitable for modern interiors.",
+      "Comes with LCD remote control for convenient operation and a safety cable for added protection."
+    ]
+  },
+  {
+    "Category": "ceiling",
+    "Name": "MB001",
+    "Images": [
+      "sfgy3-700x467.jpg",
+      "sfgy2-700x467.jpg",
+      "sfgy4-700x467.jpg",
+      "quat-tran-mitsubishi-c56-ra4-xam-dam-510x464.png"
+    ],
+    "Price": 149.21,
+    "Brand": "Mitsubishi",
+    "Blade": 4,
+    "Color": [
+      "white",
+      "grey",
+      "black"
+    ],
+    "ID": 7,
+    "Description": [
+      "Panasonic brand - Japan, made in Malaysia.",
+      "Large capacity 66W, fan blade diameter 150 cm helps cool the room quickly and evenly.",
+      "Durable ball bearing motor, smooth operation without noise.",
+      "5 wind levels, meeting different cooling needs"
+    ]
+  },
+  {
+    "Category": "ceiling",
+    "Name": "MB002",
+    "Images": [
+      "ra5cygy2-700x467.jpg",
+      "ra5cygy3-700x467.jpg",
+      "ra5cygy4-700x467.jpg",
+      "quat-tran-mitsubishi-c56-ra4-xam-dam-510x464.png"
+    ],
+    "Price": 216.14,
+    "Brand": "Mitsubishi",
+    "Blade": 5,
+    "Color": "black",
+    "ID": 8,
+    "Description": [
+      "Mitsubishi brand - Japan, made in Malaysia.",
+      "Power 55W, fan blade diameter 140 cm helps cool the room quickly and evenly.",
+      "Durable ball bearing motor, smooth operation without noise.",
+      "5 wind levels, meeting different cooling needs.",
+      "2 colors: white and gray, suitable for various interior spaces."
+    ]
+  },
+  {
+    "Category": "ceiling",
+    "Name": "KG001",
+    "Images": [
+      "quattrankangarookgsf0560516-1-1-700x467.jpg",
+      "quattrankangarookgsf0560512-1-700x467.jpg",
+      "quatkangaroo-700x467.jpg"
+    ],
+    "Price": 90.16,
+    "Brand": "Kangaroo",
+    "Blade": 5,
+    "Color": "white",
+    "ID": 9,
+    "Description": [
+      "Kangaroo brand - Vietnam, made in China.",
+      "60W capacity, 50cm fan blade diameter provides strong wind and effective cooling.",
+      "Pure copper motor, durable and smooth operation.",
+      "3 adjustable wind levels, meeting different cooling needs."
+    ]
+  },
+  {
+    "Category": "ceiling",
+    "Name": "PN003",
+    "Images": [
+      "quat-tran-panasonic-f-56xpg-w-1-638610574169660682-700x467.jpg",
+      "quat-tran-panasonic-f-56xpg-w-2-638610572224768228-700x467.jpg",
+      "quat-tran-panasonic-f-56xpg-w-3-638610572233000430-700x467.jpg"
+    ],
+    "Price": 137.4,
+    "Brand": "Panasonic",
+    "Blade": 4,
+    "Color": "white",
+    "ID": 10,
+    "Description": []
+  }
+]

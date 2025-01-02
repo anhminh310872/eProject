@@ -1,14 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import { Link, useNavigate } from 'react-router-dom';
 import Home from './Home';
 import AboutUs from './AboutUs';
 import Products from './allproduct';
+import ProductsCeiling from './productCeiling.jsx';
+import ProductsPedestal from './productPedestal.jsx';
+import ProductsWall from './ProductWall.jsx';
+import ProductsExhaust from './ProductExhaust.jsx';
+import ProductsAccessories from './ProductAccessories.jsx';
 import ContactUs from './ContactUs';
 import Login from './Login';
 import SignUp from './SignUp';
 import product from './product.json';
+import productCeiling from './productCeiling.json';
+import productPedestal from './productPedestal.json';
+import productWall from './productWall.json';
+import productExhaust from './productExhaust.json';
+import productAccessories from './productAccessories.json';
 import FAQ from './FaQ';
 
 function getDate() {
@@ -28,6 +38,24 @@ function getTime() {
 }
 
 function App() {
+  const parallaxRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const parallaxOffset = scrollY * -0.3;
+      if (parallaxRef.current) {
+        parallaxRef.current.style.transform = `translateY(${parallaxOffset}px)`;
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const navigate = useNavigate();
   const [productdropdown, setproductdropdown] = useState(false);
@@ -61,9 +89,20 @@ function App() {
     getGeolocation();
   }, []);
 
+  // Logic cho View Count
+  const [viewCount, setViewCount] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setViewCount((prevCount) => prevCount + 13); // Tăng 13 view mỗi giây
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="App">
-      <div className="wrapper">
+      <div className="wrapper" ref={parallaxRef}>
         <button className="menu-button" onClick={toggleDropdown}>
           <i className="fa-solid fa-bars" ></i>
         </button>
@@ -97,6 +136,10 @@ function App() {
           </div>
         </ul>
         <div className="right-section">
+          {/* Hiển thị View Count */}
+          <div className="visitor-count">
+          <i class="fa-solid fa-eye"></i> {viewCount}
+          </div>
           <div className="logo" onClick={() => navigate("/")}>
             <img src="./images/logo.png" alt="Fanimation Logo" />
           </div>
@@ -119,7 +162,6 @@ function App() {
             </button>
           </div>
         </li>
-
         <li id="content-dropdown" className="content-dropdown" onClick={toggleproduct}>
           Product
           <i
@@ -143,17 +185,20 @@ function App() {
         </li>
       </div>
 
-
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products data={product} />} />
+        <Route path="/products/ceiling" element={<ProductsCeiling data={productCeiling} />} />
+        <Route path="/products/pedestal" element={<ProductsPedestal data={productPedestal} />} />
+        <Route path="/products/wall" element={<ProductsWall data={productWall} />} />
+        <Route path="/products/exhaust" element={<ProductsExhaust data={productExhaust} />} />
+        <Route path="/products/accessories" element={<ProductsAccessories data={productAccessories} />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/faq" element={<FAQ />} />
       </Routes>
-
       <footer>
         <div className="footer-top">
           <div className="footer-column">

@@ -1,7 +1,10 @@
 import React from 'react';
 import './assets/about.css'
+import { useNavigate } from 'react-router-dom';
 
 function AboutUs() {
+  const nav = useNavigate();
+
   return (
     <>
       <section>
@@ -39,7 +42,7 @@ function AboutUs() {
       </div>
       <div>
         <p>VALUE</p>
-        <h3>46m</h3>
+        <h3>30</h3>
         <p>Revenue per Year</p>
       </div>
       <div>
@@ -50,7 +53,7 @@ function AboutUs() {
     </div>
     <div className="overview-content">
       <div className="image-wrapper">
-        <img src="./images/Data analysis.png" alt="Data Analysis" />
+        <img src="./images/company.jpg" alt="Data Analysis" />
       </div>
       <div className="text-wrapper">
         <span>Over 10k+ Users</span>
@@ -60,14 +63,13 @@ function AboutUs() {
           <li>Page Load</li> <br />
           <li>Big data analysis</li>
         </ul>
-        <button>Contact Us</button>
+        <button onClick={() => nav('/contact-us')}>Contact Us</button>
       </div>
     </div>
   </section>
   <section className="team-section">
     <h5>The Team</h5>
     <h2>Our Founders</h2>
-    <button>View All</button>
     <div className="founders">
       <div className="founder">
         {" "}
