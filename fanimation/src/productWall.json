@@ -1,0 +1,211 @@
+[
+  {
+    "Category": "wall",
+    "Name": "SK003",
+    "Images": [
+      "10032772-quat-treo-senko-tc1626-mon.jpg"
+    ],
+    "Price": 19.99,
+    "Brand": "Senko",
+    "Blade": 3,
+    "Color": "blue",
+    "ID": 21,
+    "Description": [
+      "Brand: Senko - Vietnam, Made in: Vietnam.",
+      "Power: 47W, Fan Blade Diameter: 39 cm providing strong and stable airflow.",
+      "Motor: Durable motor for smooth operation and energy efficiency.",
+      "Wind Levels: 3 adjustable wind levels, ideal for various cooling needs."
+    ]
+  },
+  {
+    "Category": "wall",
+    "Name": "SK004",
+    "Images": [
+      "quat-treo-senko-tc1622-mau-den-cam.jpg"
+    ],
+    "Price": 24.99,
+    "Brand": "Senko",
+    "Blade": 6,
+    "Color": [
+      "red",
+      "orange",
+      "black"
+    ],
+    "ID": 22,
+    "Description": [
+      "Brand: Senko - Vietnam, Made in: Vietnam.",
+      "Power: 47W, Fan Blade Diameter: 39 cm providing consistent and powerful airflow.",
+      "Motor: High-quality motor ensuring smooth operation and energy efficiency.",
+      "Wind Levels: 3 adjustable wind levels to suit different cooling needs.",
+      "Color: Available in various colors, blending well with interior decor."
+    ]
+  },
+  {
+    "Category": "wall",
+    "Name": "AV002",
+    "Images": [
+      "10051533-quat-treo-asiavina-vy357690-trang-1_ifri-1k.jpg"
+    ],
+    "Price": 29.99,
+    "Brand": "Asiavina",
+    "Blade": 3,
+    "Color": [
+      "grey",
+      "white"
+    ],
+    "ID": 23,
+    "Description": [
+      "Brand: ASIAvina - Vietnam, Made in: Vietnam.",
+      "Power: 45W, Fan Blade Diameter: 40 cm providing strong and stable airflow.",
+      "Motor: Durable motor for smooth operation and energy-efficient performance.",
+      "Wind Levels: 3 adjustable wind levels, suitable for various cooling needs."
+    ]
+  },
+  {
+    "Category": "wall",
+    "Name": "AV003",
+    "Images": [
+      "10051396-quat-treo-asiavina-vy377990-xam-1.jpg"
+    ],
+    "Price": 34.99,
+    "Brand": "Asiavina",
+    "Blade": 3,
+    "Color": "grey",
+    "ID": 24,
+    "Description": [
+      "Brand: ASIAvina - Vietnam, Made in: Vietnam.",
+      "Power: 45W, Fan Blade Diameter: 40 cm providing consistent and powerful airflow.",
+      "Motor: Durable motor ensuring smooth operation and energy-efficient performance.",
+      "Wind Levels: 3 adjustable wind levels to suit various cooling needs."
+    ]
+  },
+  {
+    "Category": "wall",
+    "Name": "TB002",
+    "Images": [
+      "10036643-quat-treo-toshiba-f-wsa20-h-vn.jpg",
+      "10036643-quat-treo-toshiba-f-wsa20-h-vn-2_3o9p-uu.jpg"
+    ],
+    "Price": 59.99,
+    "Brand": "Toshiba",
+    "Blade": 3,
+    "Color": [
+      "white",
+      "blue"
+    ],
+    "ID": 25,
+    "Description": [
+      "Brand: Panasonic - Japan, Made in: Vietnam.",
+      "Power: 50W, Fan Blade Diameter: 40 cm providing strong and stable airflow.",
+      "Motor: Durable motor for smooth operation and energy-efficient performance.",
+      "Wind Levels: 3 adjustable wind levels, suitable for different cooling needs."
+    ]
+  },
+  {
+    "Category": "wall",
+    "Name": "MB003",
+    "Images": [
+      "10051006-quat-treo-tuong-mitsubishi-w16-ra-bl-trang-1.jpg"
+    ],
+    "Price": 89.99,
+    "Brand": "Mitsubishi",
+    "Blade": 3,
+    "Color": [
+      "grey",
+      "white",
+      "blue"
+    ],
+    "ID": 26,
+    "Description": [
+      "Brand: Mitsubishi - Japan, Made in: Vietnam.",
+      "Power: 45W, Fan Blade Diameter: 40 cm providing strong and stable airflow.",
+      "Motor: Durable motor for smooth operation and energy-efficient performance.",
+      "Wind Levels: 3 adjustable wind levels, suitable for various cooling needs."
+    ]
+  },
+  {
+    "Category": "wall",
+    "Name": "MB004",
+    "Images": [
+      "10051013-quat-treo-tuong-mitsubishi-w16-ra-cy-gy-xam-dam-1.jpg"
+    ],
+    "Price": 89.99,
+    "Brand": "Mitsubishi",
+    "Blade": 3,
+    "Color": [
+      "grey",
+      "black"
+    ],
+    "ID": 27,
+    "Description": [
+      "Brand: Mitsubishi - Japan, Made in: Vietnam.",
+      "Power: 45W, Fan Blade Diameter: 40 cm providing strong and stable airflow.",
+      "Motor: Durable motor for smooth operation and energy-efficient performance.",
+      "Wind Levels: 3 adjustable wind levels, suitable for various cooling needs."
+    ]
+  },
+  {
+    "Category": "wall",
+    "Name": "PN004",
+    "Images": [
+      "10001194_QUAT-TREO_PANASONIC_F-409M-XANH_01.jpg",
+      "10001194_QUAT-TREO_PANASONIC_F-409M-XANH_02.jpg",
+      "10001194_QUAT-TREO_PANASONIC_F-409M-XANH_03.jpg"
+    ],
+    "Price": 124.99,
+    "Brand": "Panasonic",
+    "Blade": 3,
+    "Color": "blue",
+    "ID": 28,
+    "Description": [
+      "Brand: Panasonic - Japan, Made in: Vietnam.",
+      "Power: 45W, Fan Blade Diameter: 40 cm providing strong and stable airflow.",
+      "Motor: Durable motor for smooth operation and energy-efficient performance.",
+      "Wind Levels: 3 adjustable wind levels, suitable for various cooling needs."
+    ]
+  },
+  {
+    "Category": "wall",
+    "Name": "KD005",
+    "Images": [
+      "10003154-quat-treo-kdk-m40m-trang-nga-1.jpg",
+      "10003154-quat-treo-kdk-m40m-trang-nga-2.jpg",
+      "R.png"
+    ],
+    "Price": 134.99,
+    "Brand": "KDK",
+    "Blade": 3,
+    "Color": [
+      "white",
+      "brown"
+    ],
+    "ID": 29,
+    "Description": [
+      "Brand: KDK - Japan, Made in: Malaysia.",
+      "Power: 40W, Fan Blade Diameter: 40 cm providing strong and stable airflow.",
+      "Motor: Durable motor for smooth operation and energy-efficient performance.",
+      "Wind Levels: 3 adjustable wind levels, suitable for various cooling needs."
+    ]
+  },
+  {
+    "Category": "wall",
+    "Name": "SK005",
+    "Images": [
+      "treo-senko-t1680-1-1-700x467.jpg",
+      "treo-senko-t1680-2-700x467.jpg",
+      "treo-senko-t1680-3-700x467.jpg"
+    ],
+    "Price": 19.99,
+    "Brand": "Senko",
+    "Blade": 3,
+    "Color": "grey",
+    "ID": 30,
+    "Description": [
+      "Brand: Senko - Vietnam, Made in: Vietnam.",
+      "Power: 45W, Fan Blade Diameter: 40 cm providing strong and stable airflow.",
+      "Motor: Durable motor for smooth operation and energy-efficient performance.",
+      "Wind Levels: 3 adjustable wind levels, suitable for various cooling needs.",
+      "Color: White, suitable for a wide range of interior spaces."
+    ]
+  }
+]
