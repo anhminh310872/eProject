@@ -89,33 +89,28 @@ function App() {
     getGeolocation();
   }, []);
 
-  // Logic cho View Count
   const [viewCount, setViewCount] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setViewCount((prevCount) => prevCount + 13); // Tăng 13 view mỗi giây
-    }, 3000);
+      setViewCount((prevCount) => prevCount + 13);
+    }, 9000);
 
     return () => clearInterval(interval);
   }, []);
 
   const [searchQuery, setSearchQuery] = useState('');
 
-  // Handle search query change
   const handleSearchChange = (e) => {
-    setSearchQuery(e.target.value);  // Update searchQuery state when the user types
+    setSearchQuery(e.target.value);
   };
 
-  // Handle form submission or Enter key press for search
   const handleSearchSubmit = () => {
     if (searchQuery.trim()) {
-      // Navigate to the product page with the search query as a URL parameter
       navigate(`/products?query=${encodeURIComponent(searchQuery)}`);
     }
   };
 
-  // You can trigger the search on the Enter key press as well
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
       handleSearchSubmit();
@@ -158,7 +153,6 @@ function App() {
           </div>
         </ul>
         <div className="right-section">
-          {/* Hiển thị View Count */}
           <div className="visitor-count">
           <i class="fa-solid fa-eye"></i> {viewCount}
           </div>

@@ -3,25 +3,21 @@ import { useNavigate, useLocation, Link } from 'react-router-dom';
 import './assets/product.css'
 
 function Products({ data }) {
-  const location = useLocation();  // Get current URL
-  const query = new URLSearchParams(location.search).get("query") || "";  // Extract 'query' parameter from URL
+  const location = useLocation();
+  const query = new URLSearchParams(location.search).get("query") || "";
 
-  // Declare filteredDataToDisplay state
   const [filteredDataToDisplay, setFilteredDataToDisplay] = useState(data);
 
-  // Filter logic applied to filteredDataToDisplay
   useEffect(() => {
     const filtered = data.filter((product) => {
       const productBrand = product.Brand ? product.Brand.toLowerCase() : '';
       const productCategory = product.Category ? product.Category.toLowerCase() : '';
 
-      // Filter based on brand or category matching the query
       return productBrand.includes(query.toLowerCase()) || productCategory.includes(query.toLowerCase());
     });
 
-    // Update filteredDataToDisplay based on the filtered data
     setFilteredDataToDisplay(filtered);
-  }, [query, data]);  // Trigger whenever query or data changes
+  }, [query, data]);
 
 
   const parallaxRef = useRef(null);
@@ -120,7 +116,7 @@ function Products({ data }) {
       priceRange: { min: "", max: "" },
     });
     setFilteredDataToDisplay(data);
-    setIsFiltered(false);  // Reset filtered state
+    setIsFiltered(false);
   };
 
   const handleCheckboxChange = (field, value, isChecked) => {
@@ -159,7 +155,6 @@ function Products({ data }) {
     }
   };
 
-  // Apply filters when needed
   useEffect(() => {
     if (isFiltered) {
       let result = data;
