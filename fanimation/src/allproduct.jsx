@@ -1,11 +1,20 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import Carousel from 'react-bootstrap/Carousel';
+import React, { useState, useMemo } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import './assets/product.css'
 
-import { useLocation } from 'react-router-dom';
-
 function Products({ data }) {
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+  const query = queryParams.get('query') ? queryParams.get('query').toLowerCase() : '';
+
+  const filteredProducts = useMemo(() => { 
+    return data.filter((product) => { 
+      const productBrand = product.Brand ? product.Brand.toLowerCase() : ''; 
+      const productCategory = product.Category ? product.Category.toLowerCase() : ''; 
+  
+      return productBrand.includes(query) || productCategory.includes(query); 
+    }); 
+  }, [query, data]); 
 
   const [isCartVisible, setCartVisible] = useState(false);
   const [cart, setCart] = useState([]);
@@ -17,8 +26,6 @@ function Products({ data }) {
       mainContent.classList.toggle("shifted", !isCartVisible);
     }
   };
-  
-    const location = useLocation();
     const filteredData = location.state?.filteredData || [];
 
   const handleQuantityChange = (productId, change) => {
@@ -50,7 +57,6 @@ function Products({ data }) {
       }
     });
   };
-  
   
 
   const nav = useNavigate();
@@ -495,10 +501,10 @@ function Products({ data }) {
 
       <div className="main-content">
       <div className="product-list">
-        {dt.length === 0 ? (
+        {filteredProducts.length === 0 ? (
           <h1>No results found.</h1>
         ) : (
-          dt.map((product, index) => (
+          filteredProducts.map((product, index) => (
             <div className="product-card" key={index}>
               <div className="product-card-img-container">
                 <img src={`./images/products/${product.Images[0]}`} className="product-card-img" alt="" />
@@ -517,7 +523,6 @@ function Products({ data }) {
         )}
         </div>
       </div>
-
 
       {popupData && (
         <div className="popup-overlay" onClick={closePopup}>
