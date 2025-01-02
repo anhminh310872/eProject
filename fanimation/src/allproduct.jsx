@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import Carousel from 'react-bootstrap/Carousel';
 import './assets/product.css'
 
+import { useLocation } from 'react-router-dom';
+
 function Products({ data }) {
 
   const [isCartVisible, setCartVisible] = useState(false);
@@ -15,6 +17,9 @@ function Products({ data }) {
       mainContent.classList.toggle("shifted", !isCartVisible);
     }
   };
+  
+    const location = useLocation();
+    const filteredData = location.state?.filteredData || [];
 
   const handleQuantityChange = (productId, change) => {
     setCartItems((prevCartItems) =>
@@ -250,8 +255,8 @@ function Products({ data }) {
     <>
       <nav className={`secondary-navbar ${showSecondaryNavbar ? 'visible' : ''}`} id="secondary-navbar">
         <ul>
-          <li>
-            <a href="#" id="filter-icon" onClick={toggleFilterBox}>
+          <li id="filter-icon" onClick={toggleFilterBox}>
+            <a href="#" >
               <img src="./images/icon-filter.png" alt="Filter Icon" />
             </a>
           </li>

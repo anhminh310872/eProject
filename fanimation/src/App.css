@@ -195,6 +195,15 @@ body {
   gap: 2%;
   margin-left: auto;
   }
+  #iconfilter{
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+  }
+
+  #iconfilter:hover{
+    color: #ffdef0;
+  }
   
   .logo img {
   height: 40px;
@@ -229,22 +238,19 @@ body {
   
   .custom-menu-dropdown{
   display: none;
-  position: absolute;
   color: white;
-  background-color: #CAC0BE ;
-  height: 0;
+  background-color: #948c8a ;
   left: auto;
   top: 57px;
-  overflow: hidden;
   width: 300px;
   transition: height 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
   
   .content-dropdown {
-  padding: 15px;
+  padding: 15px 0 0 20%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   text-decoration: none;
   list-style: none;
   transition: background-color 0.7s ease, color 0.7s ease;
@@ -252,18 +258,19 @@ body {
 
   #content-dropdown{
     cursor: pointer;
+    font-weight: bold;
   }
 
   #content-dropdown:hover{
     transform: scale(1.1);
-    color: #6D6067;
-    font-weight: bold;
+    color: #ffdef0;
   }
   
   .custom-menu-dropdown.open {
+    position: fixed;
     display: block;
-  height: 270px;
-  z-index: 1000;
+    height: 100%;
+    z-index: 1000;
   }
   
   @media (max-width: 940px) {
@@ -312,8 +319,67 @@ body {
   }
   }
   
-  @media (max-width: 770px) {
-  
+  @media (max-width: 796px) {
+    .filterbox {
+      display: none;
+    }
+    .filterbox.open{
+      display: block;
+      list-style: none;
+      z-index: 10;
+      top:0;
+      padding: 10px;
+      overflow-y: auto;
+      position: relative;
+    }
+
+
+  .filterbox.open li {
+    text-align: left;
+    margin: 5px auto 5px 15px;
+  }
+  .filterbox.open li h6{
+    margin-left: 20px !important;
+    color: #7a118a
+  }
+
+  .filterbox.open li input[type="number"] {
+    width: calc(40% - 10px);
+    padding: 8px;
+    margin: 5px 10px 0 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-size: 14px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+  }
+
+  .filterbox.open li input[type="number"]:focus {
+    border-color: #6c4a71;
+    outline: none;
+    box-shadow: 0 0 6px rgba(108, 74, 113, 0.5);
+  }
+
+  .filterbox.open li button {
+    background-color: #2c2638;
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  cursor: pointer;
+  margin: auto 5px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  width: 100px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  .filterbox.open li button:hover{
+    background-color: #4a3d5c;
+    transform: scale(1.05);
+  }
+
   .menu {
     display: none !important;
   }
@@ -327,13 +393,102 @@ body {
     color: white;
     padding-top: 15px;
   }
-  
+
+  .custom-menu-dropdown.open{
+    max-height: 100%;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      width: 0px;
+    }
+  }
   .dropdown-menu{
     display: block;
   }
-  .right-section{
+
+  #inputField {
+    background-color: #948c8a;
+  }
+  .input-wrapper{
+    margin: 10px 0;
+  }
+  .input-wrapper input:focus {
+    border-color: #ffdef0;
+    }
+  
+    .input-wrapper label {
     position: absolute;
-    left: auto;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: white;
+    pointer-events: none;
+    transition: all 0.3s;
+    }
+  
+    .input-wrapper input:focus + label,
+    .input-wrapper input:not(:placeholder-shown) + label {
+    top: -2px;
+    left: 10px;
+    font-size: 16px;
+    color: #ffdef0;
+    background: #948c8a;
+    padding: 0 5px;
+  }
+  
+    .search-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    }
+    
+    .search-button {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    }
+    
+    .search-button i {
+    font-size: 20px;
+    }
+    
+    .search-button i:hover{
+    color: #ffdef0 ;
+    }
+
+  .product-dropdown {
+    display: none;
+    position: relative;
+    left: 0;
+    width: 100%;
+    background-color: #948c8a;
+    padding: 0;
+    box-shadow: none;
+    text-align: center;
+  }
+
+  .product-dropdown.open {
+    display: block;
+  }
+
+  .product-dropdown li {
+    display: block;
+    margin-left: 10px;
+    padding: 10px 20px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+  }
+
+  .product-dropdown li:hover{
+    transform: scale(1.1);
+    color: #ffdef0;
   }
   }
 
