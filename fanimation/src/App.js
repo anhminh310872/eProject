@@ -5,10 +5,20 @@ import { Link, useNavigate } from 'react-router-dom';
 import Home from './Home';
 import AboutUs from './AboutUs';
 import Products from './allproduct';
+import ProductsCeiling from './productCeiling.jsx';
+import ProductsPedestal from './productPedestal.jsx';
+import ProductsWall from './ProductWall.jsx';
+import ProductsExhaust from './ProductExhaust.jsx';
+import ProductsAccessories from './ProductAccessories.jsx';
 import ContactUs from './ContactUs';
 import Login from './Login';
 import SignUp from './SignUp';
 import product from './product.json';
+import productCeiling from './productCeiling.json';
+import productPedestal from './productPedestal.json';
+import productWall from './productWall.json';
+import productExhaust from './productExhaust.json';
+import productAccessories from './productAccessories.json';
 import FAQ from './FaQ';
 
 function getDate() {
@@ -161,6 +171,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products data={product} />} />
+        <Route path="/products/ceiling" element={<ProductsCeiling data={productCeiling} />} />
+        <Route path="/products/pedestal" element={<ProductsPedestal data={productPedestal} />} />
+        <Route path="/products/wall" element={<ProductsWall data={productWall} />} />
+        <Route path="/products/exhaust" element={<ProductsExhaust data={productExhaust} />} />
+        <Route path="/products/accessories" element={<ProductsAccessories data={productAccessories} />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/login" element={<Login />} />

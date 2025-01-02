@@ -348,7 +348,7 @@
   },
   {
     "Category": "pedestal",
-    "Name": "SH001",
+    "Name": "SH002",
     "Images": [
       "10050606-quat-sac-dien-sunhouse-shd7223-2.jpg",
       "10050606-quat-sac-dien-sunhouse-shd7223-1.jpg",
@@ -644,7 +644,8 @@
     "Brand": "Mitsubishi",
     "Blade": 5,
     "Color": "white",
-    "ID": 31
+    "ID": 31,
+    "Description": []
   },
   {
     "Category": "exhaust",
@@ -656,7 +657,8 @@
     "Brand": "Mitsubishi",
     "Blade": 5,
     "Color": "white",
-    "ID": 32
+    "ID": 32,
+    "Description": []
   },
   {
     "Category": "exhaust",
@@ -668,7 +670,8 @@
     "Brand": "Mitsubishi",
     "Blade": 6,
     "Color": "white",
-    "ID": 33
+    "ID": 33,
+    "Description": []
   },
   {
     "Category": "exhaust",
@@ -680,7 +683,8 @@
     "Brand": "Mitsubishi",
     "Blade": 5,
     "Color": "white",
-    "ID": 34
+    "ID": 34,
+    "Description": []
   },
   {
     "Category": "exhaust",
@@ -695,7 +699,8 @@
       "brown",
       "black"
     ],
-    "ID": 35
+    "ID": 35,
+    "Description": []
   },
   {
     "Category": "exhaust",
@@ -707,7 +712,8 @@
     "Brand": "Panasonic",
     "Blade": 5,
     "Color": "white",
-    "ID": 36
+    "ID": 36,
+    "Description": []
   },
   {
     "Category": "exhaust",
@@ -719,7 +725,8 @@
     "Brand": "Panasonic",
     "Blade": 5,
     "Color": "white",
-    "ID": 37
+    "ID": 37,
+    "Description": []
   },
   {
     "Category": "exhaust",
@@ -731,7 +738,8 @@
     "Brand": "Panasonic",
     "Blade": 4,
     "Color": "white",
-    "ID": 38
+    "ID": 38,
+    "Description": []
   },
   {
     "Category": "exhaust",
@@ -747,7 +755,8 @@
       "grey",
       "blue"
     ],
-    "ID": 39
+    "ID": 39,
+    "Description": []
   },
   {
     "Category": "exhaust",
@@ -759,6 +768,112 @@
     "Brand": "Sharp",
     "Blade": 5,
     "Color": "white",
-    "ID": 40
+    "ID": 40,
+    "Description": []
+  },
+  {
+    "Category": "accessories",
+    "Name": "SH003",
+    "Images": [
+      "sunhouse-acc-1.png"
+    ],
+    "Price": 24.99,
+    "Brand": "Sunhouse",
+    "Blade": 3,
+    "Color": "white",
+    "ID": 41,
+    "Description": [
+      "Brand Sunhouse - Vietnam, made in China.",
+      "Power 24W, equipped with 3 fan blades for strong and effective cooling.",
+      "Operates continuously for 5 to 16 hours after a full charge (12-15 hours charging time).",
+      "Integrated LED indicator for charging status and a convenient timer function.",
+      "Supports oscillation for evenly distributed airflow across the room."
+    ]
+  },
+  {
+    "Category": "accessories",
+    "Name": "SH004",
+    "Images": [
+      "1(529).jpg"
+    ],
+    "Price": 14.99,
+    "Brand": "Sunhouse",
+    "Blade": 3,
+    "Color": "white",
+    "ID": 42,
+    "Description": [
+      "Brand Sunhouse - Vietnam, made in China.",
+      "Power 24W, equipped with 3 fan blades for strong and effective cooling.",
+      "Operates continuously for 5 to 16 hours after a full charge (12-15 hours charging time).",
+      "Integrated LED indicator for charging status and a convenient timer function.",
+      "Supports oscillation for evenly distributed airflow across the room."
+    ]
+  },
+  {
+    "Category": "accessories",
+    "Name": "TB004",
+    "Images": [
+      "toshiba-acc-1.png"
+    ],
+    "Price": 24.99,
+    "Brand": "Toshiba",
+    "Blade": 5,
+    "Color": [
+      "white",
+      "yellow"
+    ],
+    "ID": 43,
+    "Description": [
+      "Brand Toshiba - Vietnam, made in China.",
+      "Power 24W, equipped with 5 fan blades for strong and effective cooling.",
+      "Operates continuously for 5 to 16 hours after a full charge (12-15 hours charging time).",
+      "Integrated LED indicator for charging status and a convenient timer function.",
+      "Supports oscillation for evenly distributed airflow across the room."
+    ]
+  },
+  {
+    "Category": "accessories",
+    "Name": "KD006",
+    "Images": [
+      "kdk-acc-1.png"
+    ],
+    "Price": 7.99,
+    "Brand": "KDK",
+    "Blade": 0,
+    "Color": "white",
+    "ID": 44,
+    "Description": [
+      "Replaceable remote for all KDK fans."
+    ]
+  },
+  {
+    "Category": "accessories",
+    "Name": "SH005",
+    "Images": [
+      "sunhouse-acc-2.png"
+    ],
+    "Price": 7.99,
+    "Brand": "Sunhouse",
+    "Blade": 0,
+    "Color": "white",
+    "ID": 45,
+    "Description": [
+      "Replaceable remote for all Sunhouse fans."
+    ]
+  },
+  {
+    "Category": "accessories",
+    "Name": "SK006",
+    "Images": [
+      "senko-acc-1.png"
+    ],
+    "Price": 9.99,
+    "Brand": "Senko",
+    "Blade": 0,
+    "Color": "white",
+    "ID": 46,
+    "Description": [
+      "Replaceable remote for all Senko fans."
+    ]
   }
 ]
