@@ -176,10 +176,10 @@ function App() {
         <li className="content-dropdown">
           <div className="search-container">
             <div className="input-wrapper">
-              <input type="text" id="inputField" placeholder=" " />
+              <input type="text" id="inputField" placeholder=" " value={searchQuery} onChange={handleSearchChange} />
               <label for="inputField">Search</label>
             </div>
-            <button className="search-button">
+            <button className="search-button" onClick={handleSearchSubmit}>
               <i className="fa-solid fa-magnifying-glass"></i>
             </button>
           </div>
