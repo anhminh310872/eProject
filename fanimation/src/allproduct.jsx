@@ -3,18 +3,26 @@ import { useNavigate, useLocation, Link } from 'react-router-dom';
 import './assets/product.css'
 
 function Products({ data }) {
-  const location = useLocation();
-  const queryParams = new URLSearchParams(location.search);
-  const query = queryParams.get('query') ? queryParams.get('query').toLowerCase() : '';
+  const location = useLocation();  // Get current URL
+  const query = new URLSearchParams(location.search).get("query") || "";  // Extract 'query' parameter from URL
 
-  const filteredProducts = useMemo(() => {
-    return data.filter((product) => {
+  // Declare filteredDataToDisplay state
+  const [filteredDataToDisplay, setFilteredDataToDisplay] = useState(data);
+
+  // Filter logic applied to filteredDataToDisplay
+  useEffect(() => {
+    const filtered = data.filter((product) => {
       const productBrand = product.Brand ? product.Brand.toLowerCase() : '';
       const productCategory = product.Category ? product.Category.toLowerCase() : '';
 
-      return productBrand.includes(query) || productCategory.includes(query);
+      // Filter based on brand or category matching the query
+      return productBrand.includes(query.toLowerCase()) || productCategory.includes(query.toLowerCase());
     });
-  }, [query, data]);
+
+    // Update filteredDataToDisplay based on the filtered data
+    setFilteredDataToDisplay(filtered);
+  }, [query, data]);  // Trigger whenever query or data changes
+
 
   const parallaxRef = useRef(null);
 
@@ -92,13 +100,29 @@ function Products({ data }) {
     setShowFilterBox((prev) => !prev);
   };
 
-  const [dt, setDt] = useState(data);
   const [filters, setFilters] = useState({
     color: [],
     blade: [],
     brand: [],
     priceRange: { min: "", max: "" },
   });
+
+  const [isFiltered, setIsFiltered] = useState(false);
+
+  const applyFilters = () => {
+    setIsFiltered(true);
+  };
+
+  const clearFilters = () => {
+    setFilters({
+      color: [],
+      blade: [],
+      brand: [],
+      priceRange: { min: "", max: "" },
+    });
+    setFilteredDataToDisplay(data);
+    setIsFiltered(false);  // Reset filtered state
+  };
 
   const handleCheckboxChange = (field, value, isChecked) => {
     setFilters((prevFilters) => {
@@ -124,80 +148,75 @@ function Products({ data }) {
       ...prevFilters,
       priceRange: {
         ...prevFilters.priceRange,
-        [name]: value
-      }
+        [name]: value,
+      },
     }));
   };
 
   const handlePriceInput = (e) => {
     const { value } = e.target;
-    if (value.includes('-')) {
-      e.target.value = value.replace('-', '');
+    if (value.includes("-")) {
+      e.target.value = value.replace("-", "");
     }
   };
 
-  const applyFilters = () => {
-    let filteredData = data;
+  // Apply filters when needed
+  useEffect(() => {
+    if (isFiltered) {
+      let result = data;
 
-    for (const field in filters) {
-      if (filters[field].length > 0) {
-        filteredData = filteredData.filter((product) => {
-          if (field === 'color') {
-            const colors = Array.isArray(product.Color)
-              ? product.Color
-              : product.Color.split(',').map(color => color.trim());
+      for (const field in filters) {
+        if (filters[field].length > 0) {
+          result = result.filter((product) => {
+            if (field === "color") {
+              const colors = Array.isArray(product.Color)
+                ? product.Color
+                : product.Color.split(",").map((color) => color.trim());
 
-            if (!filters[field].includes('Other')) {
-              return filters[field].some((filterColor) => {
-                return colors.some((color) => color === filterColor);
-              });
+              if (!filters[field].includes("Other")) {
+                return filters[field].some((filterColor) => {
+                  return colors.some((color) => color === filterColor);
+                });
+              }
+              if (filters[field].includes("Other")) {
+                return colors.some((color) => {
+                  if (["black", "white", "grey"].includes(color)) {
+                    return filters[field].includes(color);
+                  }
+                  return !["black", "white", "grey"].includes(color) || filters[field].includes("Other");
+                });
+              }
+
+              return false;
             }
-            if (filters[field].includes('Other')) {
-              return colors.some((color) => {
-                if (['black', 'white', 'grey'].includes(color)) {
-                  return filters[field].includes(color);
-                }
-                return !['black', 'white', 'grey'].includes(color) || filters[field].includes('Other');
-              });
+
+            if (field === "blade") {
+              return filters[field].includes(product.Blade);
             }
 
-            return false;
-          }
+            if (field === "brand") {
+              return filters[field].includes(product.Brand);
+            }
 
-          if (field === 'blade') {
-            return filters[field].includes(product.Blade);
-          }
+            return filters[field].includes(product[field]);
+          });
+        }
+      }
 
-          if (field === 'brand') {
-            return filters[field].includes(product.Brand);
-          }
+      if (filters.priceRange.min !== "" || filters.priceRange.max !== "") {
+        result = result.filter((product) => {
+          const price = product.Price;
+          const minPrice = filters.priceRange.min ? parseFloat(filters.priceRange.min) : -Infinity;
+          const maxPrice = filters.priceRange.max ? parseFloat(filters.priceRange.max) : Infinity;
 
-          return filters[field].includes(product[field]);
+          return price >= minPrice && price <= maxPrice;
         });
       }
+
+      setFilteredDataToDisplay(result);
     }
-
-    if (filters.priceRange.min !== "" || filters.priceRange.max !== "") {
-      filteredData = filteredData.filter((product) => {
-        const price = product.Price;
-        const minPrice = filters.priceRange.min ? parseFloat(filters.priceRange.min) : -Infinity;
-        const maxPrice = filters.priceRange.max ? parseFloat(filters.priceRange.max) : Infinity;
-
-        return price >= minPrice && price <= maxPrice;
-      });
-    }
-
-    setDt(filteredData);
-  };
-
-  const clearFilters = () => {
-    setFilters({
-      color: [],
-      blade: [],
-      brand: [],
-      priceRange: { min: "", max: "" }
-    });
-  };
+  }, [isFiltered, filters, data]);
+  
 
   const handleBuyNow = (product) => {
     setPopupData(product);
@@ -518,28 +537,32 @@ function Products({ data }) {
       </nav>
 
       <div className="main-content">
-        <div className="product-list">
-          {filteredProducts.length === 0 ? (
-            <h1>No results found.</h1>
-          ) : (
-            filteredProducts.map((product, index) => (
-              <div className="product-card" key={index}>
-                <div className="product-card-img-container">
-                  <img src={`/images/products/${product.Images[0]}`} className="product-card-img" alt="" />
-                </div>
-                <div className="product-card-name">
-                  {product.Brand} - {product.Name}
-                  <div className="product-card-price">
-                    ${product.Price}
-                  </div>
-                </div>
-                <div className="product-card-btn" onClick={() => handleBuyNow(product)}>
-                  More Info
-                </div>
-              </div>
-            ))
-          )}
+      <div className="product-list">
+  {filteredDataToDisplay.length === 0 ? (
+    <h1>No results found.</h1>
+  ) : (
+    filteredDataToDisplay.map((product, index) => (
+      <div className="product-card" key={index}>
+        <div className="product-card-img-container">
+          <img
+            src={`/images/products/${product.Images[0]}`}
+            className="product-card-img"
+            alt=""
+          />
         </div>
+        <div className="product-card-name">
+          {product.Brand} - {product.Name}
+          <div className="product-card-price">
+            ${product.Price}
+          </div>
+        </div>
+        <div className="product-card-btn" onClick={() => handleBuyNow(product)}>
+          More Info
+        </div>
+      </div>
+    ))
+  )}
+</div>
       </div>
 
       {popupData && (

@@ -102,13 +102,23 @@ function App() {
 
   const [searchQuery, setSearchQuery] = useState('');
 
+  // Handle search query change
   const handleSearchChange = (e) => {
-    setSearchQuery(e.target.value);
+    setSearchQuery(e.target.value);  // Update searchQuery state when the user types
   };
 
+  // Handle form submission or Enter key press for search
   const handleSearchSubmit = () => {
     if (searchQuery.trim()) {
+      // Navigate to the product page with the search query as a URL parameter
       navigate(`/products?query=${encodeURIComponent(searchQuery)}`);
+    }
+  };
+
+  // You can trigger the search on the Enter key press as well
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      handleSearchSubmit();
     }
   };
 
