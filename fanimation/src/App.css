@@ -308,7 +308,7 @@ body {
     font-size: 15px;
     margin: 0 7.5px;
   }
-  
+}
   @media (max-width: 796px) {
     .filterbox {
       display: none;
