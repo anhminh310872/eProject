@@ -89,11 +89,12 @@ function App() {
     getGeolocation();
   }, []);
 
+  // Logic cho View Count
   const [viewCount, setViewCount] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setViewCount((prevCount) => prevCount + 3);
+      setViewCount((prevCount) => prevCount + 13); // Tăng 13 view mỗi giây
     }, 3000);
 
     return () => clearInterval(interval);
@@ -147,11 +148,12 @@ function App() {
           </div>
         </ul>
         <div className="right-section">
+          {/* Hiển thị View Count */}
           <div className="visitor-count">
           <i class="fa-solid fa-eye"></i> {viewCount}
           </div>
           <div className="logo" onClick={() => navigate("/")}>
-            <img src="/images/logo.png" alt="Fanimation Logo" />
+            <img src="./images/logo.png" alt="Fanimation Logo" />
           </div>
           <div className="auth-icons">
             <Link to="/login" className="auth-icon">
@@ -213,7 +215,7 @@ function App() {
         <div className="footer-top">
           <div className="footer-column">
             <img
-              src="/images/logo.png"
+              src="./images/logo.png"
               alt="Fanimation Logo"
               className="footer-logo"
             />
@@ -284,16 +286,16 @@ function App() {
           <p>© 2025 Fanimation. All rights reserved.</p>
           <div className="footer-icons">
             <Link to="/">
-              <img src="/images/icon-facebook.png" alt="Facebook" />
+              <img src="./images/icon-facebook.png" alt="Facebook" />
             </Link>
             <Link to="/">
-              <img src="/images/icon-tiktok.png" alt="Tiktok" />
+              <img src="./images/icon-tiktok.png" alt="Tiktok" />
             </Link>
             <Link to="/">
-              <img src="/images/icon-instagram.png" alt="Instagram" />
+              <img src="./images/icon-instagram.png" alt="Instagram" />
             </Link>
             <Link to="/">
-              <img src="/images/icon-youtube.png" alt="YouTube" />
+              <img src="./images/icon-youtube.png" alt="YouTube" />
             </Link>
           </div>
         </div>
