@@ -28,7 +28,6 @@ function getTime() {
 }
 
 function App() {
-
   const parallaxRef = useRef(null);
 
   useEffect(() => {
@@ -75,11 +74,22 @@ function App() {
     getGeolocation();
   }, []);
 
+  // Logic cho View Count
+  const [viewCount, setViewCount] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setViewCount((prevCount) => prevCount + 13); // Tăng 13 view mỗi giây
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="App">
       <div className="wrapper" ref={parallaxRef}>
         <button className="menu-button" onClick={toggleDropdown}>
-          <i className="fa-solid fa-bars" ></i>
+          <i className="fa-solid fa-bars"></i>
         </button>
         <ul className="menu">
           <li onClick={() => navigate("/products")}>
@@ -103,7 +113,7 @@ function App() {
           <div className="search-container">
             <div className="input-wrapper">
               <input type="text" id="inputField" placeholder=" " />
-              <label for="inputField">Search</label>
+              <label htmlFor="inputField">Search</label>
             </div>
             <button className="search-button">
               <i className="fa-solid fa-magnifying-glass"></i>
@@ -111,8 +121,9 @@ function App() {
           </div>
         </ul>
         <div className="right-section">
+          {/* Hiển thị View Count */}
           <div className="visitor-count">
-            Visitor count: 1
+          <i class="fa-solid fa-eye"></i> {viewCount}
           </div>
           <div className="logo" onClick={() => navigate("/")}>
             <img src="./images/logo.png" alt="Fanimation Logo" />
@@ -129,7 +140,7 @@ function App() {
           <div className="search-container">
             <div className="input-wrapper">
               <input type="text" id="inputField" placeholder=" " />
-              <label for="inputField">Search</label>
+              <label htmlFor="inputField">Search</label>
             </div>
             <button className="search-button">
               <i className="fa-solid fa-magnifying-glass"></i>
@@ -147,7 +158,6 @@ function App() {
         </li>
       </div>
 
-
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products data={product} />} />
@@ -157,7 +167,6 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/faq" element={<FAQ />} />
       </Routes>
-
       <footer>
         <div className="footer-top">
           <div className="footer-column">

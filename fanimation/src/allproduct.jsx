@@ -564,6 +564,7 @@ function Products({ data }) {
           </div>
         </div>
 
+
         <div className={`carttab ${isCartVisible ? 'show' : ''}`}>
           <h1>Shopping cart</h1>
           <div className="listcart">

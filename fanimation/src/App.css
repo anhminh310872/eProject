@@ -532,9 +532,9 @@ footer {
 }
 
 .visitor-count {
-  font-size: 6pt;
+  font-size: 14pt;
   width: 200px;
   text-align: right;
   color: #fff;
-  margin-top: 35px;
+  /* margin-top: 35px; */
 }
