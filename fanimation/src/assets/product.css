@@ -5,7 +5,6 @@
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  position: fixed;
   top: 80px;
   width: 100%;
   opacity: 1;
@@ -26,7 +25,7 @@
   text-decoration: none;
   font-weight: 600;
   font-size: 16px;
-  padding: 10px 5px;
+  padding: 10px 18px;
   border-radius: 10px;
   transition: background 0.3s ease, transform 0.3s ease;
   z-index: 9999;
@@ -75,6 +74,9 @@
 @media (max-width: 796px) {
   .product-list{
     margin-top: 10px !important;
+  }
+  .secondary-navbar{
+    display: none !important;
   }
 }
 

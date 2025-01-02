@@ -1,8 +1,20 @@
-import React, { useState, useMemo, useEffect, useRef } from 'react';
-import { useNavigate, useLocation, Link } from 'react-router-dom';
+import React, { useState, useMemo } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import './assets/product.css'
 
 function Products({ data }) {
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+  const query = queryParams.get('query') ? queryParams.get('query').toLowerCase() : '';
+
+  const filteredProducts = useMemo(() => { 
+    return data.filter((product) => { 
+      const productBrand = product.Brand ? product.Brand.toLowerCase() : ''; 
+      const productCategory = product.Category ? product.Category.toLowerCase() : ''; 
+  
+      return productBrand.includes(query) || productCategory.includes(query); 
+    }); 
+  }, [query, data]); 
 
   const [isCartVisible, setCartVisible] = useState(false);
   const [cart, setCart] = useState([]);
@@ -14,9 +26,7 @@ function Products({ data }) {
       mainContent.classList.toggle("shifted", !isCartVisible);
     }
   };
-
-  const location = useLocation();
-  const filteredData = location.state?.filteredData || [];
+    const filteredData = location.state?.filteredData || [];
 
   const handleQuantityChange = (productId, change) => {
     setCartItems((prevCartItems) =>
@@ -34,7 +44,7 @@ function Products({ data }) {
     console.log("Adding to cart:", product);
     setCartItems((prevCartItems) => {
       const existingProductIndex = prevCartItems.findIndex((item) => item.ID === product.ID);
-
+      
       if (existingProductIndex !== -1) {
         const updatedCart = [...prevCartItems];
         updatedCart[existingProductIndex].quantity += 1;
@@ -246,30 +256,30 @@ function Products({ data }) {
 
   return (
     <>
-      <nav className={`secondary-navbar ${showSecondaryNavbar ? 'visible' : ''}`} id="secondary-navbar" ref={parallaxRef}>
+      <nav className={`secondary-navbar ${showSecondaryNavbar ? 'visible' : ''}`} id="secondary-navbar">
         <ul>
           <li id="filter-icon" onClick={toggleFilterBox}>
             <a href="#" >
-              <img src="/images/icon-filter.png" alt="Filter Icon" />
+              <img src="./images/icon-filter.png" alt="Filter Icon" />
             </a>
           </li>
           <li>
-            <Link to="/products" style={{fontWeight:"bold"}}>All Products</Link>
+            <a href="#">All Products</a>
           </li>
           <li>
-            <Link to="/products/ceiling">Ceiling</Link>
+            <a href="#">Ceiling</a>
           </li>
           <li>
-            <Link to="/products/pedestal">Pedestal</Link>
+            <a href="#">Pedestal</a>
           </li>
           <li>
-            <Link to="/products/wall">Wall</Link>
+            <a href="#">Wall</a>
           </li>
           <li>
-            <Link to="/products/exhaust">Exhaust</Link>
+            <a href="#">Exhaust</a>
           </li>
           <li>
-            <Link to="/products/accessories">Accessories</Link>
+            <a href="#">Accessories</a>
           </li>
         </ul>
         <div className={`filter-box-container ${showFilterBox ? 'show' : ''}`} id="filter-box-container">
@@ -497,7 +507,7 @@ function Products({ data }) {
           filteredProducts.map((product, index) => (
             <div className="product-card" key={index}>
               <div className="product-card-img-container">
-                <img src={`/images/products/${product.Images[0]}`} className="product-card-img" alt="" />
+                <img src={`./images/products/${product.Images[0]}`} className="product-card-img" alt="" />
               </div>
               <div className="product-card-name">
                 {product.Brand} - {product.Name}
@@ -521,8 +531,8 @@ function Products({ data }) {
               ×
             </button>
             <div className="popup-image">
-              {/* thay cái này với popup */}
-              <img src={`/images/products/${popupData.Images[0]}`} alt={popupData.Name} />
+            {/* thay cái này với popup */}
+            <img src={`./images/products/${popupData.Images[0]}`} alt={popupData.Name} />
             </div>
             <div className="popup-content">
               <h1><strong>{popupData.Brand}- {popupData.Name}</strong></h1>
@@ -540,9 +550,9 @@ function Products({ data }) {
               <div className="price">Price: ${popupData.Price}</div>
               <div className="popup-buttons">
                 <button className="add-to-card" onClick={() => {
-                  handleAddToCart(popupData);
-                  alert('Product added to cart!');
-                }}>
+    handleAddToCart(popupData);
+    alert('Product added to cart!');
+  }}>
                   Add to Cart
                 </button>
               </div>
@@ -565,31 +575,31 @@ function Products({ data }) {
         <div className={`carttab ${isCartVisible ? 'show' : ''}`}>
           <h1>Shopping cart</h1>
           <div className="listcart">
-            {cartItems.length === 0 ? (
-              <p>Your cart is empty</p>
-            ) : (
-              cartItems.map((item, index) => (
-                <div className="item" key={index}>
-                  <div className="image">
-                    <img src={`/images/products/${item.Images[0]}`} alt={item.Name} />
-                  </div>
-                  <div className="name">{item.Name}</div>
-                  <div className="price">${item.Price}</div>
-                  <div className="quantity">
-                    <span className="minus" onClick={() => handleQuantityChange(item.id, -1)}>
-                      <i className="fa-solid fa-minus" />
-                    </span>
-                    <span>{item.quantity}</span>
-                    <span className="plus" onClick={() => handleQuantityChange(item.id, 1)}>
-                      <i className="fa-solid fa-plus" />
-                    </span>
-                  </div>
-                </div>
-              ))
-            )}
-          </div>
+          {cartItems.length === 0 ? (
+    <p>Your cart is empty</p>
+  ) : (
+    cartItems.map((item, index) => (
+            <div className="item" key={index}>
+              <div className="image">
+              <img src={`./images/products/${item.Images[0]}`} alt={item.Name} />
+              </div>
+              <div className="name">{item.Name}</div>
+        <div className="price">${item.Price}</div>
+        <div className="quantity">
+        <span className="minus" onClick={() => handleQuantityChange(item.id, -1)}>
+            <i className="fa-solid fa-minus" />
+          </span>
+          <span>{item.quantity}</span>
+          <span className="plus" onClick={() => handleQuantityChange(item.id, 1)}>
+            <i className="fa-solid fa-plus" />
+          </span>
+              </div>
+            </div>
+          ))
+        )}
+      </div>
           <div className="btncart">
-            <h3>Total: ${cartItems.reduce((total, item) => Math.round(total + item.Price * item.quantity * 100.0) / 100.0, 0)}</h3>
+          <h3>Total: ${cartItems.reduce((total, item) => Math.round(total + item.Price * item.quantity * 100.0) / 100.0, 0)}</h3>
             <button className="purchase">
               <strong>Purchase</strong>
             </button>
