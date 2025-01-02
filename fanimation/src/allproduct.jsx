@@ -1,28 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import React, { useState, useMemo, useEffect, useRef } from 'react';
+import { useNavigate, useLocation, Link } from 'react-router-dom';
 import './assets/product.css'
 
-import { useLocation } from 'react-router-dom';
-
 function Products({ data }) {
-
-  const parallaxRef = useRef(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      const parallaxOffset = scrollY * -0.3;
-      if (parallaxRef.current) {
-        parallaxRef.current.style.transform = `translateY(${parallaxOffset}px)`;
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   const [isCartVisible, setCartVisible] = useState(false);
   const [cart, setCart] = useState([]);
@@ -67,8 +47,7 @@ function Products({ data }) {
       }
     });
   };
-
-
+  
 
   const nav = useNavigate();
   const [showSecondaryNavbar, setShowSecondaryNavbar] = useState(true);
@@ -511,30 +490,29 @@ function Products({ data }) {
       </nav>
 
       <div className="main-content">
-        <div className="product-list">
-          {dt.length === 0 ? (
-            <h1>No results found.</h1>
-          ) : (
-            dt.map((product, index) => (
-              <div className="product-card" key={index}>
-                <div className="product-card-img-container">
-                  <img src={`/images/products/${product.Images[0]}`} className="product-card-img" alt="" />
-                </div>
-                <div className="product-card-name">
-                  {product.Brand} - {product.Name}
-                  <div className="product-card-price">
-                    ${product.Price}
-                  </div>
-                </div>
-                <div className="product-card-btn" onClick={() => handleBuyNow(product)}>
-                  More Info
+      <div className="product-list">
+        {filteredProducts.length === 0 ? (
+          <h1>No results found.</h1>
+        ) : (
+          filteredProducts.map((product, index) => (
+            <div className="product-card" key={index}>
+              <div className="product-card-img-container">
+                <img src={`/images/products/${product.Images[0]}`} className="product-card-img" alt="" />
+              </div>
+              <div className="product-card-name">
+                {product.Brand} - {product.Name}
+                <div className="product-card-price">
+                  ${product.Price}
                 </div>
               </div>
-            ))
-          )}
+              <div className="product-card-btn" onClick={() => handleBuyNow(product)}>
+                More Info
+              </div>
+            </div>
+          ))
+        )}
         </div>
       </div>
-
 
       {popupData && (
         <div className="popup-overlay" onClick={closePopup}>

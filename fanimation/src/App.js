@@ -99,6 +99,18 @@ function App() {
     return () => clearInterval(interval);
   }, []);
 
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const handleSearchChange = (e) => {
+    setSearchQuery(e.target.value);
+  };
+
+  const handleSearchSubmit = () => {
+    if (searchQuery.trim()) {
+      navigate(`/products?query=${encodeURIComponent(searchQuery)}`);
+    }
+  };
+
   return (
     <div className="App">
       <div className="wrapper" ref={parallaxRef}>
@@ -126,10 +138,10 @@ function App() {
           </li>
           <div className="search-container">
             <div className="input-wrapper">
-              <input type="text" id="inputField" placeholder=" " />
+              <input type="text" id="inputField" placeholder=" " value={searchQuery} onChange={handleSearchChange}/>
               <label for="inputField">Search</label>
             </div>
-            <button className="search-button">
+            <button className="search-button" onClick={handleSearchSubmit}>
               <i className="fa-solid fa-magnifying-glass"></i>
             </button>
           </div>
