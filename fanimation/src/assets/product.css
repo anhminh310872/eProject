@@ -73,6 +73,9 @@
 }
 
 @media (max-width: 796px) {
+  .secondary-navbar{
+    display: none !important;
+  }
   .product-list{
     margin-top: 10px !important;
   }

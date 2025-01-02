@@ -59,7 +59,6 @@ function Products({ data }) {
   const [cartItems, setCartItems] = useState([]);
 
   const handleAddToCart = (product) => {
-    console.log("Adding to cart:", product);
     setCartItems((prevCartItems) => {
       const existingProductIndex = prevCartItems.findIndex((item) => item.ID === product.ID);
 
