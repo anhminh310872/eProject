@@ -640,7 +640,7 @@ function Products({ data }) {
             )}
           </div>
           <div className="btncart">
-            <h3>Total: ${cartItems.reduce((total, item) => Math.round(total + item.Price * item.quantity * 100.0) / 100.0, 0)}</h3>
+            <h3>Total: ${cartItems.reduce((total, item) => Math.round((total + item.Price * item.quantity) * 100.0) / 100.0, 0)}</h3>
             <button className="purchase">
               <strong>Purchase</strong>
             </button>
