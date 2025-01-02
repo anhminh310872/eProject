@@ -31,7 +31,7 @@ function Products({ data }) {
   const handleAddToCart = (product) => {
     console.log("Adding to cart:", product);
     setCartItems((prevCartItems) => {
-      const existingProductIndex = prevCartItems.findIndex((item) => item.id === product.id);
+      const existingProductIndex = prevCartItems.findIndex((item) => item.ID === product.ID);
       
       if (existingProductIndex !== -1) {
         const updatedCart = [...prevCartItems];
