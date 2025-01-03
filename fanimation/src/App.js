@@ -89,15 +89,18 @@ function App() {
     getGeolocation();
   }, []);
 
+  {/*
   const [viewCount, setViewCount] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setViewCount((prevCount) => prevCount + 13);
-    }, 9000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, []);
+
+  */}
 
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -154,7 +157,7 @@ function App() {
         </ul>
         <div className="right-section">
           <div className="visitor-count">
-          <i class="fa-solid fa-eye"></i> {viewCount}
+          <i class="fa-solid fa-eye"></i> {/*{viewCount}*/}14
           </div>
           <div className="logo" onClick={() => navigate("/")}>
             <img src="/images/logo.png" alt="Fanimation Logo" />
